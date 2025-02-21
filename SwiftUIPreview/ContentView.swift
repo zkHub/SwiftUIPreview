@@ -43,11 +43,10 @@ struct ContentView: View {
     
     
     func differentForSKAdNetworks() {
-        
-        let array1 = getPlist(name: "skad1")!.map {
+        let array1 = getPlist(name: "skad1")!["SKAdNetworkItems"]!.map {
             $0.values.first! as String
         }
-        var array2 = getPlist(name: "skad2")!.map {
+        var array2 = getPlist(name: "skad2")!["SKAdNetworkItems"]!.map {
             $0.values.first! as String
         }
         for (_, a2) in array2.enumerated() {
@@ -61,11 +60,11 @@ struct ContentView: View {
         print("SKAdNetworks Diff:", array2)
     }
 
-    func getPlist(name: String) -> [[String: String]]? {
+    func getPlist(name: String) -> [String : [[String: String]]]? {
         if let url = Bundle.main.url(forResource: name, withExtension: "plist") {
             do {
                 let data = try Data(contentsOf: url)
-                if let plist = try PropertyListSerialization.propertyList(from: data, format: nil) as? [[String: String]] {
+                if let plist = try PropertyListSerialization.propertyList(from: data, format: nil) as? [String : [[String: String]]] {
                     return plist
                 }
             } catch {
