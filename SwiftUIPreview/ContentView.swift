@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Kingfisher
+import KingfisherWebP
 
 struct ContentView: View {
     
@@ -14,7 +16,25 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView(content: {
+
             List {
+                
+                Text("地方的地方地方的地方大幅度发的大")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+                    .background(
+                        Image("Group245")
+                    )
+                    .background(.black)
+                
+//                if let url = Bundle.main.url(forResource: "1", withExtension: "webp") {
+//                    KFAnimatedImage(URL(string: "https://img-push.zthd.io/us/cdns/47dc17e7661b548cac6db13a1d66cfac.webp"))
+//                    KFAnimatedImage(url)
+//                }
+                                
+                
                 Button {
                     differentForSKAdNetworks()
                 } label: {
@@ -25,6 +45,11 @@ struct ContentView: View {
                 NavigationLink(destination: FontView()) { Text("FontView") }
                 NavigationLink(destination: MakeStickerView()) { Text("MakeStickerView") }
                 NavigationLink(destination: MakeStickerEidtorView()){Text("MakeStickerVCRepresentable")}
+                
+                NavigationLink(destination: DrawingView()) { Text("CanvasView") }
+                NavigationLink(destination: DrawingOverlayView(baseImage: UIImage(named: "2")!)) { Text("DrawingOverlayView") }
+                NavigationLink(destination: PKDrawingView()) { Text("PKDrawingView") }
+
             }
             
         })

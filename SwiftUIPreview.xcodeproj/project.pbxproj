@@ -33,13 +33,14 @@
 		58324B7A2CB7D3240044C85A /* MakeStickerFontColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */; };
 		58324B7C2CB933ED0044C85A /* MakeStickerSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */; };
 		58324B7E2CBA4E290044C85A /* MakeStickerLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */; };
-		584D20BE2CA10F4A008CE40F /* feetY.gif in Resources */ = {isa = PBXBuildFile; fileRef = 584D20BD2CA10F4A008CE40F /* feetY.gif */; };
-		584D20C02CA10F83008CE40F /* snow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 584D20BF2CA10F83008CE40F /* snow.jpg */; };
 		584D20C72CA28E5D008CE40F /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584D20C62CA28E5D008CE40F /* Messages.framework */; };
 		584D20CA2CA28E5D008CE40F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D20C92CA28E5D008CE40F /* MessagesViewController.swift */; };
 		584D20CD2CA28E5D008CE40F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 584D20CC2CA28E5D008CE40F /* Base */; };
 		584D20CF2CA28E5E008CE40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584D20CE2CA28E5E008CE40F /* Assets.xcassets */; };
 		584D20D32CA28E5E008CE40F /* iMessageExt.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 584D20C52CA28E5D008CE40F /* iMessageExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 586449342DA661F9007EA0F8 /* KingfisherWebP */; };
+		586449372DA663B8007EA0F8 /* 1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 586449362DA663B8007EA0F8 /* 1.webp */; };
+		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
 		58C478E12CA545C60069CE19 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 58C478E02CA545C60069CE19 /* Lottie */; };
 		58C478E32CA695A60069CE19 /* MakeStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E22CA695A60069CE19 /* MakeStickerView.swift */; };
 		58C478E52CA699150069CE19 /* MakeStickerEidtorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */; };
@@ -56,6 +57,10 @@
 		58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6077E2C804DA800097699 /* ColorExtention.swift */; };
 		58C607812C85C04B00097699 /* FontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C607802C85C04B00097699 /* FontView.swift */; };
 		58CBBE682D0A8753006660DC /* AttributeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CBBE672D0A8753006660DC /* AttributeLabel.swift */; };
+		58CDE8572DC31CFF0015B33B /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE8562DC31CFF0015B33B /* DrawingView.swift */; };
+		58CDE85F2DC9F0490015B33B /* PKDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */; };
+		58CDE8612DCA03690015B33B /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */; };
+		58CDE8632DCA04550015B33B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CDE8622DCA04550015B33B /* 2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,14 +116,14 @@
 		58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerFontColorView.swift; sourceTree = "<group>"; };
 		58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerSelectView.swift; sourceTree = "<group>"; };
 		58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerLabelsView.swift; sourceTree = "<group>"; };
-		584D20BD2CA10F4A008CE40F /* feetY.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = feetY.gif; sourceTree = "<group>"; };
-		584D20BF2CA10F83008CE40F /* snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snow.jpg; sourceTree = "<group>"; };
 		584D20C52CA28E5D008CE40F /* iMessageExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		584D20C62CA28E5D008CE40F /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		584D20C92CA28E5D008CE40F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		584D20CC2CA28E5D008CE40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		584D20CE2CA28E5E008CE40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		584D20D02CA28E5E008CE40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		586449362DA663B8007EA0F8 /* 1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.webp; sourceTree = "<group>"; };
+		586449532DAF6040007EA0F8 /* GuideMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideMaskView.swift; sourceTree = "<group>"; };
 		58C478E22CA695A60069CE19 /* MakeStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeStickerView.swift; sourceTree = "<group>"; };
 		58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeStickerEidtorView.swift; sourceTree = "<group>"; };
 		58C607602C7EFA2F00097699 /* SwiftUIPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +139,10 @@
 		58C6077E2C804DA800097699 /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		58C607802C85C04B00097699 /* FontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontView.swift; sourceTree = "<group>"; };
 		58CBBE672D0A8753006660DC /* AttributeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeLabel.swift; sourceTree = "<group>"; };
+		58CDE8562DC31CFF0015B33B /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKDrawingView.swift; sourceTree = "<group>"; };
+		58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
+		58CDE8622DCA04550015B33B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +160,7 @@
 			files = (
 				58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */,
 				58C478E12CA545C60069CE19 /* Lottie in Frameworks */,
+				586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */,
 				58C478ED2CA6A9A00069CE19 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +268,13 @@
 				58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */,
 				58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */,
 				58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */,
+				586449532DAF6040007EA0F8 /* GuideMaskView.swift */,
+				58CDE8562DC31CFF0015B33B /* DrawingView.swift */,
+				58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */,
+				58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */,
 				58324B4B2CB76BE50044C85A /* Fonts */,
-				584D20BD2CA10F4A008CE40F /* feetY.gif */,
-				584D20BF2CA10F83008CE40F /* snow.jpg */,
+				58CDE8622DCA04550015B33B /* 2.png */,
+				586449362DA663B8007EA0F8 /* 1.webp */,
 				58C607672C7EFA3100097699 /* Assets.xcassets */,
 				58C607742C7EFC5D00097699 /* skad1.plist */,
 				58C607752C7EFC5D00097699 /* skad2.plist */,
@@ -326,6 +340,7 @@
 				58C478E02CA545C60069CE19 /* Lottie */,
 				58C478EC2CA6A9A00069CE19 /* SnapKit */,
 				58324B492CB682D50044C85A /* Kingfisher */,
+				586449342DA661F9007EA0F8 /* KingfisherWebP */,
 			);
 			productName = SwiftUIPreview;
 			productReference = 58C607602C7EFA2F00097699 /* SwiftUIPreview.app */;
@@ -362,6 +377,7 @@
 				58C478DF2CA545C60069CE19 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				58C478EB2CA6A9A00069CE19 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */,
 			);
 			productRefGroup = 58C607612C7EFA2F00097699 /* Products */;
 			projectDirPath = "";
@@ -396,7 +412,6 @@
 				58324B722CB770C70044C85A /* PoppinsLatin-Bold.otf in Resources */,
 				58324B5B2CB76BF40044C85A /* LeckerliOne-Regular.ttf in Resources */,
 				58324B5C2CB76BF40044C85A /* SpicyRice-Regular.ttf in Resources */,
-				584D20BE2CA10F4A008CE40F /* feetY.gif in Resources */,
 				58C607772C7EFC5D00097699 /* skad2.plist in Resources */,
 				58324B5F2CB76BF40044C85A /* Fruktur-Regular.ttf in Resources */,
 				58324B632CB76BF40044C85A /* Chewy-Regular.ttf in Resources */,
@@ -405,7 +420,8 @@
 				58324B612CB76BF40044C85A /* Lemonada-Bold.ttf in Resources */,
 				58324B6D2CB770C70044C85A /* PoppinsLatin-Regular.ttf in Resources */,
 				58324B5A2CB76BF40044C85A /* Arbutus-Regular.ttf in Resources */,
-				584D20C02CA10F83008CE40F /* snow.jpg in Resources */,
+				58CDE8632DCA04550015B33B /* 2.png in Resources */,
+				586449372DA663B8007EA0F8 /* 1.webp in Resources */,
 				58324B6E2CB770C70044C85A /* PoppinsLatin-Light.otf in Resources */,
 				58C607682C7EFA3100097699 /* Assets.xcassets in Resources */,
 				58324B5E2CB76BF40044C85A /* Butcherman-Regular.ttf in Resources */,
@@ -430,13 +446,17 @@
 			files = (
 				58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */,
 				58324B782CB7D2A60044C85A /* MakeStickerFontView.swift in Sources */,
+				58CDE8572DC31CFF0015B33B /* DrawingView.swift in Sources */,
 				58C6077B2C7EFF1C00097699 /* MoreTextView.swift in Sources */,
+				58CDE8612DCA03690015B33B /* DrawingCanvasView.swift in Sources */,
 				58C607662C7EFA2F00097699 /* ContentView.swift in Sources */,
+				586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */,
 				58324B7C2CB933ED0044C85A /* MakeStickerSelectView.swift in Sources */,
 				58CBBE682D0A8753006660DC /* AttributeLabel.swift in Sources */,
 				58324B442CB680190044C85A /* UIColorExt.swift in Sources */,
 				58324B7A2CB7D3240044C85A /* MakeStickerFontColorView.swift in Sources */,
 				58324B7E2CBA4E290044C85A /* MakeStickerLabelsView.swift in Sources */,
+				58CDE85F2DC9F0490015B33B /* PKDrawingView.swift in Sources */,
 				58C607792C7EFDF600097699 /* ExpandTextView.swift in Sources */,
 				58C607642C7EFA2F00097699 /* SwiftUIPreviewApp.swift in Sources */,
 				58C478E52CA699150069CE19 /* MakeStickerEidtorView.swift in Sources */,
@@ -743,6 +763,14 @@
 				minimumVersion = 8.0.3;
 			};
 		};
+		586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeatse/KingfisherWebP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
 		58C478DF2CA545C60069CE19 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -766,6 +794,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		586449342DA661F9007EA0F8 /* KingfisherWebP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */;
+			productName = KingfisherWebP;
 		};
 		58C478E02CA545C60069CE19 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,5 +1,5 @@
 {
-  "originHash" : "22f5cfefa8cdfa2372d34b6f5cae763a88d498ca8db491508bf5530d196994ac",
+  "originHash" : "6400537cefa92eb4964f71da83b2ab6339c2c1a53806b74fcd168684f855ea1d",
   "pins" : [
     {
       "identity" : "kingfisher",
@@ -8,6 +8,24 @@
       "state" : {
         "revision" : "33696a71dd4d71f1b0f781ade11a48ba5549581a",
         "version" : "8.0.3"
+      }
+    },
+    {
+      "identity" : "kingfisherwebp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yeatse/KingfisherWebP.git",
+      "state" : {
+        "revision" : "dccea7e92e77b0aa9ae5955c0d8f78c88ac0a950",
+        "version" : "1.7.0"
+      }
+    },
+    {
+      "identity" : "libwebp-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libwebp-Xcode",
+      "state" : {
+        "revision" : "0d60654eeefd5d7d2bef3835804892c40225e8b2",
+        "version" : "1.5.0"
       }
     },
     {
