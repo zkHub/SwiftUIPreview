@@ -247,7 +247,7 @@ struct DrawingCanvasRepresentable: UIViewRepresentable {
 
 // 示例 SwiftUI 页面
 struct DrawingOverlayView: View {
-    @State private var strokeColor: UIColor = .red
+    @State private var strokeColor: UIColor = .black
     @State private var strokeWidth: CGFloat = 5
     @State private var drawMode: DrawMode = .pen
     @State private var canvasView: ImageDrawingView? = nil

@@ -71,9 +71,11 @@ struct ContentView: View {
         let array1 = getPlist(name: "skad1")!["SKAdNetworkItems"]!.map {
             $0.values.first! as String
         }
+        duplicates(array: array1)
         var array2 = getPlist(name: "skad2")!["SKAdNetworkItems"]!.map {
             $0.values.first! as String
         }
+        duplicates(array: array2)
         for (_, a2) in array2.enumerated() {
             if array1.contains(a2) {
                 array2.removeAll { str in
@@ -83,6 +85,16 @@ struct ContentView: View {
         }
         
         print("SKAdNetworks Diff:", array2)
+    }
+    
+    func duplicates(array: [String]) {
+        var counts: [String: Int] = [:]
+        for item in array {
+            counts[item, default: 0] += 1
+        }
+
+        let duplicates = counts.filter { $0.value > 1 }.map { $0.key }
+        print("duplicates: ", duplicates)  // 输出: [2, 3]
     }
 
     func getPlist(name: String) -> [String : [[String: String]]]? {
