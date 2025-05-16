@@ -18,10 +18,13 @@ def create_bundle_ids():
             try:
                 subprocess.run([
                     "fastlane", "produce",
+                    "--username", "192938268@qq.com",
                     "--app_identifier", bundle_id,
                     "--app_name", app_name,
-                    "--sku", f"SKU_{short_id}",
-                    "--language", "English"
+                    "--sku", bundle_id,
+                    "--app_version", "1.0",
+                    "--language", "English",
+                    "--itc_team_id", "1203961"
                 ], check=True)
                 print(f"✅ 成功创建: {bundle_id}")
             except subprocess.CalledProcessError as e:
