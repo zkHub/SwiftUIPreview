@@ -7,23 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5824C3F92DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3D42DD7253500233597 /* Stickers.xcstickers */; };
-		5824C3FA2DD7253500233597 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3CF2DD7253500233597 /* report.xml */; };
 		5824C3FB2DD7253500233597 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C72DD7253500233597 /* README.md */; };
 		5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EF2DD7253500233597 /* Gemfile.lock */; };
-		5824C3FD2DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3DE2DD7253500233597 /* Stickers.xcstickers */; };
-		5824C3FE2DD7253500233597 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3CE2DD7253500233597 /* README.md */; };
-		5824C3FF2DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3D92DD7253500233597 /* Fastfile */; };
 		5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E82DD7253500233597 /* Stickers.xcstickers */; };
 		5824C4012DD7253500233597 /* apps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C42DD7253500233597 /* apps.csv */; };
-		5824C4022DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3DD2DD7253500233597 /* Info.plist */; };
-		5824C4032DD7253500233597 /* template StickerPackExtension.ipa in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3D72DD7253500233597 /* template StickerPackExtension.ipa */; };
-		5824C4042DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3DB2DD7253500233597 /* Info.plist */; };
 		5824C4052DD7253500233597 /* generate_apps.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3F02DD7253500233597 /* generate_apps.py */; };
 		5824C4062DD7253500233597 /* template.zip in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3F12DD7253500233597 /* template.zip */; };
 		5824C4072DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E72DD7253500233597 /* Info.plist */; };
 		5824C4082DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BF2DD7253500233597 /* cloud.png */; };
-		5824C4092DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3D32DD7253500233597 /* Info.plist */; };
 		5824C40A2DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BB2DD7253500233597 /* moon.png */; };
 		5824C40B2DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E32DD7253500233597 /* Fastfile */; };
 		5824C40C2DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E52DD7253500233597 /* Info.plist */; };
@@ -31,13 +22,10 @@
 		5824C40E2DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BD2DD7253500233597 /* icon-1024.png */; };
 		5824C40F2DD7253500233597 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EE2DD7253500233597 /* Gemfile */; };
 		5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */; };
-		5824C4112DD7253500233597 /* Preview.html in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3CD2DD7253500233597 /* Preview.html */; };
 		5824C4122DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BA2DD7253500233597 /* cloud.png */; };
 		5824C4132DD7253500233597 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C82DD7253500233597 /* report.xml */; };
-		5824C4142DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3CC2DD7253500233597 /* Fastfile */; };
 		5824C4152DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C62DD7253500233597 /* Fastfile */; };
 		5824C4162DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C02DD7253500233597 /* moon.png */; };
-		5824C4172DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3D12DD7253500233597 /* Info.plist */; };
 		5824C4182DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C22DD7253500233597 /* icon-1024.png */; };
 		58324B442CB680190044C85A /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B422CB680190044C85A /* UIColorExt.swift */; };
 		58324B452CB680190044C85A /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B432CB680190044C85A /* ColorExt.swift */; };
@@ -110,34 +98,6 @@
 			remoteGlobalIDString = 58CDE88A2DCC528B0015B33B;
 			remoteInfo = "template StickerPackExtension";
 		};
-		5824C4212DD7253500233597 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5824C3E02DD7253500233597 /* template.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 58CDE8862DCC528B0015B33B;
-			remoteInfo = template;
-		};
-		5824C4232DD7253500233597 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5824C3E02DD7253500233597 /* template.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 58CDE88A2DCC528B0015B33B;
-			remoteInfo = "template StickerPackExtension";
-		};
-		5824C4272DD7253500233597 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5824C3D62DD7253500233597 /* template.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 58CDE8862DCC528B0015B33B;
-			remoteInfo = template;
-		};
-		5824C4292DD7253500233597 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5824C3D62DD7253500233597 /* template.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 58CDE88A2DCC528B0015B33B;
-			remoteInfo = "template StickerPackExtension";
-		};
 		584D20D12CA28E5E008CE40F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 58C607582C7EFA2F00097699 /* Project object */;
@@ -172,20 +132,6 @@
 		5824C3C62DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		5824C3C72DD7253500233597 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5824C3C82DD7253500233597 /* report.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
-		5824C3CC2DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		5824C3CD2DD7253500233597 /* Preview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Preview.html; sourceTree = "<group>"; };
-		5824C3CE2DD7253500233597 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5824C3CF2DD7253500233597 /* report.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
-		5824C3D12DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5824C3D32DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5824C3D42DD7253500233597 /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Stickers.xcstickers; sourceTree = "<group>"; };
-		5824C3D62DD7253500233597 /* template.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = template.xcodeproj; sourceTree = "<group>"; };
-		5824C3D72DD7253500233597 /* template StickerPackExtension.ipa */ = {isa = PBXFileReference; lastKnownFileType = file; path = "template StickerPackExtension.ipa"; sourceTree = "<group>"; };
-		5824C3D92DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		5824C3DB2DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5824C3DD2DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5824C3DE2DD7253500233597 /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Stickers.xcstickers; sourceTree = "<group>"; };
-		5824C3E02DD7253500233597 /* template.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = template.xcodeproj; sourceTree = "<group>"; };
 		5824C3E32DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		5824C3E52DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5824C3E72DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -333,103 +279,9 @@
 			path = fastlane;
 			sourceTree = "<group>";
 		};
-		5824C3CA2DD7253500233597 /* metadata */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = metadata;
-			sourceTree = "<group>";
-		};
-		5824C3CB2DD7253500233597 /* screenshots */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = screenshots;
-			sourceTree = "<group>";
-		};
-		5824C3D02DD7253500233597 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3CA2DD7253500233597 /* metadata */,
-				5824C3CB2DD7253500233597 /* screenshots */,
-				5824C3CC2DD7253500233597 /* Fastfile */,
-				5824C3CD2DD7253500233597 /* Preview.html */,
-				5824C3CE2DD7253500233597 /* README.md */,
-				5824C3CF2DD7253500233597 /* report.xml */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
-		5824C3D22DD7253500233597 /* template */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3D12DD7253500233597 /* Info.plist */,
-			);
-			path = template;
-			sourceTree = "<group>";
-		};
-		5824C3D52DD7253500233597 /* template StickerPackExtension */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3D32DD7253500233597 /* Info.plist */,
-				5824C3D42DD7253500233597 /* Stickers.xcstickers */,
-			);
-			path = "template StickerPackExtension";
-			sourceTree = "<group>";
-		};
-		5824C3D82DD7253500233597 /* FunnyCat - Sticker */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3D02DD7253500233597 /* fastlane */,
-				5824C3D22DD7253500233597 /* template */,
-				5824C3D52DD7253500233597 /* template StickerPackExtension */,
-				5824C3D62DD7253500233597 /* template.xcodeproj */,
-				5824C3D72DD7253500233597 /* template StickerPackExtension.ipa */,
-			);
-			path = "FunnyCat - Sticker";
-			sourceTree = "<group>";
-		};
-		5824C3DA2DD7253500233597 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3D92DD7253500233597 /* Fastfile */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
-		5824C3DC2DD7253500233597 /* template */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3DB2DD7253500233597 /* Info.plist */,
-			);
-			path = template;
-			sourceTree = "<group>";
-		};
-		5824C3DF2DD7253500233597 /* template StickerPackExtension */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3DD2DD7253500233597 /* Info.plist */,
-				5824C3DE2DD7253500233597 /* Stickers.xcstickers */,
-			);
-			path = "template StickerPackExtension";
-			sourceTree = "<group>";
-		};
-		5824C3E12DD7253500233597 /* FunnyDog - Sticker */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3DA2DD7253500233597 /* fastlane */,
-				5824C3DC2DD7253500233597 /* template */,
-				5824C3DF2DD7253500233597 /* template StickerPackExtension */,
-				5824C3E02DD7253500233597 /* template.xcodeproj */,
-			);
-			path = "FunnyDog - Sticker";
-			sourceTree = "<group>";
-		};
 		5824C3E22DD7253500233597 /* generated_apps */ = {
 			isa = PBXGroup;
 			children = (
-				5824C3D82DD7253500233597 /* FunnyCat - Sticker */,
-				5824C3E12DD7253500233597 /* FunnyDog - Sticker */,
 			);
 			path = generated_apps;
 			sourceTree = "<group>";
@@ -492,24 +344,6 @@
 			children = (
 				5824C41C2DD7253500233597 /* template.app */,
 				5824C41E2DD7253500233597 /* template StickerPackExtension.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5824C3F52DD7253500233597 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5824C4282DD7253500233597 /* template.app */,
-				5824C42A2DD7253500233597 /* template StickerPackExtension.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5824C3F72DD7253500233597 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5824C4222DD7253500233597 /* template.app */,
-				5824C4242DD7253500233597 /* template StickerPackExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -733,14 +567,6 @@
 					ProductGroup = 5824C3F32DD7253500233597 /* Products */;
 					ProjectRef = 5824C3EA2DD7253500233597 /* template.xcodeproj */;
 				},
-				{
-					ProductGroup = 5824C3F72DD7253500233597 /* Products */;
-					ProjectRef = 5824C3E02DD7253500233597 /* template.xcodeproj */;
-				},
-				{
-					ProductGroup = 5824C3F52DD7253500233597 /* Products */;
-					ProjectRef = 5824C3D62DD7253500233597 /* template.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -763,34 +589,6 @@
 			fileType = "wrapper.app-extension";
 			path = "template StickerPackExtension.appex";
 			remoteRef = 5824C41D2DD7253500233597 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5824C4222DD7253500233597 /* template.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = template.app;
-			remoteRef = 5824C4212DD7253500233597 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5824C4242DD7253500233597 /* template StickerPackExtension.appex */ = {
-			isa = PBXReferenceProxy;
-			fileType = "wrapper.app-extension";
-			path = "template StickerPackExtension.appex";
-			remoteRef = 5824C4232DD7253500233597 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5824C4282DD7253500233597 /* template.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = template.app;
-			remoteRef = 5824C4272DD7253500233597 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5824C42A2DD7253500233597 /* template StickerPackExtension.appex */ = {
-			isa = PBXReferenceProxy;
-			fileType = "wrapper.app-extension";
-			path = "template StickerPackExtension.appex";
-			remoteRef = 5824C4292DD7253500233597 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -823,23 +621,14 @@
 				58324B632CB76BF40044C85A /* Chewy-Regular.ttf in Resources */,
 				58324B712CB770C70044C85A /* PoppinsLatin-ExtraLight.otf in Resources */,
 				58324B622CB76BF40044C85A /* Piedra-Regular.ttf in Resources */,
-				5824C3F92DD7253500233597 /* Stickers.xcstickers in Resources */,
-				5824C3FA2DD7253500233597 /* report.xml in Resources */,
 				5824C3FB2DD7253500233597 /* README.md in Resources */,
 				5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */,
-				5824C3FD2DD7253500233597 /* Stickers.xcstickers in Resources */,
-				5824C3FE2DD7253500233597 /* README.md in Resources */,
-				5824C3FF2DD7253500233597 /* Fastfile in Resources */,
 				5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */,
 				5824C4012DD7253500233597 /* apps.csv in Resources */,
-				5824C4022DD7253500233597 /* Info.plist in Resources */,
-				5824C4032DD7253500233597 /* template StickerPackExtension.ipa in Resources */,
-				5824C4042DD7253500233597 /* Info.plist in Resources */,
 				5824C4052DD7253500233597 /* generate_apps.py in Resources */,
 				5824C4062DD7253500233597 /* template.zip in Resources */,
 				5824C4072DD7253500233597 /* Info.plist in Resources */,
 				5824C4082DD7253500233597 /* cloud.png in Resources */,
-				5824C4092DD7253500233597 /* Info.plist in Resources */,
 				5824C40A2DD7253500233597 /* moon.png in Resources */,
 				5824C40B2DD7253500233597 /* Fastfile in Resources */,
 				5824C40C2DD7253500233597 /* Info.plist in Resources */,
@@ -847,13 +636,10 @@
 				5824C40E2DD7253500233597 /* icon-1024.png in Resources */,
 				5824C40F2DD7253500233597 /* Gemfile in Resources */,
 				5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */,
-				5824C4112DD7253500233597 /* Preview.html in Resources */,
 				5824C4122DD7253500233597 /* cloud.png in Resources */,
 				5824C4132DD7253500233597 /* report.xml in Resources */,
-				5824C4142DD7253500233597 /* Fastfile in Resources */,
 				5824C4152DD7253500233597 /* Fastfile in Resources */,
 				5824C4162DD7253500233597 /* moon.png in Resources */,
-				5824C4172DD7253500233597 /* Info.plist in Resources */,
 				5824C4182DD7253500233597 /* icon-1024.png in Resources */,
 				58324B612CB76BF40044C85A /* Lemonada-Bold.ttf in Resources */,
 				58324B6D2CB770C70044C85A /* PoppinsLatin-Regular.ttf in Resources */,
