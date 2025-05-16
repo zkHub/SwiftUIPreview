@@ -1,0 +1,11 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and upload the app"
+  lane :build_and_upload do
+    build_app(
+      scheme: "template StickerPackExtension"
+    )
+    upload_to_app_store
+  end
+end
