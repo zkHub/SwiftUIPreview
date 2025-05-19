@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EF2DD7253500233597 /* Gemfile.lock */; };
 		5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E82DD7253500233597 /* Stickers.xcstickers */; };
 		5824C4012DD7253500233597 /* apps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C42DD7253500233597 /* apps.csv */; };
 		5824C4052DD7253500233597 /* generate_apps.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3F02DD7253500233597 /* generate_apps.py */; };
@@ -19,7 +18,6 @@
 		5824C40C2DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E52DD7253500233597 /* Info.plist */; };
 		5824C40D2DD7253500233597 /* create_bundleIds.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3ED2DD7253500233597 /* create_bundleIds.py */; };
 		5824C40E2DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BD2DD7253500233597 /* icon-1024.png */; };
-		5824C40F2DD7253500233597 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EE2DD7253500233597 /* Gemfile */; };
 		5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */; };
 		5824C4122DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BA2DD7253500233597 /* cloud.png */; };
 		5824C4162DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C02DD7253500233597 /* moon.png */; };
@@ -135,8 +133,6 @@
 		5824C3EA2DD7253500233597 /* template.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = template.xcodeproj; sourceTree = "<group>"; };
 		5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_X22F658K7F.p8; sourceTree = "<group>"; };
 		5824C3ED2DD7253500233597 /* create_bundleIds.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_bundleIds.py; sourceTree = "<group>"; };
-		5824C3EE2DD7253500233597 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		5824C3EF2DD7253500233597 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		5824C3F02DD7253500233597 /* generate_apps.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generate_apps.py; sourceTree = "<group>"; };
 		5824C3F12DD7253500233597 /* template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = template.zip; sourceTree = "<group>"; };
 		5824C4302DD747ED00233597 /* build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = build_upload.py; sourceTree = "<group>"; };
@@ -320,8 +316,6 @@
 				5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */,
 				5824C3ED2DD7253500233597 /* create_bundleIds.py */,
 				5824C4302DD747ED00233597 /* build_upload.py */,
-				5824C3EE2DD7253500233597 /* Gemfile */,
-				5824C3EF2DD7253500233597 /* Gemfile.lock */,
 				5824C3F02DD7253500233597 /* generate_apps.py */,
 				5824C3F12DD7253500233597 /* template.zip */,
 			);
@@ -619,7 +613,6 @@
 				58324B712CB770C70044C85A /* PoppinsLatin-ExtraLight.otf in Resources */,
 				58324B622CB76BF40044C85A /* Piedra-Regular.ttf in Resources */,
 				5824C4342DDADF4300233597 /* get_bundleid.rb in Resources */,
-				5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */,
 				5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */,
 				5824C4012DD7253500233597 /* apps.csv in Resources */,
 				5824C4052DD7253500233597 /* generate_apps.py in Resources */,
@@ -632,7 +625,6 @@
 				5824C40D2DD7253500233597 /* create_bundleIds.py in Resources */,
 				5824C40E2DD7253500233597 /* icon-1024.png in Resources */,
 				5824C4312DD747ED00233597 /* build_upload.py in Resources */,
-				5824C40F2DD7253500233597 /* Gemfile in Resources */,
 				5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */,
 				5824C4122DD7253500233597 /* cloud.png in Resources */,
 				5824C4162DD7253500233597 /* moon.png in Resources */,
