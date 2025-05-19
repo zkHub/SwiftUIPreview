@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5824C3FB2DD7253500233597 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C72DD7253500233597 /* README.md */; };
 		5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EF2DD7253500233597 /* Gemfile.lock */; };
 		5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E82DD7253500233597 /* Stickers.xcstickers */; };
 		5824C4012DD7253500233597 /* apps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C42DD7253500233597 /* apps.csv */; };
@@ -23,8 +22,6 @@
 		5824C40F2DD7253500233597 /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EE2DD7253500233597 /* Gemfile */; };
 		5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */; };
 		5824C4122DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BA2DD7253500233597 /* cloud.png */; };
-		5824C4132DD7253500233597 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C82DD7253500233597 /* report.xml */; };
-		5824C4152DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C62DD7253500233597 /* Fastfile */; };
 		5824C4162DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C02DD7253500233597 /* moon.png */; };
 		5824C4182DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C22DD7253500233597 /* icon-1024.png */; };
 		5824C4312DD747ED00233597 /* build_upload.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C4302DD747ED00233597 /* build_upload.py */; };
@@ -131,9 +128,6 @@
 		5824C3C02DD7253500233597 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
 		5824C3C22DD7253500233597 /* icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1024.png"; sourceTree = "<group>"; };
 		5824C3C42DD7253500233597 /* apps.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = apps.csv; sourceTree = "<group>"; };
-		5824C3C62DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		5824C3C72DD7253500233597 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5824C3C82DD7253500233597 /* report.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 		5824C3E32DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		5824C3E52DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5824C3E72DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -273,16 +267,6 @@
 			path = apps_config;
 			sourceTree = "<group>";
 		};
-		5824C3C92DD7253500233597 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3C62DD7253500233597 /* Fastfile */,
-				5824C3C72DD7253500233597 /* README.md */,
-				5824C3C82DD7253500233597 /* report.xml */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
 		5824C3E22DD7253500233597 /* generated_apps */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				5824C3C52DD7253500233597 /* apps_config */,
-				5824C3C92DD7253500233597 /* fastlane */,
 				5824C3E22DD7253500233597 /* generated_apps */,
 				5824C3EB2DD7253500233597 /* template */,
 				5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */,
@@ -635,7 +618,6 @@
 				58324B632CB76BF40044C85A /* Chewy-Regular.ttf in Resources */,
 				58324B712CB770C70044C85A /* PoppinsLatin-ExtraLight.otf in Resources */,
 				58324B622CB76BF40044C85A /* Piedra-Regular.ttf in Resources */,
-				5824C3FB2DD7253500233597 /* README.md in Resources */,
 				5824C4342DDADF4300233597 /* get_bundleid.rb in Resources */,
 				5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */,
 				5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */,
@@ -653,8 +635,6 @@
 				5824C40F2DD7253500233597 /* Gemfile in Resources */,
 				5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */,
 				5824C4122DD7253500233597 /* cloud.png in Resources */,
-				5824C4132DD7253500233597 /* report.xml in Resources */,
-				5824C4152DD7253500233597 /* Fastfile in Resources */,
 				5824C4162DD7253500233597 /* moon.png in Resources */,
 				5824C4182DD7253500233597 /* icon-1024.png in Resources */,
 				58324B612CB76BF40044C85A /* Lemonada-Bold.ttf in Resources */,
