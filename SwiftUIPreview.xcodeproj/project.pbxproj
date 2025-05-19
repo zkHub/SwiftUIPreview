@@ -10,7 +10,6 @@
 		5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E82DD7253500233597 /* Stickers.xcstickers */; };
 		5824C4012DD7253500233597 /* apps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C42DD7253500233597 /* apps.csv */; };
 		5824C4052DD7253500233597 /* generate_apps.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3F02DD7253500233597 /* generate_apps.py */; };
-		5824C4062DD7253500233597 /* template.zip in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3F12DD7253500233597 /* template.zip */; };
 		5824C4072DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E72DD7253500233597 /* Info.plist */; };
 		5824C4082DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BF2DD7253500233597 /* cloud.png */; };
 		5824C40A2DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BB2DD7253500233597 /* moon.png */; };
@@ -134,7 +133,6 @@
 		5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_X22F658K7F.p8; sourceTree = "<group>"; };
 		5824C3ED2DD7253500233597 /* create_bundleIds.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_bundleIds.py; sourceTree = "<group>"; };
 		5824C3F02DD7253500233597 /* generate_apps.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generate_apps.py; sourceTree = "<group>"; };
-		5824C3F12DD7253500233597 /* template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = template.zip; sourceTree = "<group>"; };
 		5824C4302DD747ED00233597 /* build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = build_upload.py; sourceTree = "<group>"; };
 		5824C4322DDADF4300233597 /* get_bundleid.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = get_bundleid.rb; sourceTree = "<group>"; };
 		582D8FF62D1518E3004AE8DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -317,7 +315,6 @@
 				5824C3ED2DD7253500233597 /* create_bundleIds.py */,
 				5824C4302DD747ED00233597 /* build_upload.py */,
 				5824C3F02DD7253500233597 /* generate_apps.py */,
-				5824C3F12DD7253500233597 /* template.zip */,
 			);
 			path = StickerPacks;
 			sourceTree = "<group>";
@@ -616,7 +613,6 @@
 				5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */,
 				5824C4012DD7253500233597 /* apps.csv in Resources */,
 				5824C4052DD7253500233597 /* generate_apps.py in Resources */,
-				5824C4062DD7253500233597 /* template.zip in Resources */,
 				5824C4072DD7253500233597 /* Info.plist in Resources */,
 				5824C4082DD7253500233597 /* cloud.png in Resources */,
 				5824C40A2DD7253500233597 /* moon.png in Resources */,
