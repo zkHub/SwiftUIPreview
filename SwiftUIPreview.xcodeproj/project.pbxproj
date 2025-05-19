@@ -27,6 +27,8 @@
 		5824C4152DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C62DD7253500233597 /* Fastfile */; };
 		5824C4162DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C02DD7253500233597 /* moon.png */; };
 		5824C4182DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C22DD7253500233597 /* icon-1024.png */; };
+		5824C4312DD747ED00233597 /* build_upload.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C4302DD747ED00233597 /* build_upload.py */; };
+		5824C4342DDADF4300233597 /* get_bundleid.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5824C4322DDADF4300233597 /* get_bundleid.rb */; };
 		58324B442CB680190044C85A /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B422CB680190044C85A /* UIColorExt.swift */; };
 		58324B452CB680190044C85A /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B432CB680190044C85A /* ColorExt.swift */; };
 		58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58324B492CB682D50044C85A /* Kingfisher */; };
@@ -143,6 +145,8 @@
 		5824C3EF2DD7253500233597 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		5824C3F02DD7253500233597 /* generate_apps.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generate_apps.py; sourceTree = "<group>"; };
 		5824C3F12DD7253500233597 /* template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = template.zip; sourceTree = "<group>"; };
+		5824C4302DD747ED00233597 /* build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = build_upload.py; sourceTree = "<group>"; };
+		5824C4322DDADF4300233597 /* get_bundleid.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = get_bundleid.rb; sourceTree = "<group>"; };
 		582D8FF62D1518E3004AE8DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		582D8FF82D1518E3004AE8DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		58324B422CB680190044C85A /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 		5824C3E42DD7253500233597 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
+				5824C4332DDADF4300233597 /* actions */,
 				5824C3E32DD7253500233597 /* Fastfile */,
 			);
 			path = fastlane;
@@ -331,6 +336,7 @@
 				5824C3EB2DD7253500233597 /* template */,
 				5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */,
 				5824C3ED2DD7253500233597 /* create_bundleIds.py */,
+				5824C4302DD747ED00233597 /* build_upload.py */,
 				5824C3EE2DD7253500233597 /* Gemfile */,
 				5824C3EF2DD7253500233597 /* Gemfile.lock */,
 				5824C3F02DD7253500233597 /* generate_apps.py */,
@@ -346,6 +352,14 @@
 				5824C41E2DD7253500233597 /* template StickerPackExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5824C4332DDADF4300233597 /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				5824C4322DDADF4300233597 /* get_bundleid.rb */,
+			);
+			path = actions;
 			sourceTree = "<group>";
 		};
 		58324B462CB6801D0044C85A /* extension */ = {
@@ -622,6 +636,7 @@
 				58324B712CB770C70044C85A /* PoppinsLatin-ExtraLight.otf in Resources */,
 				58324B622CB76BF40044C85A /* Piedra-Regular.ttf in Resources */,
 				5824C3FB2DD7253500233597 /* README.md in Resources */,
+				5824C4342DDADF4300233597 /* get_bundleid.rb in Resources */,
 				5824C3FC2DD7253500233597 /* Gemfile.lock in Resources */,
 				5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */,
 				5824C4012DD7253500233597 /* apps.csv in Resources */,
@@ -634,6 +649,7 @@
 				5824C40C2DD7253500233597 /* Info.plist in Resources */,
 				5824C40D2DD7253500233597 /* create_bundleIds.py in Resources */,
 				5824C40E2DD7253500233597 /* icon-1024.png in Resources */,
+				5824C4312DD747ED00233597 /* build_upload.py in Resources */,
 				5824C40F2DD7253500233597 /* Gemfile in Resources */,
 				5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */,
 				5824C4122DD7253500233597 /* cloud.png in Resources */,
