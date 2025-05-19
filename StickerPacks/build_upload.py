@@ -1,18 +1,25 @@
-import csv
 import os
 import subprocess
+from openpyxl import load_workbook
 
-# 获取当前工作目录
-base_dir = os.getcwd()
+def main():
+    # 获取当前工作目录
+    base_dir = os.getcwd()
 
-# 读取 CSV 文件
-with open('apps_config/apps.csv', newline='', encoding='utf-8') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-        app_name = row['app_name']
-        short_id = row['short_id']
-        display_name = row['display_name']
-        resource_folder = row['resource_folder']
+    # 读取 Excel 文件
+    workbook = load_workbook('apps_config/apps.xlsx')
+    sheet = workbook.active
+
+    # 获取表头
+    headers = [cell.value for cell in sheet[1]]
+
+    # 遍历每一行（从第二行开始）
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        row_data = dict(zip(headers, row))
+        app_name = row_data.get('app_name')
+        short_id = row_data.get('short_id')
+        display_name = row_data.get('display_name')
+        resource_folder = row_data.get('resource_folder')
 
         # 构建项目路径
         project_path = os.path.join(base_dir, "generated_apps", app_name)
@@ -48,3 +55,6 @@ with open('apps_config/apps.csv', newline='', encoding='utf-8') as csvfile:
 
         # 返回上级目录
         os.chdir(base_dir)
+
+if __name__ == '__main__':
+    main()

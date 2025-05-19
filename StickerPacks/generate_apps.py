@@ -1,11 +1,11 @@
 import os
 import shutil
 import plistlib
-import csv
 import json
 from PIL import Image
 import subprocess
 import re
+from openpyxl import load_workbook
 
 # 模板项目根目录
 TEMPLATE_DIR = 'template'
@@ -13,8 +13,8 @@ TEMPLATE_DIR = 'template'
 # 输出工程目录
 OUTPUT_DIR = 'generated_apps'
 
-# CSV 配置文件路径
-CONFIG_FILE = 'apps_config/apps.csv'
+# Excel 配置文件路径
+CONFIG_FILE = 'apps_config/apps.xlsx'
 
 # 所有资源文件的根路径
 BASE_CONFIG_DIR = 'apps_config'
@@ -206,16 +206,21 @@ def process_app(row):
     replace_icons(extension_path, resource_path)
     replace_stickers(extension_path, resource_path)
 
+# 读取 Excel 文件
+def read_excel_config():
+    wb = load_workbook(CONFIG_FILE)
+    sheet = wb.active
+    rows = list(sheet.iter_rows(min_row=2, values_only=True))  # 跳过表头
+    return rows
+    
 # ============================
-# 主函数：读取 CSV 并批量生成
+# 主函数：读取 Excel 并批量生成
 # ============================
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(CONFIG_FILE, newline='', encoding='utf-8') as csvfile:
-        reader = csv.reader(csvfile)
-        headers = next(reader)  # 跳过表头
-        for row in reader:
-            process_app(row)
+    rows = read_excel_config()
+    for row in rows:
+        process_app(row)
     print("\n✅ 所有 Sticker App 工程已批量生成完成")
 
 if __name__ == '__main__':
