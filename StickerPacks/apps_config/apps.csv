@@ -1,3 +1,3 @@
-app_name,short_id,display_name,resource_folder
-FunnyCat,funnycat,Funny Cat,funnycat
-FunnyDog,funnydog,Funny Dog,funnydog
+app_name,short_id,display_name,version,resource_folder
+FunnyCat,funnycat,Funny Cat,2.0,funnycat
+FunnyDog,funnydog,Funny Dog,2.0,funnydog

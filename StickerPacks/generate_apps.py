@@ -4,6 +4,8 @@ import plistlib
 import csv
 import json
 from PIL import Image
+import subprocess
+import re
 
 # 模板项目根目录
 TEMPLATE_DIR = 'template'
@@ -147,18 +149,23 @@ def modify_info_plist(plist_path, display_name):
         plistlib.dump(plist, f)
 
 # ============================
-# 修改 project.pbxproj 中的 Bundle ID（纯文本替换）
+# 修改 project.pbxproj 中的 Bundle ID 和 MARKETING_VERSION
 # ============================
-def replace_bundle_id_in_pbxproj(pbxproj_path, old_bundle_id, new_bundle_id):
+def replace_bundle_id_in_pbxproj(pbxproj_path, bundle_id, ext_bundle_id, version):
     with open(pbxproj_path, "r", encoding="utf-8") as f:
         contents = f.read()
 
-    updated_contents = contents.replace(old_bundle_id, new_bundle_id)
+    updated_contents = contents.replace("com.getsticker.stickerpack.template", bundle_id)
+    updated_contents = updated_contents.replace("com.getsticker.stickerpack.template.StickerPackExtension", ext_bundle_id)
+    print(f"✅ 替换完成：{bundle_id} {ext_bundle_id}")
+
+    # 使用正则表达式替换 MARKETING_VERSION 的值
+    new_content = re.sub(r'MARKETING_VERSION = [^;]+;', f'MARKETING_VERSION = {version};', updated_contents)
+    print(f"✅ 已将 MARKETING_VERSION 更新为 {version}")
 
     with open(pbxproj_path, "w", encoding="utf-8") as f:
-        f.write(updated_contents)
-
-    print(f"🔧 替换完成：{old_bundle_id} → {new_bundle_id}")
+        f.write(new_content)
+    print(f"✅ 替换完成")
 
 # ============================
 # 拷贝模板工程
@@ -174,7 +181,7 @@ def copy_template(app_name):
 # 构建单个 App 工程
 # ============================
 def process_app(row):
-    app_name, short_id, display_name, resource_folder = row
+    app_name, short_id, display_name, version, resource_folder = row
     print(f"\n🎯 正在生成 {app_name}")
 
     # 自动生成 bundle id
@@ -191,8 +198,7 @@ def process_app(row):
 
     # 修改 .xcodeproj 的 bundle id
     pbxproj_path = os.path.join(target, f"{os.path.basename(TEMPLATE_DIR)}.xcodeproj", "project.pbxproj")
-    replace_bundle_id_in_pbxproj(pbxproj_path, "com.getsticker.stickerpack.template", main_bundle_id)
-    replace_bundle_id_in_pbxproj(pbxproj_path, "com.getsticker.stickerpack.template.StickerPackExtension", extension_bundle_id)
+    replace_bundle_id_in_pbxproj(pbxproj_path, main_bundle_id, extension_bundle_id, version)
 
     # 替换贴纸与图标资源
     extension_path = os.path.join(target, 'template StickerPackExtension')
