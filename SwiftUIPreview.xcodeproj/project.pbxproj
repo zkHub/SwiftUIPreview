@@ -7,22 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E82DD7253500233597 /* Stickers.xcstickers */; };
-		5824C4052DD7253500233597 /* generate_apps.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3F02DD7253500233597 /* generate_apps.py */; };
-		5824C4072DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E72DD7253500233597 /* Info.plist */; };
-		5824C4082DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BF2DD7253500233597 /* cloud.png */; };
-		5824C40A2DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BB2DD7253500233597 /* moon.png */; };
-		5824C40B2DD7253500233597 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E32DD7253500233597 /* Fastfile */; };
-		5824C40C2DD7253500233597 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3E52DD7253500233597 /* Info.plist */; };
-		5824C40D2DD7253500233597 /* create_bundleIds.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3ED2DD7253500233597 /* create_bundleIds.py */; };
-		5824C40E2DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BD2DD7253500233597 /* icon-1024.png */; };
-		5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */; };
-		5824C4122DD7253500233597 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3BA2DD7253500233597 /* cloud.png */; };
-		5824C4162DD7253500233597 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C02DD7253500233597 /* moon.png */; };
-		5824C4182DD7253500233597 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 5824C3C22DD7253500233597 /* icon-1024.png */; };
-		5824C4312DD747ED00233597 /* build_upload.py in Resources */ = {isa = PBXBuildFile; fileRef = 5824C4302DD747ED00233597 /* build_upload.py */; };
-		5824C4342DDADF4300233597 /* get_bundleid.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5824C4322DDADF4300233597 /* get_bundleid.rb */; };
-		5824C4482DDB3E0B00233597 /* apps.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 5824C4472DDB3E0B00233597 /* apps.xlsx */; };
 		58324B442CB680190044C85A /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B422CB680190044C85A /* UIColorExt.swift */; };
 		58324B452CB680190044C85A /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B432CB680190044C85A /* ColorExt.swift */; };
 		58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58324B492CB682D50044C85A /* Kingfisher */; };
@@ -49,6 +33,8 @@
 		58324B7A2CB7D3240044C85A /* MakeStickerFontColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */; };
 		58324B7C2CB933ED0044C85A /* MakeStickerSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */; };
 		58324B7E2CBA4E290044C85A /* MakeStickerLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */; };
+		583D73C12DDC7EC100D34E5D /* DragSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C02DDC7EC100D34E5D /* DragSortView.swift */; };
+		583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C42DDC80E800D34E5D /* DragListView.swift */; };
 		584D20C72CA28E5D008CE40F /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584D20C62CA28E5D008CE40F /* Messages.framework */; };
 		584D20CA2CA28E5D008CE40F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D20C92CA28E5D008CE40F /* MessagesViewController.swift */; };
 		584D20CD2CA28E5D008CE40F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 584D20CC2CA28E5D008CE40F /* Base */; };
@@ -80,16 +66,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5824C41B2DD7253500233597 /* PBXContainerItemProxy */ = {
+		583D73EE2DDC8E3000D34E5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5824C3EA2DD7253500233597 /* template.xcodeproj */;
+			containerPortal = 583D73DB2DDC8E2600D34E5D /* template.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 58CDE8862DCC528B0015B33B;
 			remoteInfo = template;
 		};
-		5824C41D2DD7253500233597 /* PBXContainerItemProxy */ = {
+		583D73F02DDC8E3000D34E5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5824C3EA2DD7253500233597 /* template.xcodeproj */;
+			containerPortal = 583D73DB2DDC8E2600D34E5D /* template.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 58CDE88A2DCC528B0015B33B;
 			remoteInfo = "template StickerPackExtension";
@@ -118,23 +104,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5824C3BA2DD7253500233597 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
-		5824C3BB2DD7253500233597 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
-		5824C3BD2DD7253500233597 /* icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1024.png"; sourceTree = "<group>"; };
-		5824C3BF2DD7253500233597 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
-		5824C3C02DD7253500233597 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
-		5824C3C22DD7253500233597 /* icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1024.png"; sourceTree = "<group>"; };
-		5824C3E32DD7253500233597 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		5824C3E52DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5824C3E72DD7253500233597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5824C3E82DD7253500233597 /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Stickers.xcstickers; sourceTree = "<group>"; };
-		5824C3EA2DD7253500233597 /* template.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = template.xcodeproj; sourceTree = "<group>"; };
-		5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_X22F658K7F.p8; sourceTree = "<group>"; };
-		5824C3ED2DD7253500233597 /* create_bundleIds.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_bundleIds.py; sourceTree = "<group>"; };
-		5824C3F02DD7253500233597 /* generate_apps.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generate_apps.py; sourceTree = "<group>"; };
-		5824C4302DD747ED00233597 /* build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = build_upload.py; sourceTree = "<group>"; };
-		5824C4322DDADF4300233597 /* get_bundleid.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = get_bundleid.rb; sourceTree = "<group>"; };
-		5824C4472DDB3E0B00233597 /* apps.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = apps.xlsx; sourceTree = "<group>"; };
 		582D8FF62D1518E3004AE8DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		582D8FF82D1518E3004AE8DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		58324B422CB680190044C85A /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
@@ -163,6 +132,24 @@
 		58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerFontColorView.swift; sourceTree = "<group>"; };
 		58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerSelectView.swift; sourceTree = "<group>"; };
 		58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerLabelsView.swift; sourceTree = "<group>"; };
+		583D73C02DDC7EC100D34E5D /* DragSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragSortView.swift; sourceTree = "<group>"; };
+		583D73C42DDC80E800D34E5D /* DragListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragListView.swift; sourceTree = "<group>"; };
+		583D73C82DDC8E2600D34E5D /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		583D73C92DDC8E2600D34E5D /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
+		583D73CB2DDC8E2600D34E5D /* icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1024.png"; sourceTree = "<group>"; };
+		583D73CD2DDC8E2600D34E5D /* apps.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = apps.xlsx; sourceTree = "<group>"; };
+		583D73D02DDC8E2600D34E5D /* get_bundleid.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = get_bundleid.rb; sourceTree = "<group>"; };
+		583D73D22DDC8E2600D34E5D /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		583D73D32DDC8E2600D34E5D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		583D73D42DDC8E2600D34E5D /* report.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
+		583D73D62DDC8E2600D34E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583D73D82DDC8E2600D34E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583D73D92DDC8E2600D34E5D /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Stickers.xcstickers; sourceTree = "<group>"; };
+		583D73DB2DDC8E2600D34E5D /* template.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = template.xcodeproj; sourceTree = "<group>"; };
+		583D73DD2DDC8E2600D34E5D /* AuthKey_X22F658K7F.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_X22F658K7F.p8; sourceTree = "<group>"; };
+		583D73DE2DDC8E2600D34E5D /* build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = build_upload.py; sourceTree = "<group>"; };
+		583D73DF2DDC8E2600D34E5D /* create_bundleIds.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_bundleIds.py; sourceTree = "<group>"; };
+		583D73E02DDC8E2600D34E5D /* generate_apps.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generate_apps.py; sourceTree = "<group>"; };
 		584D20C52CA28E5D008CE40F /* iMessageExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		584D20C62CA28E5D008CE40F /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		584D20C92CA28E5D008CE40F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -215,127 +202,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5824C3BC2DD7253500233597 /* stickers */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3BA2DD7253500233597 /* cloud.png */,
-				5824C3BB2DD7253500233597 /* moon.png */,
-			);
-			path = stickers;
-			sourceTree = "<group>";
-		};
-		5824C3BE2DD7253500233597 /* funnycat */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3BC2DD7253500233597 /* stickers */,
-				5824C3BD2DD7253500233597 /* icon-1024.png */,
-			);
-			path = funnycat;
-			sourceTree = "<group>";
-		};
-		5824C3C12DD7253500233597 /* stickers */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3BF2DD7253500233597 /* cloud.png */,
-				5824C3C02DD7253500233597 /* moon.png */,
-			);
-			path = stickers;
-			sourceTree = "<group>";
-		};
-		5824C3C32DD7253500233597 /* funnydog */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3C12DD7253500233597 /* stickers */,
-				5824C3C22DD7253500233597 /* icon-1024.png */,
-			);
-			path = funnydog;
-			sourceTree = "<group>";
-		};
-		5824C3C52DD7253500233597 /* apps_config */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3BE2DD7253500233597 /* funnycat */,
-				5824C3C32DD7253500233597 /* funnydog */,
-				5824C4472DDB3E0B00233597 /* apps.xlsx */,
-			);
-			path = apps_config;
-			sourceTree = "<group>";
-		};
-		5824C3E22DD7253500233597 /* generated_apps */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = generated_apps;
-			sourceTree = "<group>";
-		};
-		5824C3E42DD7253500233597 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				5824C4332DDADF4300233597 /* actions */,
-				5824C3E32DD7253500233597 /* Fastfile */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
-		5824C3E62DD7253500233597 /* template */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3E52DD7253500233597 /* Info.plist */,
-			);
-			path = template;
-			sourceTree = "<group>";
-		};
-		5824C3E92DD7253500233597 /* template StickerPackExtension */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3E72DD7253500233597 /* Info.plist */,
-				5824C3E82DD7253500233597 /* Stickers.xcstickers */,
-			);
-			path = "template StickerPackExtension";
-			sourceTree = "<group>";
-		};
-		5824C3EB2DD7253500233597 /* template */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3E42DD7253500233597 /* fastlane */,
-				5824C3E62DD7253500233597 /* template */,
-				5824C3E92DD7253500233597 /* template StickerPackExtension */,
-				5824C3EA2DD7253500233597 /* template.xcodeproj */,
-			);
-			path = template;
-			sourceTree = "<group>";
-		};
-		5824C3F22DD7253500233597 /* StickerPacks */ = {
-			isa = PBXGroup;
-			children = (
-				5824C3C52DD7253500233597 /* apps_config */,
-				5824C3E22DD7253500233597 /* generated_apps */,
-				5824C3EB2DD7253500233597 /* template */,
-				5824C3EC2DD7253500233597 /* AuthKey_X22F658K7F.p8 */,
-				5824C3ED2DD7253500233597 /* create_bundleIds.py */,
-				5824C4302DD747ED00233597 /* build_upload.py */,
-				5824C3F02DD7253500233597 /* generate_apps.py */,
-			);
-			path = StickerPacks;
-			sourceTree = "<group>";
-		};
-		5824C3F32DD7253500233597 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5824C41C2DD7253500233597 /* template.app */,
-				5824C41E2DD7253500233597 /* template StickerPackExtension.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5824C4332DDADF4300233597 /* actions */ = {
-			isa = PBXGroup;
-			children = (
-				5824C4322DDADF4300233597 /* get_bundleid.rb */,
-			);
-			path = actions;
-			sourceTree = "<group>";
-		};
 		58324B462CB6801D0044C85A /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +253,110 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		583D73CA2DDC8E2600D34E5D /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				583D73C82DDC8E2600D34E5D /* cloud.png */,
+				583D73C92DDC8E2600D34E5D /* moon.png */,
+			);
+			path = stickers;
+			sourceTree = "<group>";
+		};
+		583D73CC2DDC8E2600D34E5D /* funnycat */ = {
+			isa = PBXGroup;
+			children = (
+				583D73CA2DDC8E2600D34E5D /* stickers */,
+				583D73CB2DDC8E2600D34E5D /* icon-1024.png */,
+			);
+			path = funnycat;
+			sourceTree = "<group>";
+		};
+		583D73CE2DDC8E2600D34E5D /* apps_config */ = {
+			isa = PBXGroup;
+			children = (
+				583D73CC2DDC8E2600D34E5D /* funnycat */,
+				583D73CD2DDC8E2600D34E5D /* apps.xlsx */,
+			);
+			path = apps_config;
+			sourceTree = "<group>";
+		};
+		583D73CF2DDC8E2600D34E5D /* generated_apps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = generated_apps;
+			sourceTree = "<group>";
+		};
+		583D73D12DDC8E2600D34E5D /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				583D73D02DDC8E2600D34E5D /* get_bundleid.rb */,
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
+		583D73D52DDC8E2600D34E5D /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				583D73D12DDC8E2600D34E5D /* actions */,
+				583D73D22DDC8E2600D34E5D /* Fastfile */,
+				583D73D32DDC8E2600D34E5D /* README.md */,
+				583D73D42DDC8E2600D34E5D /* report.xml */,
+			);
+			path = fastlane;
+			sourceTree = "<group>";
+		};
+		583D73D72DDC8E2600D34E5D /* template */ = {
+			isa = PBXGroup;
+			children = (
+				583D73D62DDC8E2600D34E5D /* Info.plist */,
+			);
+			path = template;
+			sourceTree = "<group>";
+		};
+		583D73DA2DDC8E2600D34E5D /* template StickerPackExtension */ = {
+			isa = PBXGroup;
+			children = (
+				583D73D82DDC8E2600D34E5D /* Info.plist */,
+				583D73D92DDC8E2600D34E5D /* Stickers.xcstickers */,
+			);
+			path = "template StickerPackExtension";
+			sourceTree = "<group>";
+		};
+		583D73DC2DDC8E2600D34E5D /* template */ = {
+			isa = PBXGroup;
+			children = (
+				583D73D52DDC8E2600D34E5D /* fastlane */,
+				583D73D72DDC8E2600D34E5D /* template */,
+				583D73DA2DDC8E2600D34E5D /* template StickerPackExtension */,
+				583D73DB2DDC8E2600D34E5D /* template.xcodeproj */,
+			);
+			path = template;
+			sourceTree = "<group>";
+		};
+		583D73E12DDC8E2600D34E5D /* StickerPacks */ = {
+			isa = PBXGroup;
+			children = (
+				583D73CE2DDC8E2600D34E5D /* apps_config */,
+				583D73CF2DDC8E2600D34E5D /* generated_apps */,
+				583D73DC2DDC8E2600D34E5D /* template */,
+				583D73DD2DDC8E2600D34E5D /* AuthKey_X22F658K7F.p8 */,
+				583D73DE2DDC8E2600D34E5D /* build_upload.py */,
+				583D73DF2DDC8E2600D34E5D /* create_bundleIds.py */,
+				583D73E02DDC8E2600D34E5D /* generate_apps.py */,
+			);
+			path = StickerPacks;
+			sourceTree = "<group>";
+		};
+		583D73EA2DDC8E3000D34E5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				583D73EF2DDC8E3000D34E5D /* template.app */,
+				583D73F12DDC8E3000D34E5D /* template StickerPackExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		584D20C82CA28E5D008CE40F /* iMessageExt */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,8 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				58C607622C7EFA2F00097699 /* SwiftUIPreview */,
+				583D73E12DDC8E2600D34E5D /* StickerPacks */,
 				584D20C82CA28E5D008CE40F /* iMessageExt */,
-				5824C3F22DD7253500233597 /* StickerPacks */,
 				58C607612C7EFA2F00097699 /* Products */,
 				58C607712C7EFC3B00097699 /* Frameworks */,
 			);
@@ -441,6 +411,8 @@
 				58CDE8562DC31CFF0015B33B /* DrawingView.swift */,
 				58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */,
 				58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */,
+				583D73C02DDC7EC100D34E5D /* DragSortView.swift */,
+				583D73C42DDC80E800D34E5D /* DragListView.swift */,
 				58324B4B2CB76BE50044C85A /* Fonts */,
 				58CDE8622DCA04550015B33B /* 2.png */,
 				586449362DA663B8007EA0F8 /* 1.webp */,
@@ -552,8 +524,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5824C3F32DD7253500233597 /* Products */;
-					ProjectRef = 5824C3EA2DD7253500233597 /* template.xcodeproj */;
+					ProductGroup = 583D73EA2DDC8E3000D34E5D /* Products */;
+					ProjectRef = 583D73DB2DDC8E2600D34E5D /* template.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -565,18 +537,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5824C41C2DD7253500233597 /* template.app */ = {
+		583D73EF2DDC8E3000D34E5D /* template.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = template.app;
-			remoteRef = 5824C41B2DD7253500233597 /* PBXContainerItemProxy */;
+			remoteRef = 583D73EE2DDC8E3000D34E5D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5824C41E2DD7253500233597 /* template StickerPackExtension.appex */ = {
+		583D73F12DDC8E3000D34E5D /* template StickerPackExtension.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
 			path = "template StickerPackExtension.appex";
-			remoteRef = 5824C41D2DD7253500233597 /* PBXContainerItemProxy */;
+			remoteRef = 583D73F02DDC8E3000D34E5D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -609,22 +581,6 @@
 				58324B632CB76BF40044C85A /* Chewy-Regular.ttf in Resources */,
 				58324B712CB770C70044C85A /* PoppinsLatin-ExtraLight.otf in Resources */,
 				58324B622CB76BF40044C85A /* Piedra-Regular.ttf in Resources */,
-				5824C4342DDADF4300233597 /* get_bundleid.rb in Resources */,
-				5824C4002DD7253500233597 /* Stickers.xcstickers in Resources */,
-				5824C4052DD7253500233597 /* generate_apps.py in Resources */,
-				5824C4482DDB3E0B00233597 /* apps.xlsx in Resources */,
-				5824C4072DD7253500233597 /* Info.plist in Resources */,
-				5824C4082DD7253500233597 /* cloud.png in Resources */,
-				5824C40A2DD7253500233597 /* moon.png in Resources */,
-				5824C40B2DD7253500233597 /* Fastfile in Resources */,
-				5824C40C2DD7253500233597 /* Info.plist in Resources */,
-				5824C40D2DD7253500233597 /* create_bundleIds.py in Resources */,
-				5824C40E2DD7253500233597 /* icon-1024.png in Resources */,
-				5824C4312DD747ED00233597 /* build_upload.py in Resources */,
-				5824C4102DD7253500233597 /* AuthKey_X22F658K7F.p8 in Resources */,
-				5824C4122DD7253500233597 /* cloud.png in Resources */,
-				5824C4162DD7253500233597 /* moon.png in Resources */,
-				5824C4182DD7253500233597 /* icon-1024.png in Resources */,
 				58324B612CB76BF40044C85A /* Lemonada-Bold.ttf in Resources */,
 				58324B6D2CB770C70044C85A /* PoppinsLatin-Regular.ttf in Resources */,
 				58324B5A2CB76BF40044C85A /* Arbutus-Regular.ttf in Resources */,
@@ -654,6 +610,7 @@
 			files = (
 				58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */,
 				58324B782CB7D2A60044C85A /* MakeStickerFontView.swift in Sources */,
+				583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */,
 				58CDE8572DC31CFF0015B33B /* DrawingView.swift in Sources */,
 				58C6077B2C7EFF1C00097699 /* MoreTextView.swift in Sources */,
 				58CDE8612DCA03690015B33B /* DrawingCanvasView.swift in Sources */,
@@ -664,6 +621,7 @@
 				58324B442CB680190044C85A /* UIColorExt.swift in Sources */,
 				58324B7A2CB7D3240044C85A /* MakeStickerFontColorView.swift in Sources */,
 				58324B7E2CBA4E290044C85A /* MakeStickerLabelsView.swift in Sources */,
+				583D73C12DDC7EC100D34E5D /* DragSortView.swift in Sources */,
 				58CDE85F2DC9F0490015B33B /* PKDrawingView.swift in Sources */,
 				58C607792C7EFDF600097699 /* ExpandTextView.swift in Sources */,
 				58C607642C7EFA2F00097699 /* SwiftUIPreviewApp.swift in Sources */,

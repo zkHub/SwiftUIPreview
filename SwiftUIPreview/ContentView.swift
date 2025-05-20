@@ -49,7 +49,10 @@ struct ContentView: View {
                 NavigationLink(destination: DrawingView()) { Text("CanvasView") }
                 NavigationLink(destination: DrawingOverlayView(baseImage: UIImage(named: "2")!)) { Text("DrawingOverlayView") }
                 NavigationLink(destination: PKDrawingView()) { Text("PKDrawingView") }
-
+                
+                NavigationLink("CustomDragSortView", destination: CustomDragSortView())
+                
+                NavigationLink("DragReorderListView", destination: DragReorderListView())
             }
             
         })
