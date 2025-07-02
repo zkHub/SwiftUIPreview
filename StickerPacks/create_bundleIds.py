@@ -11,11 +11,14 @@ BUNDLE_PREFIX = "com.getsticker.stickerpack."
 base_url = 'https://api.appstoreconnect.apple.com/v1'
 
 def make_jwt():
-    header = {"alg":"ES256","kid":KEY_ID,"typ":"JWT"}
+    header = {"alg": "ES256", "kid": KEY_ID, "typ": "JWT"}
     now = int(time.time())
-    payload = {"iss":ISSUER_ID,"iat":now,"exp":now+600,"aud":"appstoreconnect-v1"}
+    payload = {"iss": ISSUER_ID, "iat": now, "exp": now+600, "aud": "appstoreconnect-v1"}
     token = jwt.encode(payload, PRIVATE_KEY, algorithm="ES256", headers=header)
     return token.decode("utf-8") if isinstance(token, bytes) else token
+
+jwt_token = make_jwt()
+headers = { "Authorization": f"Bearer {jwt_token}", "Content-Type": "application/json"}
 
 def exists_bundle(bundle, headers):
     r = requests.get("https://api.appstoreconnect.apple.com/v1/bundleIds",
@@ -42,12 +45,6 @@ def create_app(bundle, name, headers):
     return r.ok, r.json()
 
 # ————— 主流程 —————————————————————————————
-jwt_token = make_jwt()
-headers = {
-    "Authorization": f"Bearer {jwt_token}",
-    "Content-Type": "application/json"
-}
-
 wb = openpyxl.load_workbook(EXCEL_PATH)
 ws = wb.active
 cols = [cell.value for cell in next(ws.iter_rows(min_row=1, max_row=1))]
