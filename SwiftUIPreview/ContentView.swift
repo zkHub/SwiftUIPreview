@@ -8,6 +8,7 @@
 import SwiftUI
 import Kingfisher
 import KingfisherWebP
+import Lottie
 
 struct ContentView: View {
     
@@ -19,6 +20,18 @@ struct ContentView: View {
 
             List {
                 
+                LottieView(animation: .named("swipeLeft"))
+                    .playing(loopMode: .loop)  // 或 .playing(), .paused()
+                    .frame(width: 200, height: 200)
+                    .background(Color.black)
+                
+                LottieView {
+                    try await DotLottieFile.named("swipeLeft1")  // 加载 .lottie 文件
+                }
+                .playing(loopMode: .loop)
+                .frame(width: 200, height: 200)
+                .background(Color.black)
+
                 Text("地方的地方地方的地方大幅度发的大")
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
@@ -53,6 +66,8 @@ struct ContentView: View {
                 NavigationLink("CustomDragSortView", destination: CustomDragSortView())
                 
                 NavigationLink("DragReorderListView", destination: DragReorderListView())
+                NavigationLink("OCCreateView", destination: OCCreateView())
+
             }
             
         })

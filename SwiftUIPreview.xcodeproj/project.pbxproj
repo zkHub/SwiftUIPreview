@@ -35,6 +35,7 @@
 		58324B7E2CBA4E290044C85A /* MakeStickerLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */; };
 		583D73C12DDC7EC100D34E5D /* DragSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C02DDC7EC100D34E5D /* DragSortView.swift */; };
 		583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C42DDC80E800D34E5D /* DragListView.swift */; };
+		583D74022DE43DCF00D34E5D /* OCCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D74012DE43DCF00D34E5D /* OCCreateView.swift */; };
 		584D20C72CA28E5D008CE40F /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584D20C62CA28E5D008CE40F /* Messages.framework */; };
 		584D20CA2CA28E5D008CE40F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D20C92CA28E5D008CE40F /* MessagesViewController.swift */; };
 		584D20CD2CA28E5D008CE40F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 584D20CC2CA28E5D008CE40F /* Base */; };
@@ -43,6 +44,9 @@
 		586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 586449342DA661F9007EA0F8 /* KingfisherWebP */; };
 		586449372DA663B8007EA0F8 /* 1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 586449362DA663B8007EA0F8 /* 1.webp */; };
 		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
+		589E751C2E0A4D4500EBFBEE /* swipeLeft.json in Resources */ = {isa = PBXBuildFile; fileRef = 589E751B2E0A4D4500EBFBEE /* swipeLeft.json */; };
+		589E75202E0A4E4100EBFBEE /* swipeLeft1.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */; };
+		589E752E2E0BDB0A00EBFBEE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589E752D2E0BDB0A00EBFBEE /* TestView.swift */; };
 		58C478E12CA545C60069CE19 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 58C478E02CA545C60069CE19 /* Lottie */; };
 		58C478E32CA695A60069CE19 /* MakeStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E22CA695A60069CE19 /* MakeStickerView.swift */; };
 		58C478E52CA699150069CE19 /* MakeStickerEidtorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */; };
@@ -150,6 +154,7 @@
 		583D73DE2DDC8E2600D34E5D /* build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = build_upload.py; sourceTree = "<group>"; };
 		583D73DF2DDC8E2600D34E5D /* create_bundleIds.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_bundleIds.py; sourceTree = "<group>"; };
 		583D73E02DDC8E2600D34E5D /* generate_apps.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = generate_apps.py; sourceTree = "<group>"; };
+		583D74012DE43DCF00D34E5D /* OCCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCCreateView.swift; sourceTree = "<group>"; };
 		584D20C52CA28E5D008CE40F /* iMessageExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		584D20C62CA28E5D008CE40F /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		584D20C92CA28E5D008CE40F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +163,9 @@
 		584D20D02CA28E5E008CE40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586449362DA663B8007EA0F8 /* 1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.webp; sourceTree = "<group>"; };
 		586449532DAF6040007EA0F8 /* GuideMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideMaskView.swift; sourceTree = "<group>"; };
+		589E751B2E0A4D4500EBFBEE /* swipeLeft.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = swipeLeft.json; sourceTree = "<group>"; };
+		589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipeLeft1.lottie; sourceTree = "<group>"; };
+		589E752D2E0BDB0A00EBFBEE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		58C478E22CA695A60069CE19 /* MakeStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeStickerView.swift; sourceTree = "<group>"; };
 		58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeStickerEidtorView.swift; sourceTree = "<group>"; };
 		58C607602C7EFA2F00097699 /* SwiftUIPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -413,9 +421,13 @@
 				58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */,
 				583D73C02DDC7EC100D34E5D /* DragSortView.swift */,
 				583D73C42DDC80E800D34E5D /* DragListView.swift */,
+				583D74012DE43DCF00D34E5D /* OCCreateView.swift */,
+				589E752D2E0BDB0A00EBFBEE /* TestView.swift */,
 				58324B4B2CB76BE50044C85A /* Fonts */,
 				58CDE8622DCA04550015B33B /* 2.png */,
 				586449362DA663B8007EA0F8 /* 1.webp */,
+				589E751B2E0A4D4500EBFBEE /* swipeLeft.json */,
+				589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */,
 				58C607672C7EFA3100097699 /* Assets.xcassets */,
 				58C607742C7EFC5D00097699 /* skad1.plist */,
 				58C607752C7EFC5D00097699 /* skad2.plist */,
@@ -576,8 +588,10 @@
 				58324B722CB770C70044C85A /* PoppinsLatin-Bold.otf in Resources */,
 				58324B5B2CB76BF40044C85A /* LeckerliOne-Regular.ttf in Resources */,
 				58324B5C2CB76BF40044C85A /* SpicyRice-Regular.ttf in Resources */,
+				589E751C2E0A4D4500EBFBEE /* swipeLeft.json in Resources */,
 				58C607772C7EFC5D00097699 /* skad2.plist in Resources */,
 				58324B5F2CB76BF40044C85A /* Fruktur-Regular.ttf in Resources */,
+				589E75202E0A4E4100EBFBEE /* swipeLeft1.lottie in Resources */,
 				58324B632CB76BF40044C85A /* Chewy-Regular.ttf in Resources */,
 				58324B712CB770C70044C85A /* PoppinsLatin-ExtraLight.otf in Resources */,
 				58324B622CB76BF40044C85A /* Piedra-Regular.ttf in Resources */,
@@ -609,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */,
+				583D74022DE43DCF00D34E5D /* OCCreateView.swift in Sources */,
 				58324B782CB7D2A60044C85A /* MakeStickerFontView.swift in Sources */,
 				583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */,
 				58CDE8572DC31CFF0015B33B /* DrawingView.swift in Sources */,
@@ -631,6 +646,7 @@
 				58C607812C85C04B00097699 /* FontView.swift in Sources */,
 				58324B762CB772080044C85A /* UIFontExt.swift in Sources */,
 				58C6077D2C8028C100097699 /* ColorView.swift in Sources */,
+				589E752E2E0BDB0A00EBFBEE /* TestView.swift in Sources */,
 				58C478E32CA695A60069CE19 /* MakeStickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
