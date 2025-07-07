@@ -185,6 +185,7 @@
 		58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKDrawingView.swift; sourceTree = "<group>"; };
 		58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
 		58CDE8622DCA04550015B33B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		58D7AFD42E1B5C69003AF0E4 /* create_build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_build_upload.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +352,7 @@
 				583D73DD2DDC8E2600D34E5D /* AuthKey_X22F658K7F.p8 */,
 				583D73DE2DDC8E2600D34E5D /* build_upload.py */,
 				583D73DF2DDC8E2600D34E5D /* create_bundleIds.py */,
+				58D7AFD42E1B5C69003AF0E4 /* create_build_upload.py */,
 				583D73E02DDC8E2600D34E5D /* generate_apps.py */,
 			);
 			path = StickerPacks;
