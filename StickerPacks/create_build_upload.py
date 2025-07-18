@@ -279,42 +279,42 @@ def process_app():
 process_app()
 
 
-# ————— 打包上传App —————————————————————————————
-
-def build_upload():
-    # 获取当前工作目录
-    base_dir = os.getcwd()
-    # 构建项目路径
-    project_path = os.path.join(base_dir, "generated_apps", app_name)
-    # 检查项目路径是否存在
-    if not os.path.isdir(project_path):
-        print(f'项目目录 {project_path} 不存在')
-        sys.exit(1)
-    # 切换到项目目录
-    os.chdir(project_path)
-    print(f'开始上传 {app_name}...')
-    
-    # 使用 subprocess.Popen 实时打印输出
-    process = subprocess.Popen(
-        ['fastlane', 'build_and_upload'],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True
-    )
-
-    # 实时读取并打印输出
-    for line in process.stdout:
-        print(line, end='')
-
-    process.wait()
-
-    if process.returncode == 0:
-        print(f'✅ {app_name} 上传成功')
-    else:
-        print(f'❎{app_name} 上传失败，返回码：{process.returncode}')
-        sys.exit(1)
-    # 返回上级目录
-    os.chdir(base_dir)
-
-
-build_upload()
+## ————— 打包上传App —————————————————————————————
+#
+#def build_upload():
+#    # 获取当前工作目录
+#    base_dir = os.getcwd()
+#    # 构建项目路径
+#    project_path = os.path.join(base_dir, "generated_apps", app_name)
+#    # 检查项目路径是否存在
+#    if not os.path.isdir(project_path):
+#        print(f'项目目录 {project_path} 不存在')
+#        sys.exit(1)
+#    # 切换到项目目录
+#    os.chdir(project_path)
+#    print(f'开始上传 {app_name}...')
+#    
+#    # 使用 subprocess.Popen 实时打印输出
+#    process = subprocess.Popen(
+#        ['fastlane', 'build_and_upload'],
+#        stdout=subprocess.PIPE,
+#        stderr=subprocess.STDOUT,
+#        text=True
+#    )
+#
+#    # 实时读取并打印输出
+#    for line in process.stdout:
+#        print(line, end='')
+#
+#    process.wait()
+#
+#    if process.returncode == 0:
+#        print(f'✅ {app_name} 上传成功')
+#    else:
+#        print(f'❎{app_name} 上传失败，返回码：{process.returncode}')
+#        sys.exit(1)
+#    # 返回上级目录
+#    os.chdir(base_dir)
+#
+#
+#build_upload()

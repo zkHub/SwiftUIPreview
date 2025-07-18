@@ -186,6 +186,9 @@
 		58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
 		58CDE8622DCA04550015B33B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		58D7AFD42E1B5C69003AF0E4 /* create_build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_build_upload.py; sourceTree = "<group>"; };
+		58D7AFDA2E1BA568003AF0E4 /* screenshot.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = screenshot.py; sourceTree = "<group>"; };
+		58D7AFF02E289D97003AF0E4 /* get_reviews.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = get_reviews.py; sourceTree = "<group>"; };
+		58D7AFF62E28E83E003AF0E4 /* AuthKey_9Q394F5TP7.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_9Q394F5TP7.p8; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +357,7 @@
 				583D73DF2DDC8E2600D34E5D /* create_bundleIds.py */,
 				58D7AFD42E1B5C69003AF0E4 /* create_build_upload.py */,
 				583D73E02DDC8E2600D34E5D /* generate_apps.py */,
+				58D7AFDA2E1BA568003AF0E4 /* screenshot.py */,
 			);
 			path = StickerPacks;
 			sourceTree = "<group>";
@@ -381,6 +385,7 @@
 		58C607572C7EFA2F00097699 = {
 			isa = PBXGroup;
 			children = (
+				58D7AFED2E289D48003AF0E4 /* Neku */,
 				58C607622C7EFA2F00097699 /* SwiftUIPreview */,
 				583D73E12DDC8E2600D34E5D /* StickerPacks */,
 				584D20C82CA28E5D008CE40F /* iMessageExt */,
@@ -454,6 +459,15 @@
 				582D8FF82D1518E3004AE8DC /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58D7AFED2E289D48003AF0E4 /* Neku */ = {
+			isa = PBXGroup;
+			children = (
+				58D7AFF02E289D97003AF0E4 /* get_reviews.py */,
+				58D7AFF62E28E83E003AF0E4 /* AuthKey_9Q394F5TP7.p8 */,
+			);
+			path = Neku;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

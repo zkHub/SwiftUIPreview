@@ -13,6 +13,8 @@ struct TestView: View {
         VStack {
             Spacer()
             ZStack(alignment: .bottom) {
+                LoadingDotsView()
+                
                 Image("bg_tip_follow")
                     .resizable()
                     .frame(width: 316, height: 71)
@@ -51,4 +53,18 @@ struct TestView: View {
 
 #Preview {
     TestView()
+}
+
+struct LoadingDotsView: View {
+    @State private var dotCount = 1
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    let maxDots: Int = 3
+
+    var body: some View {
+        let dots = String(repeating: ".", count: dotCount)
+        Text("Loading\(dots)")
+            .onReceive(timer) { _ in
+                dotCount = dotCount % maxDots + 1
+            }
+    }
 }
