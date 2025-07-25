@@ -9,16 +9,17 @@ ISSUER_ID = '69a6de8b-552c-47e3-e053-5b8c7c11a4d1'  # 替换为你的Issuer ID
 PRIVATE_KEY = open('AuthKey_9Q394F5TP7.p8', 'r').read()  # 认证文件路径
 APP_ID = '1630343674'  # 你的应用ID
 BASE_URL = 'https://api.appstoreconnect.apple.com/v1'
-VERSIONS = ['1.550.12']
+VERSIONS = []
 
 # 生成JWT认证令牌
 def make_jwt():
     header = {'alg': 'ES256', 'kid': KEY_ID, 'typ': 'JWT'}
+    now = int(time.time())
     payload = {
         'iss': ISSUER_ID,
         'aud': 'appstoreconnect-v1',
-        'iat': int(time.time()),
-        'exp': int(time.time()) + 1200  # 20分钟有效期
+        'iat': now,
+        'exp': now + 1200  # 20分钟有效期
     }
     return jwt.encode(payload, PRIVATE_KEY, algorithm='ES256', headers=header)
 
