@@ -13,18 +13,6 @@ struct TestView: View {
         VStack {
             Spacer()
             ZStack(alignment: .bottom) {
-                LottieView(animation: .named("swipeLeft"))
-                    .playing(loopMode: .loop)  // 或 .playing(), .paused()
-                    .frame(width: 200, height: 200)
-                    .background(Color.black)
-                
-                LottieView {
-                    try await DotLottieFile.named("DcmXDCJUay")  // 加载 .lottie 文件
-                }
-                .playing(loopMode: .loop)
-                .frame(width: 200, height: 200)
-                .background(Color.black)
-                
                 
                 LoadingDotsView()
                 
