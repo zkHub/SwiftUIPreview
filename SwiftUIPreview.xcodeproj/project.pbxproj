@@ -47,6 +47,7 @@
 		589E751C2E0A4D4500EBFBEE /* swipeLeft.json in Resources */ = {isa = PBXBuildFile; fileRef = 589E751B2E0A4D4500EBFBEE /* swipeLeft.json */; };
 		589E75202E0A4E4100EBFBEE /* swipeLeft1.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */; };
 		589E752E2E0BDB0A00EBFBEE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589E752D2E0BDB0A00EBFBEE /* TestView.swift */; };
+		58B1A1F92E372879002D26B7 /* DcmXDCJUay.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 58B1A1F82E372879002D26B7 /* DcmXDCJUay.lottie */; };
 		58C478E12CA545C60069CE19 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 58C478E02CA545C60069CE19 /* Lottie */; };
 		58C478E32CA695A60069CE19 /* MakeStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E22CA695A60069CE19 /* MakeStickerView.swift */; };
 		58C478E52CA699150069CE19 /* MakeStickerEidtorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */; };
@@ -166,6 +167,7 @@
 		589E751B2E0A4D4500EBFBEE /* swipeLeft.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = swipeLeft.json; sourceTree = "<group>"; };
 		589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipeLeft1.lottie; sourceTree = "<group>"; };
 		589E752D2E0BDB0A00EBFBEE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		58B1A1F82E372879002D26B7 /* DcmXDCJUay.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = DcmXDCJUay.lottie; sourceTree = "<group>"; };
 		58C478E22CA695A60069CE19 /* MakeStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeStickerView.swift; sourceTree = "<group>"; };
 		58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeStickerEidtorView.swift; sourceTree = "<group>"; };
 		58C607602C7EFA2F00097699 /* SwiftUIPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -433,6 +435,7 @@
 				586449362DA663B8007EA0F8 /* 1.webp */,
 				589E751B2E0A4D4500EBFBEE /* swipeLeft.json */,
 				589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */,
+				58B1A1F82E372879002D26B7 /* DcmXDCJUay.lottie */,
 				58C607672C7EFA3100097699 /* Assets.xcassets */,
 				58C607742C7EFC5D00097699 /* skad1.plist */,
 				58C607752C7EFC5D00097699 /* skad2.plist */,
@@ -603,6 +606,7 @@
 				58324B5B2CB76BF40044C85A /* LeckerliOne-Regular.ttf in Resources */,
 				58324B5C2CB76BF40044C85A /* SpicyRice-Regular.ttf in Resources */,
 				589E751C2E0A4D4500EBFBEE /* swipeLeft.json in Resources */,
+				58B1A1F92E372879002D26B7 /* DcmXDCJUay.lottie in Resources */,
 				58C607772C7EFC5D00097699 /* skad2.plist in Resources */,
 				58324B5F2CB76BF40044C85A /* Fruktur-Regular.ttf in Resources */,
 				589E75202E0A4E4100EBFBEE /* swipeLeft1.lottie in Resources */,

@@ -26,7 +26,7 @@ struct ContentView: View {
                     .background(Color.black)
                 
                 LottieView {
-                    try await DotLottieFile.named("swipeLeft1")  // 加载 .lottie 文件
+                    try await DotLottieFile.named("DcmXDCJUay")  // 加载 .lottie 文件
                 }
                 .playing(loopMode: .loop)
                 .frame(width: 200, height: 200)
