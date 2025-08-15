@@ -19,18 +19,7 @@ struct ContentView: View {
         NavigationView(content: {
 
             List {
-                
-                LottieView(animation: .named("swipeLeft"))
-                    .playing(loopMode: .loop)  // 或 .playing(), .paused()
-                    .frame(width: 200, height: 200)
-                    .background(Color.black)
-                
-                LottieView {
-                    try await DotLottieFile.named("DcmXDCJUay")  // 加载 .lottie 文件
-                }
-                .playing(loopMode: .loop)
-                .frame(width: 200, height: 200)
-                .background(Color.black)
+                NavigationLink("TestView", destination: TestView())
 
                 Text("地方的地方地方的地方大幅度发的大")
                     .lineLimit(1)

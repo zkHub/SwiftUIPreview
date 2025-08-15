@@ -9,8 +9,32 @@ import SwiftUI
 import Lottie
 
 struct TestView: View {
+    @State var showLottie = false
+    
     var body: some View {
         VStack {
+            LottieView(animation: .named("swipeLeft"))
+                .playing(loopMode: .loop)  // 或 .playing(), .paused()
+                .frame(width: 200, height: 200)
+                .background(Color.black)
+            
+            Button {
+                showLottie = !showLottie
+            } label: {
+                Text("ShowLottie")
+            }
+            
+            if showLottie {
+                LottieView {
+                    try await DotLottieFile.named("vipWelcome")
+                }
+                .playing(loopMode: .loop)
+                .aspectRatio(375.0/500.0, contentMode: .fit)
+                .offset(y: -20)
+                .allowsHitTesting(false)
+            }
+
+            
             Spacer()
             ZStack(alignment: .bottom) {
                 
@@ -48,7 +72,6 @@ struct TestView: View {
             Color.clear.frame(height: 2)
 
         }
-//        Color.clear.frame(height: 2)
     }
 }
 
