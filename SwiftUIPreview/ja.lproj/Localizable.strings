@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  SwiftUIPreview
+
+  Created by zk on 2025/9/9.
+  
+*/
+"INFJ" = "INFJ";
+"Advocate" = "提唱者";
+"OOTD" = "OOTD";
+"Much Empathy" = "高い共感力";
+"Insight Guards Ideals" = "洞察が理想を守る";
+"\"Counselor Personality\": Niche but Deep" = "「カウンセラー性格」：ニッチで深い";
+
+"ENFP" = "ENFP";
+"Campaigner" = "運動家";
+"Curiosity" = "好奇心";
+"Back to School" = "学校に戻る";
+"Novelty & Passion-Driven" = "新奇・情熱主導";
+"\"Cheerful Puppy\": Enthusiastic, creative" = "「ハッピーパピー」：熱狂的、創造的";
+
+"INTJ" = "INTJ";
+"Architect" = "建築家";
+"Sharp Roast" = "鋭いツッコミ";
+"Focus on Work" = "仕事に集中";
+"Reason Builds Future" = "理性が未来を築く";
+"\"Cool top student\"：calmness, strategy" = "「クールトップ生」：冷静、戦略";

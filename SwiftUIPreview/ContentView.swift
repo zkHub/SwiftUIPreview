@@ -19,7 +19,9 @@ struct ContentView: View {
         NavigationView(content: {
 
             List {
+                NavigationLink("TextContentView", destination: TextContentView())
                 NavigationLink("TestView", destination: TestView())
+                NavigationLink("TapLikeAnimationView", destination: TapLikeAnimationView())
 
                 Text("地方的地方地方的地方大幅度发的大")
                     .lineLimit(1)

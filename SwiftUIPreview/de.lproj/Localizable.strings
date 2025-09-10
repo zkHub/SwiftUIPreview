@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  SwiftUIPreview
+
+  Created by zk on 2025/9/9.
+  
+*/
+"INFJ" = "INFJ";
+"Advocate" = "Fürsprecher";
+"OOTD" = "OOTD";
+"Much Empathy" = "Viel Empathie";
+"Insight Guards Ideals" = "Einsicht bewahrt Ideale";
+"\"Counselor Personality\": Niche but Deep" = "« Beraterpersönlichkeit » : Nischig, Tief";
+
+"ENFP" = "ENFP";
+"Campaigner" = "Kämpfer";
+"Curiosity" = "Neugier";
+"Back to School" = "Zurück zur Schule";
+"Novelty & Passion-Driven" = "Neuheit & Leidenschaft-Getrieben";
+"\"Cheerful Puppy\": Enthusiastic, creative" = "« Fröhlicher Welpe » : Enthusiastisch, Kreativ";
+
+"INTJ" = "INTJ";
+"Architect" = "Architekt";
+"Sharp Roast" = "Scharfe Kritik";
+"Focus on Work" = "Sich auf die Arbeit konzentrieren";
+"Reason Builds Future" = "Vernunft baut die Zukunft";
+"\"Cool top student\"：calmness, strategy" = "« Cooler Spitzenstudent » : Ruhe, Strategie";

@@ -37,4 +37,8 @@ extension UIFont {
         UIFont(name: "PoppinsLatin-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
     }
     
+    static func VAGRoundedNextBlack(size: CGFloat) -> UIFont {
+        UIFont(name: "VAGRoundedNext-Black", size: size) ?? UIFont.systemFont(ofSize: size)
+    }
+
 }

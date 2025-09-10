@@ -46,4 +46,8 @@ extension Font {
         Font.custom("PoppinsLatin-Regular", size: size)
     }
     
+    static func VAGRoundedNextBlack(size: CGFloat) -> Font {
+        Font.custom("VAGRoundedNext-Black", size: size)
+    }
+    
 }
