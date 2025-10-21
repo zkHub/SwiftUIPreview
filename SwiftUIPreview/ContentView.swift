@@ -14,11 +14,13 @@ struct ContentView: View {
     
     @State private var random1: Int = 0
     @State private var random2: Int = 0
+    @State var showTabTest = false
     
     var body: some View {
         NavigationView(content: {
 
             List {
+                NavigationLink("TabScrollSafeAreaTest", destination: TabScrollSafeAreaTest())
                 NavigationLink("TextContentView", destination: TextContentView())
                 NavigationLink("TestView", destination: TestView())
                 NavigationLink("TapLikeAnimationView", destination: TapLikeAnimationView())
@@ -41,6 +43,7 @@ struct ContentView: View {
                 
                 Button {
                     differentForSKAdNetworks()
+                    showTabTest = true
                 } label: {
                     Text("SKAdNetworks Diff")
                 }
@@ -59,6 +62,8 @@ struct ContentView: View {
                 NavigationLink("DragReorderListView", destination: DragReorderListView())
                 NavigationLink("OCCreateView", destination: OCCreateView())
 
+                NavigationLink("WheelPickerView", destination: WheelPickerView(store: WheelPickerStore(options: (0..<10).map { "Option \($0)" })))
+                
             }
             
         })
@@ -73,6 +78,14 @@ struct ContentView: View {
             }
             print(random1, random2)
         })
+        .overlay {
+            if showTabTest {
+                TabScrollSafeAreaTest()
+                    .onTapGesture {
+                        showTabTest = false
+                    }
+            }
+        }
     }
     
     

@@ -10,129 +10,111 @@ import Lottie
 import Kingfisher
 
 struct TestView: View {
+    @State var save = false
     @State var showLottie = false
     @State var att = AttributedString("abc123ABC", attributes: AttributeContainer([NSAttributedString.Key.strokeWidth : 3, .strokeColor: UIColor.blue]))
+    
+    @State var text: String = ""
+    @State var text1: String = ""
+    @FocusState private var focusedField: String?
+    
+    @ViewBuilder
+    func commentGuide() -> some View {
+        Image("img_comment_guidebox").resizable().frame(width: 287, height: 99)
+            .overlay(alignment: .topLeading) {
+                Image("icon_Select").resizable()
+                    .frame(width: 42, height: 42)
+                    .clipShape(Circle())
+                    .padding(.top, 8).padding(.leading, 16)
+            }
+            .overlay(alignment: .bottomTrailing) {
+                Text("Waiting for your message... tick-tock~").font(.PoppinsLatinMedium(size: 13)).foregroundStyle(Color.black).minimumScaleFactor(0.3)
+                    .frame(width: 181, height: 44)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 34).padding(.trailing, 22)
+            }
+            .shadow(color: Color.black.opacity(0.3), radius: 10, y: 6)
+            .padding(.bottom, 80)
+    }
+    
+    
     var body: some View {
         VStack {
-            IDCardViewRepresentable(type: 0)
-                .frame(width: 343, height: 500)
-                .padding(.top, 100)
+
+            commentGuide()
             
-            
-//            Image("bg_card1").resizable().frame(width: 343, height: 100)
-//                .overlay {
-//                    VStack(spacing: 0) {
-//                        AttributedText(text: Binding.constant("INFJ-Advocate"), font: UIFont.VAGRoundedNextSemiBold(size: 37) , colors: [UIColor.white], strokeWidth: 5, strokeColor: UIColor.black, maxSize: CGSize(width: 227, height: 50))
-////                            .frame(width: 127, height: 40)
-////                            .shadow(color: Color.black, radius: 0, y: 4)
-////                            .padding(.top, 38)
-//                        
-////                        AttributedText(text: Binding(get: { "Insight Guards Ideals" }, set: { _ in }), font: UIFont.VAGRoundedNextBlack(size: 14) , colors: [UIColor.white], strokeWidth: 2, strokeColor: UIColor.black)
-////                            .frame(height: 27)
-////                            .shadow(color: Color.black, radius: 0, y: 1)
-////                            .padding(.top, 20)
-////                        
-////                        HStack {
-////                            AttributedText(text: Binding(get: { "OOTD" }, set: { _ in }), font: UIFont.VAGRoundedNextBlack(size: 14) , colors: [UIColor(hexRGB: "#F4D25F"), UIColor(hexRGB: "#E86A53")], strokeWidth: 3, strokeColor: UIColor.black)
-////                                .frame(height: 27)
-////                                .shadow(color: Color.black, radius: 0, y: 3)
-////                                .padding(.top, 53)
-////                                .padding(.leading, 18)
-////                                .rotationEffect(Angle(degrees: -6))
-////                            
-////                            Spacer()
-////                        }
-////                        
-////                        HStack {
-////                            Spacer()
-////
-////                            AttributedText(text: Binding(get: { "Empathy Overload" }, set: { _ in }), font: UIFont.VAGRoundedNextBlack(size: 14) , colors: [UIColor(hexRGB: "#F4D25F"), UIColor(hexRGB: "#E86A53")], strokeWidth: 3, strokeColor: UIColor.black)
-////                                .frame(height: 27)
-////                                .shadow(color: Color.black, radius: 0, y: 3)
-////                                .padding(.top, 98)
-////                                .padding(.leading, 18)
-////                                .rotationEffect(Angle(degrees: 8))
-////                            
-////                        }
-//                        
-//                        Spacer()
-//
-//                    }
-//                }
-            
-            LottieView(animation: .named("swipeLeft"))
-                .playing(loopMode: .loop)  // 或 .playing(), .paused()
-                .frame(width: 200, height: 200)
-                .background(Color.black)
-            
-            Button {
-                showLottie = !showLottie
-            } label: {
-                Text("ShowLottie")
-            }
-            
-            if showLottie {
-                LottieView {
-                    try await DotLottieFile.named("vipWelcome")
+            ZStack {
+                VStack {
+                    Color.clear.frame(height: 10)
+                    Color.black
+                    Color.blue
+                    Color.red
                 }
-                .playing(loopMode: .loop)
-                .aspectRatio(375.0/500.0, contentMode: .fit)
-                .offset(y: -20)
-                .allowsHitTesting(false)
+                
+
+//                        .blur(radius: 40) // 模糊半径
+//                        .frame(width: 300, height: 200)
+                Rectangle().fill(.ultraThinMaterial)
+                Color.white.opacity(0.8)
+//                Rectangle().fill(.ultraThinMaterial)
+
+//                    .background(.ultraThinMaterial)
+//                    .blur(radius: 40)
+                
             }
+            
+            
+//            IDCardViewRepresentable(url: "", save: $save, type: 0, onClose: {
+//                
+//            })
+//                .frame(width: 343, height: 500)
+//                .padding(.top, 100)
+//                .padding(.bottom, 14)
+//            Button {
+//                save = true
+//            } label: {
+//                Text("Save").font(.PoppinsLatinBold(size: 16)).foregroundStyle(Color.white)
+//                    .frame(width: 250, height: 54)
+//                    .background(.red)
+//            }
+            
+//            LottieView(animation: .named("swipeLeft"))
+//                .playing(loopMode: .loop)  // 或 .playing(), .paused()
+//                .frame(width: 200, height: 200)
+//                .background(Color.black)
+//            
+//            LottieView {
+//                try await DotLottieFile.named("vipWelcome")
+//            }
+//            .playing(loopMode: .loop)
+//            .aspectRatio(375.0/500.0, contentMode: .fit)
+//            .offset(y: -20)
+//            .allowsHitTesting(false)
 
             
-            Spacer()
-            ZStack(alignment: .bottom) {
-                
-                LoadingDotsView()
-                
-                Image("bg_tip_follow")
-                    .resizable()
-                    .frame(width: 316, height: 71)
-                
-                Text("Follow after watching!")
-                    .font(.PoppinsLatinBold(size: 13))
-                    .foregroundStyle(Color.white)
-                    .minimumScaleFactor(0.5)
-                    .frame(width: 160, height: 38)
-                    .padding(.bottom, 16)
-                                
-                ZStack(alignment: .trailing) {
-                    Text("Follow")
-                        .font(.PoppinsLatinBold(size: 11))
-                        .foregroundStyle(Color(hex: "333333"))
-                        .minimumScaleFactor(0.5)
-                        .frame(width: 57, height: 24)
-                        .background(Color(hex: "FFE968"))
-                        .clipShape(Capsule())
-                        .background {
-                            Capsule()
-                                .shadow(color: Color(hex: "B80071"), radius: 0, y: 2.5)
-                        }
-                        .padding(.bottom, 24)
-                        .offset(x: 110)
-                }
-                .frame(maxWidth: .infinity)
-            }
-            .frame(width: 316, height: 71)
-            Color.clear.frame(height: 2)
+            LoadingDotsView()
 
         }
+
     }
 }
 
-#Preview {
-    IDCardViewRepresentable(type: 0)
-}
 
 #Preview {
-    IDCardViewRepresentable(type: 1)
+    TestView()
 }
 
-#Preview {
-    IDCardViewRepresentable(type: 2)
-}
+//#Preview {
+//    IDCardViewRepresentable(type: 0)
+//}
+//
+//#Preview {
+//    IDCardViewRepresentable(type: 1)
+//}
+//
+//#Preview {
+//    IDCardViewRepresentable(type: 2)
+//}
 
 struct LoadingDotsView: View {
     @State private var dotCount = 1
@@ -148,29 +130,163 @@ struct LoadingDotsView: View {
     }
 }
 
+//
+//  IDCardView.swift
+//  Avatar
+//
+//  Created by zk on 2025/9/10.
+//
+
+import SwiftUI
+import Kingfisher
+import Photos
+
+
+struct IDCardCreateView: View {
+    @State var url: String
+    var portal: String
+    var onClose: ()->Void
+    
+    @State private var save = false
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            let type = Int.random(in: 0...2)
+            let typeStr = type == 0 ? "INFJ" : (type == 1 ? "ENFP" : "INTJ")
+            HStack {
+                Spacer()
+                Button {
+//                    Collector.collect(["portal": portal, "Style": "\(typeStr)"], "IDCard_Close_Click")
+                    onClose()
+                } label: {
+                    Image("icon_close_2").resizable().frame(width: 24, height: 24).padding(20)
+                }
+            }
+            .frame(width: 343)
+
+            IDCardViewRepresentable(url: url, save: $save, type: type, onClose: {
+                onClose()
+            })
+            .frame(width: 343, height: 500)
+            .onAppear {
+//                Collector.collect(["portal": portal, "Style": "\(typeStr)"], "IDCard_Show")
+            }
+
+            Button {
+                save = true
+//                Collector.collect(["portal": portal, "Style": "\(typeStr)"], "IDCard_Save_Click")
+            } label: {
+                Text("Save").font(.PoppinsLatinBold(size: 16)).foregroundStyle(Color.white)
+                    .frame(width: 250, height: 54)
+//                    .background(LinearGradient(colors: Color.buttonGradient, startPoint: .leading, endPoint: .trailing))
+                    .clipShape(Capsule())
+            }
+            .padding(.top, 20)
+            .padding(.bottom, 100)
+
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black.opacity(0.6))
+        
+    }
+}
+
+
+
+
 struct IDCardViewRepresentable: UIViewRepresentable {
+    var url: String
+    @Binding var save: Bool
     var type: Int
+    var onClose: ()->Void
     typealias UIViewType = IDCardView
 
     func makeUIView(context: Context) -> IDCardView {
-        return IDCardView(frame: CGRect(x: 0, y: 0, width: 343, height: 500), type: type)
+        return IDCardView(frame: CGRect(x: 0, y: 0, width: 343, height: 500), type: type, url: url)
     }
     
     func updateUIView(_ uiView: IDCardView, context: Context) {
-        
+        if save {
+            uiView.saveScreenshot { suc in
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+                    save = false
+                    if suc {
+                        onClose()
+                    }
+                })
+            }
+        }
     }
-    
-    
     
 }
 
 
 
 class IDCardView: UIView {
+    var url: String
     var type: Int
     
-    init(frame: CGRect, type: Int) {
+    private var bgImg = UIImageView()
+    
+    
+    func setupSaveButton() {
+        let saveButton = UIButton(type: .custom)
+        saveButton.setTitle("Save".localizedString, for: .normal)
+        saveButton.addTarget(self, action: #selector(saveScreenshot), for: .touchUpInside)
+        // 创建 CAGradientLayer
+        let gradientLayer = CAGradientLayer()
+        // 设置渐变的颜色数组
+        gradientLayer.colors = [
+            UIColor(hexRGB: "#FB458F").cgColor,   // 起始颜色
+            UIColor(hexRGB: "#FF5DC2").cgColor   // 结束颜色
+        ]
+        // 设置渐变的起始和结束点 (0,0) 为左上角，(1,1) 为右下角
+        gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        // 设置渐变层的大小为视图的大小
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: 250, height: 54)
+        // 添加渐变层到视图的 layer 上
+        saveButton.layer.insertSublayer(gradientLayer, at: 0)
+        saveButton.layer.cornerRadius = 21
+        saveButton.layer.masksToBounds = true
+        addSubview(saveButton)
+    }
+    
+    @objc func saveScreenshot(done: @escaping (Bool)->Void) {
+        PHPhotoLibrary.requestAuthorization { status in
+            guard status == .authorized || status == .limited else {
+                DispatchQueue.main.async {
+//                    Sper.alertTopError("Photo library access is required")
+                }
+                done(false)
+                return
+            }
+            DispatchQueue.main.async {
+                let image = self.takeScreenshot()
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                done(true)
+                DispatchQueue.main.async {
+//                    Sper.alertBottomDone("Save success")
+                }
+            }
+        }
+    }
+    
+    func takeScreenshot() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0)
+        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        var image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+        UIGraphicsEndImageContext()
+        if let pngData = image.pngData(), let png = UIImage(data: pngData) {
+            image = png
+        }
+        return image
+    }
+    
+    
+    init(frame: CGRect, type: Int, url: String) {
         self.type = type
+        self.url = url
         super.init(frame: frame)
         initUI()
     }
@@ -180,6 +296,11 @@ class IDCardView: UIView {
             self.type = type
         } else {
             self.type = 0
+        }
+        if let type = coder.decodeObject(forKey: "url") as? String {
+            self.url = type
+        } else {
+            self.url = ""
         }
         super.init(coder: coder)
         initUI()
@@ -193,23 +314,22 @@ class IDCardView: UIView {
         } else {
             createINFJView()
         }
-        
     }
     
     func createINFJView() {
-        let bgImg = UIImageView(image: UIImage(named: "bg_idcard_1"))
+        bgImg = UIImageView(image: UIImage(named: "bg_idcard_1"))
         bgImg.frame = self.bounds
         addSubview(bgImg)
         
         let imageView = UIImageView()
-        let url = URL(string: "https://img.zthd.io/us/avatars/264ef1293d73cacd8174ac2f406b9f74.webp")
+        let url = URL(string: url)
         imageView.kf.setImage(with: url)
         imageView.frame = CGRect(x: 59, y: 137, width: 225, height: 237)
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         addSubview(imageView)
         
-        let titleLabel = createLabel(frame: CGRect(x: 21.5, y: 34, width: 300, height: 50), text: "INFJ".localizedString + "-" + "Advocate".localizedString, font: UIFont.VAGRoundedNextBlack(size: 36), colors: [UIColor.white], strokeWidth: 5, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 4), shadowBlurRadius: 0, numberOfLines: 1)
+        let titleLabel = createLabel(frame: CGRect(x: 21.5, y: 30, width: 300, height: 56), text: "INFJ".localizedString + "-" + "Advocate".localizedString, font: UIFont.VAGRoundedNextBlack(size: 36), colors: [UIColor.white], strokeWidth: 5, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 4), shadowBlurRadius: 0, numberOfLines: 1)
         addSubview(titleLabel)
         
         let featureLabel = createLabel(frame: CGRect(x: 95, y: 98, width: 160, height: 27), text: "Insight Guards Ideals".localizedString, font: UIFont.VAGRoundedNextBlack(size: 14), colors: [UIColor.white], strokeWidth: 2, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 1), shadowBlurRadius: 0, numberOfLines: 1)
@@ -239,14 +359,14 @@ class IDCardView: UIView {
         addSubview(bgImg)
         
         let imageView = UIImageView()
-        let url = URL(string: "https://img.zthd.io/us/avatars/264ef1293d73cacd8174ac2f406b9f74.webp")
+        let url = URL(string: url)
         imageView.kf.setImage(with: url)
         imageView.frame = CGRect(x: 59, y: 137, width: 225, height: 237)
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         addSubview(imageView)
         
-        let titleLabel = createLabel(frame: CGRect(x: 21.5, y: 34, width: 300, height: 50), text: "ENFP".localizedString + "-" + "Campaigner".localizedString, font: UIFont.VAGRoundedNextBlack(size: 36), colors: [UIColor.white], strokeWidth: 5, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 4), shadowBlurRadius: 0, numberOfLines: 1)
+        let titleLabel = createLabel(frame: CGRect(x: 21.5, y: 30, width: 300, height: 56), text: "ENFP".localizedString + "-" + "Campaigner".localizedString, font: UIFont.VAGRoundedNextBlack(size: 36), colors: [UIColor.white], strokeWidth: 5, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 4), shadowBlurRadius: 0, numberOfLines: 1)
         addSubview(titleLabel)
         
         let featureLabel = createLabel(frame: CGRect(x: 95, y: 98, width: 160, height: 27), text: "Novelty & Passion-Driven".localizedString, font: UIFont.VAGRoundedNextBlack(size: 14), colors: [UIColor.white], strokeWidth: 2, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 1), shadowBlurRadius: 0, numberOfLines: 1)
@@ -260,7 +380,7 @@ class IDCardView: UIView {
         tag1Bg.addSubview(tag1)
         
         
-        let tag2Bg = createTagBgView(frame: CGRect(x: 247, y: 126, width: 82, height: 52))
+        let tag2Bg = createTagBgView(frame: CGRect(x: 247, y: 130, width: 82, height: 52))
         tag2Bg.transform = CGAffineTransform(rotationAngle: 8 * .pi / 180)
         addSubview(tag2Bg)
         let tag2 = createLabel(frame: CGRect(x: 5, y: 5, width: 76, height: 48), text: "Back to School".localizedString, font: UIFont.VAGRoundedNextBlack(size: 16), colors: [UIColor(hexRGB: "#D68EFE"), UIColor(hexRGB: "#F5EF84"), UIColor(hexRGB: "#92EFD6"), UIColor(hexRGB: "#D3D4FF")], strokeWidth: 3, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 3), shadowBlurRadius: 0, numberOfLines: 0, lineHeight: 19)
@@ -277,14 +397,14 @@ class IDCardView: UIView {
         addSubview(bgImg)
         
         let imageView = UIImageView()
-        let url = URL(string: "https://img.zthd.io/us/avatars/264ef1293d73cacd8174ac2f406b9f74.webp")
+        let url = URL(string: url)
         imageView.kf.setImage(with: url)
         imageView.frame = CGRect(x: 59, y: 137, width: 225, height: 237)
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         addSubview(imageView)
         
-        let titleLabel = createLabel(frame: CGRect(x: 21.5, y: 34, width: 300, height: 50), text: "INTJ".localizedString + "-" + "Architect".localizedString, font: UIFont.VAGRoundedNextBlack(size: 36), colors: [UIColor.white], strokeWidth: 5, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 4), shadowBlurRadius: 0, numberOfLines: 1)
+        let titleLabel = createLabel(frame: CGRect(x: 21.5, y: 30, width: 300, height: 56), text: "INTJ".localizedString + "-" + "Architect".localizedString, font: UIFont.VAGRoundedNextBlack(size: 36), colors: [UIColor.white], strokeWidth: 5, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 4), shadowBlurRadius: 0, numberOfLines: 1)
         addSubview(titleLabel)
         
         let featureLabel = createLabel(frame: CGRect(x: 95, y: 98, width: 160, height: 27), text: "Reason Builds Future".localizedString, font: UIFont.VAGRoundedNextBlack(size: 14), colors: [UIColor.white], strokeWidth: 2, strokeColor: .black, shadowOffset: CGSize(width: 0, height: 1), shadowBlurRadius: 0, numberOfLines: 1)
@@ -357,18 +477,6 @@ class IDCardView: UIView {
 }
 
 
-
-extension String {
-    var localized: LocalizedStringKey {
-        .init(self)
-    }
-    
-    var localizedString: String {
-        NSLocalizedString(self, comment: "")
-    }
-}
-
-
 extension UILabel {
     func adjustFontSizeToFitMultiline(minScale: CGFloat = 0.5, lineHeight: CGFloat = 0) {
         guard let text = text, !text.isEmpty else { return }
@@ -405,5 +513,95 @@ extension UILabel {
         if currentFontSize <= originalFont.pointSize * minScale {
             font = UIFont(descriptor: originalFont.fontDescriptor, size: originalFont.pointSize * minScale)
         }
+    }
+}
+
+
+
+struct IDCardSelectView: View {
+    @State var img: UIImage
+    var onCreateOC: ()->Void
+    var onCreateCard: ()->Void
+    var onClose: ()->Void
+    
+    @State private var save = false
+    
+    var body: some View {
+        VStack(spacing: 0) {
+//            HStack {
+//                Spacer()
+//                Button {
+//                    onClose()
+//                } label: {
+//                    Image("icon_close_vip").resizable().frame(width: 24, height: 24).padding(20)
+//                }
+//            }
+//            .padding(.horizontal, 16)
+            
+            VStack(spacing: 20) {
+                Image(uiImage: img).resizable().frame(width: 200, height: 200)
+                    .padding(.top, 40)
+                
+                Text("Great creation! Craft an OC/ID Card to boost love for your avatar~").font(.PoppinsLatinMedium(size: 16)).foregroundStyle(Color(hex: "#333333")).multilineTextAlignment(.center)
+                    .padding(.horizontal, 25)
+                
+                HStack(spacing: 20) {
+                    Button {
+                        onCreateOC()
+                    } label: {
+                        VStack(spacing: 8) {
+                            Image("icon_idcard_oc").resizable().frame(width: 36, height: 36)
+                            Text("Create OC").font(.PoppinsLatinMedium(size: 12)).foregroundStyle(Color(hex: "#333333"))
+                        }
+                        .frame(width: 134, height: 122)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 6).stroke(Color(hex: "#E5E5E5"), lineWidth: 1)
+                        }
+                    }
+                    
+                    Button {
+                        onCreateCard()
+                    } label: {
+                        VStack(spacing: 8) {
+                            Image("icon_idcard_card").resizable().frame(width: 36, height: 36)
+                            Text("Create ID Card").font(.PoppinsLatinMedium(size: 12)).foregroundStyle(Color(hex: "#333333"))
+                        }
+                        .frame(width: 134, height: 122)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 6).stroke(Color(hex: "#E5E5E5"), lineWidth: 1)
+                        }
+                    }
+                }
+                .padding(.bottom, 40)
+                
+            }
+            .overlay(alignment: .topTrailing) {
+                Button {
+                    onClose()
+                } label: {
+                    Image("icon_close_b").resizable().frame(width: 14, height: 14).padding(22)
+                }
+            }
+            .frame(maxWidth: 400)
+            .background(.white)
+            .cornerRadius(20)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 120)
+
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black.opacity(0.7))
+        
+    }
+}
+
+extension String {
+    var localized: LocalizedStringKey {
+        .init(self)
+    }
+    
+    var localizedString: String {
+        NSLocalizedString(self, comment: "")
     }
 }

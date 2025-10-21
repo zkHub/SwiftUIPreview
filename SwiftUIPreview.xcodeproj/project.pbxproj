@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58036FD02E7A9278003C68E6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58036FCF2E7A9278003C68E6 /* WebKit.framework */; };
+		581941F22E7BF6A600C751ED /* TabTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581941F12E7BF6A600C751ED /* TabTestView.swift */; };
 		58324B442CB680190044C85A /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B422CB680190044C85A /* UIColorExt.swift */; };
 		58324B452CB680190044C85A /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B432CB680190044C85A /* ColorExt.swift */; };
 		58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58324B492CB682D50044C85A /* Kingfisher */; };
@@ -44,6 +46,9 @@
 		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
 		587506DD2E53222C007E1290 /* TapLikeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */; };
 		5875070D2E5726EE007E1290 /* TextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875070C2E5726EE007E1290 /* TextContentView.swift */; };
+		589E2A262E869A320029894A /* TestPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589E2A252E869A320029894A /* TestPickerView.swift */; };
+		589E2A322E88D6310029894A /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 589E2A312E88D6310029894A /* SwiftUIIntrospect */; };
+		589E2A362E97BD810029894A /* VAGRoundedNext-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 589E2A352E97BD810029894A /* VAGRoundedNext-Medium.otf */; };
 		589E751C2E0A4D4500EBFBEE /* swipeLeft.json in Resources */ = {isa = PBXBuildFile; fileRef = 589E751B2E0A4D4500EBFBEE /* swipeLeft.json */; };
 		589E75202E0A4E4100EBFBEE /* swipeLeft1.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */; };
 		589E752E2E0BDB0A00EBFBEE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589E752D2E0BDB0A00EBFBEE /* TestView.swift */; };
@@ -101,6 +106,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		58036FCF2E7A9278003C68E6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		581941F12E7BF6A600C751ED /* TabTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTestView.swift; sourceTree = "<group>"; };
 		582D8FF62D1518E3004AE8DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		582D8FF82D1518E3004AE8DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		58324B422CB680190044C85A /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
@@ -162,6 +169,8 @@
 		587506972E4F442A007E1290 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLikeAnimationView.swift; sourceTree = "<group>"; };
 		5875070C2E5726EE007E1290 /* TextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentView.swift; sourceTree = "<group>"; };
+		589E2A252E869A320029894A /* TestPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPickerView.swift; sourceTree = "<group>"; };
+		589E2A352E97BD810029894A /* VAGRoundedNext-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedNext-Medium.otf"; sourceTree = "<group>"; };
 		589E751B2E0A4D4500EBFBEE /* swipeLeft.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = swipeLeft.json; sourceTree = "<group>"; };
 		589E751F2E0A4E4100EBFBEE /* swipeLeft1.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = swipeLeft1.lottie; sourceTree = "<group>"; };
 		589E752D2E0BDB0A00EBFBEE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -197,6 +206,8 @@
 			files = (
 				58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */,
 				58C478E12CA545C60069CE19 /* Lottie in Frameworks */,
+				58036FD02E7A9278003C68E6 /* WebKit.framework in Frameworks */,
+				589E2A322E88D6310029894A /* SwiftUIIntrospect in Frameworks */,
 				586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */,
 				58C478ED2CA6A9A00069CE19 /* SnapKit in Frameworks */,
 			);
@@ -246,6 +257,7 @@
 		58324B662CB7707F0044C85A /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				589E2A352E97BD810029894A /* VAGRoundedNext-Medium.otf */,
 				5854E3082E6FD9B8005D66EA /* VAGRoundedNext-Black.otf */,
 				58324B6C2CB770C70044C85A /* PoppinsLatin-Bold.otf */,
 				58324B6A2CB770C70044C85A /* PoppinsLatin-ExtraBold.ttf */,
@@ -408,6 +420,8 @@
 				583D73C42DDC80E800D34E5D /* DragListView.swift */,
 				583D74012DE43DCF00D34E5D /* OCCreateView.swift */,
 				589E752D2E0BDB0A00EBFBEE /* TestView.swift */,
+				589E2A252E869A320029894A /* TestPickerView.swift */,
+				581941F12E7BF6A600C751ED /* TabTestView.swift */,
 				5854E3022E6FC991005D66EA /* GradientText.swift */,
 				587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */,
 				5875070C2E5726EE007E1290 /* TextContentView.swift */,
@@ -437,6 +451,7 @@
 		58C607712C7EFC3B00097699 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58036FCF2E7A9278003C68E6 /* WebKit.framework */,
 				584D20C62CA28E5D008CE40F /* Messages.framework */,
 				582D8FF62D1518E3004AE8DC /* WidgetKit.framework */,
 				582D8FF82D1518E3004AE8DC /* SwiftUI.framework */,
@@ -477,6 +492,7 @@
 				58C478EC2CA6A9A00069CE19 /* SnapKit */,
 				58324B492CB682D50044C85A /* Kingfisher */,
 				586449342DA661F9007EA0F8 /* KingfisherWebP */,
+				589E2A312E88D6310029894A /* SwiftUIIntrospect */,
 			);
 			productName = SwiftUIPreview;
 			productReference = 58C607602C7EFA2F00097699 /* SwiftUIPreview.app */;
@@ -515,6 +531,7 @@
 				58C478EB2CA6A9A00069CE19 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */,
+				589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			productRefGroup = 58C607612C7EFA2F00097699 /* Products */;
 			projectDirPath = "";
@@ -575,6 +592,7 @@
 				58324B6D2CB770C70044C85A /* PoppinsLatin-Regular.ttf in Resources */,
 				58324B5A2CB76BF40044C85A /* Arbutus-Regular.ttf in Resources */,
 				58CDE8632DCA04550015B33B /* 2.png in Resources */,
+				589E2A362E97BD810029894A /* VAGRoundedNext-Medium.otf in Resources */,
 				586449372DA663B8007EA0F8 /* 1.webp in Resources */,
 				5854E3282E6FD9B8005D66EA /* VAGRoundedNext-Black.otf in Resources */,
 				58324B6E2CB770C70044C85A /* PoppinsLatin-Light.otf in Resources */,
@@ -591,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581941F22E7BF6A600C751ED /* TabTestView.swift in Sources */,
 				58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */,
 				587506DD2E53222C007E1290 /* TapLikeAnimationView.swift in Sources */,
 				583D74022DE43DCF00D34E5D /* OCCreateView.swift in Sources */,
@@ -613,6 +632,7 @@
 				58C607792C7EFDF600097699 /* ExpandTextView.swift in Sources */,
 				58C607642C7EFA2F00097699 /* SwiftUIPreviewApp.swift in Sources */,
 				58C478E52CA699150069CE19 /* MakeStickerEidtorView.swift in Sources */,
+				589E2A262E869A320029894A /* TestPickerView.swift in Sources */,
 				58324B452CB680190044C85A /* ColorExt.swift in Sources */,
 				58324B742CB771040044C85A /* FontExt.swift in Sources */,
 				58C607812C85C04B00097699 /* FontView.swift in Sources */,
@@ -866,6 +886,14 @@
 				minimumVersion = 1.7.0;
 			};
 		};
+		589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/swiftui-introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 26.0.0;
+			};
+		};
 		58C478DF2CA545C60069CE19 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -894,6 +922,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */;
 			productName = KingfisherWebP;
+		};
+		589E2A312E88D6310029894A /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
 		};
 		58C478E02CA545C60069CE19 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

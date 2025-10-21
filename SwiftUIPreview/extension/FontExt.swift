@@ -50,4 +50,8 @@ extension Font {
         Font.custom("VAGRoundedNext-Black", size: size)
     }
     
+    static func VAGRoundedNextMedium(size: CGFloat) -> Font {
+        Font.custom("VAGRoundedNext-Medium", size: size)
+    }
+    
 }

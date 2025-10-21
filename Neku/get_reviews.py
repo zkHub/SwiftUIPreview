@@ -10,6 +10,7 @@ PRIVATE_KEY = open('AuthKey_9Q394F5TP7.p8', 'r').read()  # 认证文件路径
 APP_ID = '1630343674'  # 你的应用ID
 BASE_URL = 'https://api.appstoreconnect.apple.com/v1'
 VERSIONS = []
+MinVersion = '1.620.12'
 
 # 生成JWT认证令牌
 def make_jwt():

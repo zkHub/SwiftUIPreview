@@ -74,7 +74,7 @@ struct AttributedTextContent: UIViewRepresentable {
         label.strokeWidth = strokeWidth
         label.strokeColor = strokeColor
         label.numberOfLines = 1
-        label.backgroundColor = .red
+//        label.backgroundColor = .red
         label.clipsToBounds = false // 避免裁剪描边
         return label
     }
