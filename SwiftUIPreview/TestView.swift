@@ -9,6 +9,62 @@ import SwiftUI
 import Lottie
 import Kingfisher
 
+
+struct TextEditorTestView: View {
+    @State private var text = ""
+    @State private var textEditorHeight: CGFloat = 40
+    
+    let minHeight: CGFloat = 40
+    let maxHeight: CGFloat = 200
+    
+    var body: some View {
+        VStack {
+            Text("自适应高度 TextEditor")
+                .font(.headline)
+            
+            TextEditor(text: $text)
+                .frame(height: textEditorHeight)
+                .opacity(text.isEmpty ? 0.85 : 1)
+                .background(
+                    GeometryReader { geometry in
+                        Color.clear
+                            .onAppear {
+                                calculateHeight(for: text, in: geometry.size.width)
+                            }
+                            .onChange(of: text) { _ in
+                                calculateHeight(for: text, in: geometry.size.width)
+                            }
+                    }
+                )
+            
+            Text("当前高度: \(Int(textEditorHeight))")
+                .font(.caption)
+                .foregroundColor(.gray)
+        }
+    }
+    
+    private func calculateHeight(for text: String, in width: CGFloat) {
+        let textView = UITextView()
+        textView.text = text
+        textView.font = UIFont.preferredFont(forTextStyle: .body)
+        let size = textView.sizeThatFits(CGSize(width: width, height: .greatestFiniteMagnitude))
+        textEditorHeight = min(max(size.height, minHeight), maxHeight)
+    }
+    
+}
+
+struct TextEditorViewHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
+}
+
+#Preview(body: {
+    TextEditorTestView()
+})
+
+
 struct TestView: View {
     @State var save = false
     @State var showLottie = false
@@ -20,20 +76,20 @@ struct TestView: View {
     
     @ViewBuilder
     func commentGuide() -> some View {
-        Image("img_comment_guidebox").resizable().frame(width: 287, height: 99)
+        Image("img_comment_guidebox").resizable().frame(width: 253, height: 71)
             .overlay(alignment: .topLeading) {
                 Image("icon_Select").resizable()
-                    .frame(width: 42, height: 42)
+                    .frame(width: 40, height: 40)
+//                    .background(Color.white)
                     .clipShape(Circle())
-                    .padding(.top, 8).padding(.leading, 16)
+                    .padding(.top, 14).padding(.leading, 12)
             }
-            .overlay(alignment: .bottomTrailing) {
-                Text("Waiting for your message... tick-tock~").font(.PoppinsLatinMedium(size: 13)).foregroundStyle(Color.black).minimumScaleFactor(0.3)
-                    .frame(width: 181, height: 44)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 34).padding(.trailing, 22)
+            .overlay(alignment: .topTrailing) {
+                Text("Waiting for your message... tick-tock~").font(.PoppinsLatinBold(size: 12)).foregroundStyle(Color.white).minimumScaleFactor(0.3)
+                    .frame(width: 177, height: 36)
+                    .padding(.top, 16).padding(.trailing, 12)
             }
-            .shadow(color: Color.black.opacity(0.3), radius: 10, y: 6)
+            .shadow(color: Color.black.opacity(0.2), radius: 6, y: 4)
             .padding(.bottom, 80)
     }
     
