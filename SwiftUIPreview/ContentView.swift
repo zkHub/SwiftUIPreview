@@ -20,6 +20,9 @@ struct ContentView: View {
         NavigationView(content: {
 
             List {
+                
+                NavigationLink("SpineEditorView", destination: SpineEditorView(templateId: "hSXG11sA", portal: ""))
+                
                 NavigationLink("TabScrollSafeAreaTest", destination: TabScrollSafeAreaTest())
                 NavigationLink("TextContentView", destination: TextContentView())
                 NavigationLink("TestView", destination: TestView())
@@ -48,7 +51,7 @@ struct ContentView: View {
                     Text("SKAdNetworks Diff")
                 }
                 NavigationLink(destination: MoreTextView()) { Text("MoreTextView") }
-                NavigationLink(destination: ColorView()) { Text("ColorView") }
+                NavigationLink(destination: AColorView()) { Text("ColorView") }
                 NavigationLink(destination: FontView()) { Text("FontView") }
                 NavigationLink(destination: MakeStickerView()) { Text("MakeStickerView") }
                 NavigationLink(destination: MakeStickerEidtorView()){Text("MakeStickerVCRepresentable")}

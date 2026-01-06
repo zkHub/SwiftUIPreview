@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ColorView: View {
+struct AColorView: View {
     
     private var Colors: [UIColor] = [
         .black,
@@ -98,5 +98,5 @@ struct ColorView: View {
 }
 
 #Preview {
-    ColorView()
+    AColorView()
 }
