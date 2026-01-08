@@ -6,7 +6,7 @@ target 'SwiftUIPreview' do
   use_frameworks!
 
   # Pods for SwiftUIPreview
-  pod 'Spine', :podspec => 'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.2/Spine.podspec'
-  pod 'SpineCppLite', :podspec => 'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.2/SpineCppLite.podspec'
-  pod 'SpineShadersStructs', :podspec => 'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.2/SpineShadersStructs.podspec'
+#  pod 'Spine', :podspec => 'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.2/Spine.podspec'
+#  pod 'SpineCppLite', :podspec => 'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.2/SpineCppLite.podspec'
+#  pod 'SpineShadersStructs', :podspec => 'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.2/SpineShadersStructs.podspec'
 end
