@@ -35,6 +35,7 @@
 		58324B7A2CB7D3240044C85A /* MakeStickerFontColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */; };
 		58324B7C2CB933ED0044C85A /* MakeStickerSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */; };
 		58324B7E2CBA4E290044C85A /* MakeStickerLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */; };
+		5837CA262F0F8B1E003AF59A /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5837CA252F0F8B1E003AF59A /* ViewExt.swift */; };
 		583D73C12DDC7EC100D34E5D /* DragSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C02DDC7EC100D34E5D /* DragSortView.swift */; };
 		583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C42DDC80E800D34E5D /* DragListView.swift */; };
 		583D74022DE43DCF00D34E5D /* OCCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D74012DE43DCF00D34E5D /* OCCreateView.swift */; };
@@ -160,6 +161,7 @@
 		58324B792CB7D3240044C85A /* MakeStickerFontColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerFontColorView.swift; sourceTree = "<group>"; };
 		58324B7B2CB933ED0044C85A /* MakeStickerSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerSelectView.swift; sourceTree = "<group>"; };
 		58324B7D2CBA4E290044C85A /* MakeStickerLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStickerLabelsView.swift; sourceTree = "<group>"; };
+		5837CA252F0F8B1E003AF59A /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		583D73C02DDC7EC100D34E5D /* DragSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragSortView.swift; sourceTree = "<group>"; };
 		583D73C42DDC80E800D34E5D /* DragListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragListView.swift; sourceTree = "<group>"; };
 		583D73C82DDC8E2600D34E5D /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				58324B422CB680190044C85A /* UIColorExt.swift */,
 				58324B732CB771040044C85A /* FontExt.swift */,
 				58324B752CB772080044C85A /* UIFontExt.swift */,
+				5837CA252F0F8B1E003AF59A /* ViewExt.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				58C607642C7EFA2F00097699 /* SwiftUIPreviewApp.swift in Sources */,
 				58C478E52CA699150069CE19 /* MakeStickerEidtorView.swift in Sources */,
 				589E2A262E869A320029894A /* TestPickerView.swift in Sources */,
+				5837CA262F0F8B1E003AF59A /* ViewExt.swift in Sources */,
 				58324B452CB680190044C85A /* ColorExt.swift in Sources */,
 				58324B742CB771040044C85A /* FontExt.swift in Sources */,
 				58C607812C85C04B00097699 /* FontView.swift in Sources */,
