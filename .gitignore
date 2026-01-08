@@ -64,3 +64,4 @@ fastlane/test_output
 *.xcuserstate
 *.xcodeproj/xcuserdata
 StickerPacks/generated_apps
+Pods

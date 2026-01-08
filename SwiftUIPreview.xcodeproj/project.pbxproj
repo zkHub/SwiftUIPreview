@@ -47,8 +47,6 @@
 		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
 		587506DD2E53222C007E1290 /* TapLikeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */; };
 		5875070D2E5726EE007E1290 /* TextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875070C2E5726EE007E1290 /* TextContentView.swift */; };
-		589659342F0B9F43004616C4 /* Spine in Frameworks */ = {isa = PBXBuildFile; productRef = 589659332F0B9F43004616C4 /* Spine */; };
-		589659362F0B9F43004616C4 /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 589659352F0B9F43004616C4 /* SpineCppLite */; };
 		5896594B2F0BA65D004616C4 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659382F0BA65D004616C4 /* Avatar.swift */; };
 		5896594C2F0BA65D004616C4 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593D2F0BA65D004616C4 /* Editor.swift */; };
 		5896594D2F0BA65D004616C4 /* ToningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659442F0BA65D004616C4 /* ToningView.swift */; };
@@ -98,6 +96,7 @@
 		58CDE85F2DC9F0490015B33B /* PKDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */; };
 		58CDE8612DCA03690015B33B /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */; };
 		58CDE8632DCA04550015B33B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CDE8622DCA04550015B33B /* 2.png */; };
+		8CAEB5378B9B3184A72DD954 /* Pods_SwiftUIPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D45175B7538B8E60E111BA /* Pods_SwiftUIPreview.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +245,9 @@
 		58D7AFD42E1B5C69003AF0E4 /* create_build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_build_upload.py; sourceTree = "<group>"; };
 		58D7AFF02E289D97003AF0E4 /* get_reviews.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = get_reviews.py; sourceTree = "<group>"; };
 		58D7AFF62E28E83E003AF0E4 /* AuthKey_9Q394F5TP7.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_9Q394F5TP7.p8; sourceTree = "<group>"; };
+		81D45175B7538B8E60E111BA /* Pods_SwiftUIPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EF3A7BD1D2948520A268DEF /* Pods-SwiftUIPreview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPreview.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview.debug.xcconfig"; sourceTree = "<group>"; };
+		FB5524AD2FBFD486AC861B4C /* Pods-SwiftUIPreview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPreview.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,10 +259,9 @@
 				58C478E12CA545C60069CE19 /* Lottie in Frameworks */,
 				58036FD02E7A9278003C68E6 /* WebKit.framework in Frameworks */,
 				589E2A322E88D6310029894A /* SwiftUIIntrospect in Frameworks */,
-				589659362F0B9F43004616C4 /* SpineCppLite in Frameworks */,
 				586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */,
 				58C478ED2CA6A9A00069CE19 /* SnapKit in Frameworks */,
-				589659342F0B9F43004616C4 /* Spine in Frameworks */,
+				8CAEB5378B9B3184A72DD954 /* Pods_SwiftUIPreview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +512,7 @@
 				583D73E12DDC8E2600D34E5D /* StickerPacks */,
 				58C607612C7EFA2F00097699 /* Products */,
 				58C607712C7EFC3B00097699 /* Frameworks */,
+				7F8CCEF331F831FAAD94DDA5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -588,6 +590,7 @@
 				582D8FF82D1518E3004AE8DC /* SwiftUI.framework */,
 				587506952E4F442A007E1290 /* UserNotifications.framework */,
 				587506972E4F442A007E1290 /* UserNotificationsUI.framework */,
+				81D45175B7538B8E60E111BA /* Pods_SwiftUIPreview.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -601,6 +604,15 @@
 			path = Neku;
 			sourceTree = "<group>";
 		};
+		7F8CCEF331F831FAAD94DDA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EF3A7BD1D2948520A268DEF /* Pods-SwiftUIPreview.debug.xcconfig */,
+				FB5524AD2FBFD486AC861B4C /* Pods-SwiftUIPreview.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,10 +620,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58C6076E2C7EFA3100097699 /* Build configuration list for PBXNativeTarget "SwiftUIPreview" */;
 			buildPhases = (
+				5B91F1B9FD918179B75B5719 /* [CP] Check Pods Manifest.lock */,
 				58C6075C2C7EFA2F00097699 /* Sources */,
 				58C6075D2C7EFA2F00097699 /* Frameworks */,
 				58C6075E2C7EFA2F00097699 /* Resources */,
 				584D20D42CA28E5E008CE40F /* Embed Foundation Extensions */,
+				7083021D83DDF14FEED7C092 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -624,8 +638,6 @@
 				58324B492CB682D50044C85A /* Kingfisher */,
 				586449342DA661F9007EA0F8 /* KingfisherWebP */,
 				589E2A312E88D6310029894A /* SwiftUIIntrospect */,
-				589659332F0B9F43004616C4 /* Spine */,
-				589659352F0B9F43004616C4 /* SpineCppLite */,
 			);
 			productName = SwiftUIPreview;
 			productReference = 58C607602C7EFA2F00097699 /* SwiftUIPreview.app */;
@@ -666,7 +678,6 @@
 				58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */,
 				589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
-				589659322F0B9F43004616C4 /* XCRemoteSwiftPackageReference "spine-runtimes" */,
 			);
 			productRefGroup = 58C607612C7EFA2F00097699 /* Products */;
 			projectDirPath = "";
@@ -746,6 +757,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B91F1B9FD918179B75B5719 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUIPreview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7083021D83DDF14FEED7C092 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58C6075C2C7EFA2F00097699 /* Sources */ = {
@@ -942,6 +995,7 @@
 		};
 		58C6076F2C7EFA3100097699 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EF3A7BD1D2948520A268DEF /* Pods-SwiftUIPreview.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -977,6 +1031,7 @@
 		};
 		58C607702C7EFA3100097699 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5524AD2FBFD486AC861B4C /* Pods-SwiftUIPreview.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1049,14 +1104,6 @@
 				minimumVersion = 1.7.0;
 			};
 		};
-		589659322F0B9F43004616C4 /* XCRemoteSwiftPackageReference "spine-runtimes" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:EsotericSoftware/spine-runtimes.git";
-			requirement = {
-				branch = 4.2;
-				kind = branch;
-			};
-		};
 		589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/swiftui-introspect";
@@ -1093,16 +1140,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */;
 			productName = KingfisherWebP;
-		};
-		589659332F0B9F43004616C4 /* Spine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 589659322F0B9F43004616C4 /* XCRemoteSwiftPackageReference "spine-runtimes" */;
-			productName = Spine;
-		};
-		589659352F0B9F43004616C4 /* SpineCppLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 589659322F0B9F43004616C4 /* XCRemoteSwiftPackageReference "spine-runtimes" */;
-			productName = SpineCppLite;
 		};
 		589E2A312E88D6310029894A /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;

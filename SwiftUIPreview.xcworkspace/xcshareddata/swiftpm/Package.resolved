@@ -6,23 +6,23 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
       "state" : {
-        "revision" : "33696a71dd4d71f1b0f781ade11a48ba5549581a",
-        "version" : "8.0.3"
+        "revision" : "d30a5fad881137e2267f96a8e3fc35c58999bb94",
+        "version" : "8.6.2"
       }
     },
     {
       "identity" : "kingfisherwebp",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/yeatse/KingfisherWebP.git",
+      "location" : "https://github.com/yeatse/KingfisherWebP",
       "state" : {
-        "revision" : "dccea7e92e77b0aa9ae5955c0d8f78c88ac0a950",
-        "version" : "1.7.0"
+        "revision" : "917513a49391052d94da59697aae0e65c68d35bc",
+        "version" : "1.7.2"
       }
     },
     {
       "identity" : "libwebp-xcode",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/libwebp-Xcode",
+      "location" : "https://github.com/SDWebImage/libwebp-Xcode.git",
       "state" : {
         "revision" : "0d60654eeefd5d7d2bef3835804892c40225e8b2",
         "version" : "1.5.0"
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-spm.git",
       "state" : {
-        "revision" : "b842598f1295f3ffa1475b1580672d1fe5b83580",
-        "version" : "4.5.0"
+        "revision" : "69faaefa7721fba9e434a52c16adf4329c9084db",
+        "version" : "4.6.0"
       }
     },
     {
