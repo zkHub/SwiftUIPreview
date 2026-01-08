@@ -215,6 +215,7 @@
 		589659752F0CA53B004616C4 /* spine-hSXG11sA.atlas */ = {isa = PBXFileReference; lastKnownFileType = text; path = "spine-hSXG11sA.atlas"; sourceTree = "<group>"; };
 		589659762F0CA53B004616C4 /* spine-hSXG11sA.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "spine-hSXG11sA.json"; sourceTree = "<group>"; };
 		589659772F0CA53B004616C4 /* spine-hSXG11sA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spine-hSXG11sA.png"; sourceTree = "<group>"; };
+		5896597F2F0DFF26004616C4 /* SwiftUIPreview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftUIPreview-Bridging-Header.h"; sourceTree = "<group>"; };
 		589E2A252E869A320029894A /* TestPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPickerView.swift; sourceTree = "<group>"; };
 		589E2A352E97BD810029894A /* VAGRoundedNext-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedNext-Medium.otf"; sourceTree = "<group>"; };
 		589E751B2E0A4D4500EBFBEE /* swipeLeft.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = swipeLeft.json; sourceTree = "<group>"; };
@@ -562,6 +563,7 @@
 				58C607752C7EFC5D00097699 /* skad2.plist */,
 				5854E33D2E7002F8005D66EA /* Localizable.strings */,
 				58C607692C7EFA3100097699 /* Preview Content */,
+				5896597F2F0DFF26004616C4 /* SwiftUIPreview-Bridging-Header.h */,
 			);
 			path = SwiftUIPreview;
 			sourceTree = "<group>";
@@ -638,6 +640,7 @@
 				TargetAttributes = {
 					58C6075F2C7EFA2F00097699 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -939,6 +942,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUIPreview/Preview\\ Content SwiftUIPreview/en.lproj/Localizable.strings";
@@ -960,6 +964,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.zthd.SwiftUIPreview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftUIPreview/SwiftUIPreview-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -971,6 +977,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUIPreview/Preview\\ Content SwiftUIPreview/en.lproj/Localizable.strings";
@@ -992,6 +999,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.zthd.SwiftUIPreview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftUIPreview/SwiftUIPreview-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
