@@ -37,7 +37,7 @@ struct SpineEditorView: View {
             avatarContainer
             
             // 底部面板
-//            bottomPanel
+            bottomPanel
         }
         .background(Color.black)
     }
@@ -141,6 +141,7 @@ struct SpineEditorView: View {
                 )
             }
         }
+        .aspectRatio(1.0, contentMode: .fit)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
@@ -159,7 +160,7 @@ struct SpineEditorView: View {
                 )
             }
         }
-        .frame(height: 300)
+//        .frame(height: 300)
         .background(Color.black.opacity(0.9))
     }
     
@@ -207,7 +208,7 @@ struct ErrorView: View {
 struct SpineAvatarView: View {
     let drawable: SkeletonDrawableWrapper
     @Binding var avatar: Avatar
-    let template: Template
+    let template: TemplateConfig
     let skuSlots: [String: Set<String>]
     
     @State private var controller: SpineController?

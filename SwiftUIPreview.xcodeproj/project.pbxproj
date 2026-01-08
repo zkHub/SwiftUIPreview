@@ -42,6 +42,10 @@
 		5854E3032E6FC991005D66EA /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5854E3022E6FC991005D66EA /* GradientText.swift */; };
 		5854E3282E6FD9B8005D66EA /* VAGRoundedNext-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5854E3082E6FD9B8005D66EA /* VAGRoundedNext-Black.otf */; };
 		5854E33F2E7002F8005D66EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5854E33D2E7002F8005D66EA /* Localizable.strings */; };
+		585652052F0FB17B00FE26B0 /* Spine in Frameworks */ = {isa = PBXBuildFile; productRef = 585652042F0FB17B00FE26B0 /* Spine */; };
+		585652072F0FB17B00FE26B0 /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 585652062F0FB17B00FE26B0 /* SpineCppLite */; };
+		5856520A2F0FB2B600FE26B0 /* Spine in Frameworks */ = {isa = PBXBuildFile; productRef = 585652092F0FB2B600FE26B0 /* Spine */; };
+		5856520C2F0FB2B600FE26B0 /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 5856520B2F0FB2B600FE26B0 /* SpineCppLite */; };
 		586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 586449342DA661F9007EA0F8 /* KingfisherWebP */; };
 		586449372DA663B8007EA0F8 /* 1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 586449362DA663B8007EA0F8 /* 1.webp */; };
 		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
@@ -58,7 +62,7 @@
 		589659532F0BA65D004616C4 /* Toning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593B2F0BA65D004616C4 /* Toning.swift */; };
 		589659542F0BA65D004616C4 /* SpineUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659482F0BA65D004616C4 /* SpineUtils.swift */; };
 		589659552F0BA65D004616C4 /* SpineRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659432F0BA65D004616C4 /* SpineRecorder.swift */; };
-		589659562F0BA65D004616C4 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593A2F0BA65D004616C4 /* Template.swift */; };
+		589659562F0BA65D004616C4 /* TemplateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593A2F0BA65D004616C4 /* TemplateConfig.swift */; };
 		589659572F0BA65D004616C4 /* ColorSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659472F0BA65D004616C4 /* ColorSampler.swift */; };
 		589659582F0BA65D004616C4 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659402F0BA65D004616C4 /* SelectionView.swift */; };
 		589659702F0BB97B004616C4 /* MJbLxQ7V.json in Resources */ = {isa = PBXBuildFile; fileRef = 5896596B2F0BB97B004616C4 /* MJbLxQ7V.json */; };
@@ -96,6 +100,8 @@
 		58CDE85F2DC9F0490015B33B /* PKDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */; };
 		58CDE8612DCA03690015B33B /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */; };
 		58CDE8632DCA04550015B33B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CDE8622DCA04550015B33B /* 2.png */; };
+		58DECDB82F0FBA6600C2623C /* Spine in Frameworks */ = {isa = PBXBuildFile; productRef = 58DECDB72F0FBA6600C2623C /* Spine */; };
+		58DECDBA2F0FBA6600C2623C /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 58DECDB92F0FBA6600C2623C /* SpineCppLite */; };
 		8CAEB5378B9B3184A72DD954 /* Pods_SwiftUIPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D45175B7538B8E60E111BA /* Pods_SwiftUIPreview.framework */; };
 /* End PBXBuildFile section */
 
@@ -197,7 +203,7 @@
 		589659372F0BA65D004616C4 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		589659382F0BA65D004616C4 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		589659392F0BA65D004616C4 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
-		5896593A2F0BA65D004616C4 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		5896593A2F0BA65D004616C4 /* TemplateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateConfig.swift; sourceTree = "<group>"; };
 		5896593B2F0BA65D004616C4 /* Toning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toning.swift; sourceTree = "<group>"; };
 		5896593D2F0BA65D004616C4 /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
 		5896593E2F0BA65D004616C4 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
@@ -255,13 +261,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DECDB82F0FBA6600C2623C /* Spine in Frameworks */,
+				5856520A2F0FB2B600FE26B0 /* Spine in Frameworks */,
 				58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */,
 				58C478E12CA545C60069CE19 /* Lottie in Frameworks */,
 				58036FD02E7A9278003C68E6 /* WebKit.framework in Frameworks */,
 				589E2A322E88D6310029894A /* SwiftUIIntrospect in Frameworks */,
+				5856520C2F0FB2B600FE26B0 /* SpineCppLite in Frameworks */,
+				58DECDBA2F0FBA6600C2623C /* SpineCppLite in Frameworks */,
+				585652052F0FB17B00FE26B0 /* Spine in Frameworks */,
 				586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */,
 				58C478ED2CA6A9A00069CE19 /* SnapKit in Frameworks */,
 				8CAEB5378B9B3184A72DD954 /* Pods_SwiftUIPreview.framework in Frameworks */,
+				585652072F0FB17B00FE26B0 /* SpineCppLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +445,7 @@
 				589659372F0BA65D004616C4 /* Animation.swift */,
 				589659382F0BA65D004616C4 /* Avatar.swift */,
 				589659392F0BA65D004616C4 /* Selection.swift */,
-				5896593A2F0BA65D004616C4 /* Template.swift */,
+				5896593A2F0BA65D004616C4 /* TemplateConfig.swift */,
 				5896593B2F0BA65D004616C4 /* Toning.swift */,
 			);
 			path = data;
@@ -637,6 +649,12 @@
 				58324B492CB682D50044C85A /* Kingfisher */,
 				586449342DA661F9007EA0F8 /* KingfisherWebP */,
 				589E2A312E88D6310029894A /* SwiftUIIntrospect */,
+				585652042F0FB17B00FE26B0 /* Spine */,
+				585652062F0FB17B00FE26B0 /* SpineCppLite */,
+				585652092F0FB2B600FE26B0 /* Spine */,
+				5856520B2F0FB2B600FE26B0 /* SpineCppLite */,
+				58DECDB72F0FBA6600C2623C /* Spine */,
+				58DECDB92F0FBA6600C2623C /* SpineCppLite */,
 			);
 			productName = SwiftUIPreview;
 			productReference = 58C607602C7EFA2F00097699 /* SwiftUIPreview.app */;
@@ -677,6 +695,7 @@
 				58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */,
 				589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
+				58DECDB62F0FBA6600C2623C /* XCRemoteSwiftPackageReference "spine-runtimes" */,
 			);
 			productRefGroup = 58C607612C7EFA2F00097699 /* Products */;
 			projectDirPath = "";
@@ -810,7 +829,7 @@
 				589659532F0BA65D004616C4 /* Toning.swift in Sources */,
 				589659542F0BA65D004616C4 /* SpineUtils.swift in Sources */,
 				589659552F0BA65D004616C4 /* SpineRecorder.swift in Sources */,
-				589659562F0BA65D004616C4 /* Template.swift in Sources */,
+				589659562F0BA65D004616C4 /* TemplateConfig.swift in Sources */,
 				589659572F0BA65D004616C4 /* ColorSampler.swift in Sources */,
 				589659582F0BA65D004616C4 /* SelectionView.swift in Sources */,
 				58324B7C2CB933ED0044C85A /* MakeStickerSelectView.swift in Sources */,
@@ -1110,6 +1129,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		58DECDB62F0FBA6600C2623C /* XCRemoteSwiftPackageReference "spine-runtimes" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zkHub/spine-runtimes";
+			requirement = {
+				branch = 4.2;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1117,6 +1144,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		585652042F0FB17B00FE26B0 /* Spine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Spine;
+		};
+		585652062F0FB17B00FE26B0 /* SpineCppLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpineCppLite;
+		};
+		585652092F0FB2B600FE26B0 /* Spine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Spine;
+		};
+		5856520B2F0FB2B600FE26B0 /* SpineCppLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpineCppLite;
 		};
 		586449342DA661F9007EA0F8 /* KingfisherWebP */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1137,6 +1180,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58C478EB2CA6A9A00069CE19 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		58DECDB72F0FBA6600C2623C /* Spine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DECDB62F0FBA6600C2623C /* XCRemoteSwiftPackageReference "spine-runtimes" */;
+			productName = Spine;
+		};
+		58DECDB92F0FBA6600C2623C /* SpineCppLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DECDB62F0FBA6600C2623C /* XCRemoteSwiftPackageReference "spine-runtimes" */;
+			productName = SpineCppLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

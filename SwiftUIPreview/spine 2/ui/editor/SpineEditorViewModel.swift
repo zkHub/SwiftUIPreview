@@ -117,7 +117,7 @@ class SpineEditorViewModel: ObservableObject {
             
             // 排序 selections
             let sortedSelections = template.selections.sorted { $0.playIndex < $1.playIndex }
-            let sortedTemplate = Template(
+            let sortedTemplate = TemplateConfig(
                 selections: sortedSelections,
                 tonings: template.tonings,
                 animations: template.animations,
@@ -135,13 +135,13 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 获取 Template，对应 Android 的 getTemplate
-    private func getTemplate(templateId: String) throws -> Template {
+    private func getTemplate(templateId: String) throws -> TemplateConfig {
         guard let bundle = Bundle.main.path(forResource: "\(templateId)", ofType: "json") else {
             throw NSError(domain: "SpineEditorViewModel", code: -1, userInfo: [NSLocalizedDescriptionKey: "找不到模板文件"])
         }
         
         let data = try Data(contentsOf: URL(fileURLWithPath: bundle))
-        return try JSONDecoder().decode(Template.self, from: data)
+        return try JSONDecoder().decode(TemplateConfig.self, from: data)
     }
     
     /// 获取 SkeletonDrawable，对应 Android 的 getSkeletonDrawable
@@ -318,7 +318,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 构建 Category -> SKUs 的索引映射，对应 Android 的 buildCategoryToSkusMap
-    private func buildCategoryToSkusMap(template: Template) -> [String: [Sku]] {
+    private func buildCategoryToSkusMap(template: TemplateConfig) -> [String: [Sku]] {
         var categoryToSkus: [String: [Sku]] = [:]
         
         for selection in template.selections {

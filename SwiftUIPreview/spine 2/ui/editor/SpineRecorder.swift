@@ -68,6 +68,7 @@ class SpineRecorder {
                 // 使用透明背景，避免背景出现在 GIF 中
                 if let cgImage = try drawable.renderToImage(
                     size: CGSize(width: width, height: height),
+                    boundsProvider: RawBounds(x: -256, y: -512, width: 512, height: 512),
                     backgroundColor: .clear, // 使用透明背景
                     scaleFactor: 1.0
                 ) {

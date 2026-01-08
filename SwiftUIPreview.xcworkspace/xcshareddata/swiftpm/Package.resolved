@@ -1,5 +1,5 @@
 {
-  "originHash" : "7995963cabc8e8b2cf3f3622fe4a6c8dfc78d66a6af87abc472f154a7a5d4bcc",
+  "originHash" : "5f2dfcff0468f1f17f3e6dd6457439857766b5898a48f24f9ad03525d25515fa",
   "pins" : [
     {
       "identity" : "kingfisher",
@@ -44,6 +44,15 @@
       "state" : {
         "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
         "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "spine-runtimes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zkHub/spine-runtimes",
+      "state" : {
+        "branch" : "4.2",
+        "revision" : "38b32bde58520784fa2a02ef57223e84822dc215"
       }
     },
     {

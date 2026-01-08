@@ -33,7 +33,7 @@ enum SpineUtils {
     }
     
     /// 获取 SKU 对应的 Slot 名称集合，对应 Android 的 getSkeletonSlots
-    static func getSkeletonSlots(drawable: SkeletonDrawableWrapper, template: Template) -> [String: Set<String>] {
+    static func getSkeletonSlots(drawable: SkeletonDrawableWrapper, template: TemplateConfig) -> [String: Set<String>] {
         var mapping: [String: Set<String>] = [:]
         
         for selection in template.selections {
