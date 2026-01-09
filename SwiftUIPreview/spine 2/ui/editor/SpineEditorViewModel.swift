@@ -146,13 +146,13 @@ class SpineEditorViewModel: ObservableObject {
             try Task.checkCancellation()
             
             // 获取皮肤缩略图
-            let skeletonSkins = try await SpineUtils.getSkeletonSkins(drawable: drawable)
+            let skeletonSkins = try await self.getSkeletonSkins(drawable: drawable)
             
             // 检查任务是否被取消
             try Task.checkCancellation()
             
             // 获取 SKU Slots 映射
-            let skeletonSlots = SpineUtils.getSkeletonSlots(drawable: drawable, template: template)
+            let skeletonSlots = self.getSkeletonSlots(drawable: drawable, template: template)
             
             // 排序 selections
             let sortedSelections = template.selections.sorted { $0.playIndex < $1.playIndex }
@@ -233,8 +233,7 @@ class SpineEditorViewModel: ObservableObject {
         let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: currentSkus,
-            tonings: avatar.tonings,
-            animation: avatar.animation
+            animation: avatar.animation, tonings: avatar.tonings
         )
         updateAvatar(newAvatar)
     }
@@ -256,8 +255,7 @@ class SpineEditorViewModel: ObservableObject {
         let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: selectedSkus,
-            tonings: avatar.tonings,
-            animation: avatar.animation
+            animation: avatar.animation, tonings: avatar.tonings
         )
         updateAvatar(newAvatar)
     }
@@ -288,8 +286,7 @@ class SpineEditorViewModel: ObservableObject {
         let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: avatar.skus,
-            tonings: selectedTonings,
-            animation: avatar.animation
+            animation: avatar.animation, tonings: selectedTonings
         )
         updateAvatar(newAvatar)
     }
@@ -352,8 +349,7 @@ class SpineEditorViewModel: ObservableObject {
         let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: Array(selectedSkus),
-            tonings: [:],
-            animation: avatar.animation
+            animation: avatar.animation, tonings: [:]
         )
         updateAvatar(newAvatar)
     }
@@ -417,6 +413,119 @@ class SpineEditorViewModel: ObservableObject {
         avatar = newAvatar
         updateUndoRedoState()
     }
+    
+    func applyAvatar() {
+        guard let drawable = drawable, let template = editor?.template else {
+            return
+        }
+        let skeleton = drawable.skeleton
+        
+        // 应用皮肤
+        let skus = template.selections
+            .flatMap { $0.skus }
+            .filter { avatar.skus.contains($0.id) }
+        
+        // 构建自定义皮肤
+        // 注意：每次创建新的 skin，旧的会被自动释放
+        let customSkin = Skin.create(name: "avatar-skin")
+        for sku in skus {
+            if let skin = drawable.skeletonData.findSkin(name: sku.skinName) {
+                customSkin.addSkin(other: skin)
+            }
+        }
+        
+        skeleton.skin = customSkin
+        skeleton.setToSetupPose()
+        
+        // 应用颜色
+        applyColor(skeleton: skeleton)
+        
+        // 播放动画
+        playAnimation(controller: controller, animationName: "react_default")
+    }
+    
+    private func applyColor(skeleton: Skeleton) {
+        guard let skuSlots = editor?.skuSlots, let template = editor?.template else {
+            return
+        }
+        // 重置颜色
+        resetColor(skeleton: skeleton)
+        
+        // 应用染色
+        guard let avatarTonings = avatar.tonings, !avatarTonings.isEmpty else { return }
+        
+        let tonings = template.tonings ?? []
+        guard !tonings.isEmpty else { return }
+        
+        // 构建 skuId -> Sku 的映射
+        let allSkusMap = template.selections
+            .flatMap { $0.skus }
+            .reduce(into: [String: Sku]()) { $0[$1.id] = $1 }
+        
+        let selectedSkuIds = Set(avatar.skus)
+        
+        for (toningId, colorId) in avatarTonings {
+            guard let toning = tonings.first(where: { $0.id == toningId }),
+                  let colorSet = toning.colors.first(where: { $0.id == colorId }) else {
+                continue
+            }
+            
+            // 计算颜色
+            let sampler = ColorSampler(colors: colorSet.colors)
+            let lightColor = sampler.bright()
+            let darkColor = sampler.dark()
+            
+            // 找到所有符合条件的 SKU
+            let affectedSkus = selectedSkuIds.compactMap { skuId -> Sku? in
+                guard let sku = allSkusMap[skuId],
+                      sku.toningIds?.contains(toningId) == true else {
+                    return nil
+                }
+                return sku
+            }
+            
+            // 对所有受影响的 SKU 的 Slots 染色
+            for sku in affectedSkus {
+                guard let slots = skuSlots[sku.id] else { continue }
+                for slotName in slots {
+                    if let slot = skeleton.findSlot(slotName: slotName) {
+                        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+                        lightColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+                        slot.setColor(r: Float(r), g: Float(g), b: Float(b), a: Float(a))
+                        
+                        if slot.hasDarkColor() {
+                            darkColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+                            slot.setDarkColor(r: Float(r), g: Float(g), b: Float(b), a: Float(a))
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func resetColor(skeleton: Skeleton) {
+        for slot in skeleton.slots {
+            slot.setColor(r: 1, g: 1, b: 1, a: 1)
+            if slot.hasDarkColor() {
+                slot.setDarkColor(r: 1, g: 1, b: 1, a: 1)
+            }
+        }
+    }
+    
+    private func playAnimation(controller: SpineController, animationName: String) {
+        guard let drawable = drawable, let animation = drawable.skeletonData.findAnimation(name: animationName) else {
+            return
+        }
+        
+        drawable.animationState.setAnimation(trackIndex: 0, animation: animation, loop: false)
+        
+        // 添加 idle 动画
+        if let idle = drawable.skeletonData.findAnimation(name: "idle_default") {
+            drawable.animationState.addAnimation(trackIndex: 0, animation: idle, loop: true, delay: 0)
+        }
+    }
+    
+    
     
     /// 导出，对应 Android 的 export
     func export() {
@@ -547,7 +656,7 @@ class SpineEditorViewModel: ObservableObject {
             for frameIndex in 0..<frameCount {
                 // 重置 skeleton 到初始姿态（每帧都重置，确保状态一致）
                 skeleton.setToSetupPose()
-                
+                applyColor(skeleton: skeleton)
                 // 计算当前应该渲染的动画时间（循环播放）
                 let currentTime = Float(frameIndex) * delta
                 let animationTime = currentTime.truncatingRemainder(dividingBy: duration)
@@ -634,6 +743,54 @@ class SpineEditorViewModel: ObservableObject {
         guard CGImageDestinationFinalize(destination) else {
             throw NSError(domain: "SpineRecorder", code: -1, userInfo: [NSLocalizedDescriptionKey: "GIF 编码失败"])
         }
+    }
+    
+    
+    /// 获取所有皮肤的缩略图，对应 Android 的 getSkeletonSkins
+    @MainActor
+    func getSkeletonSkins(drawable: SkeletonDrawableWrapper) async throws -> [String: UIImage] {
+        return try await MainActor.run {
+            var skeletonSkins: [String: UIImage] = [:]
+            for skin in drawable.skeletonData.skins {
+                if skin.name == "default" { continue }
+                let skeleton = drawable.skeleton
+                skeleton.skin = skin
+                skeleton.setToSetupPose()
+                skeleton.update(delta: 0)
+                skeleton.updateWorldTransform(physics: SPINE_PHYSICS_UPDATE)
+                try skin.name.flatMap { skinName in
+                    if let img = try drawable.renderToImage(
+                        size: CGSizeMake(200, 200),
+                        backgroundColor: .white,
+                        scaleFactor: UIScreen.main.scale
+                    ) {
+                        skeletonSkins[skinName] = UIImage(cgImage: img)
+                    }
+                }
+            }
+            return skeletonSkins
+        }
+    }
+    
+    /// 获取 SKU 对应的 Slot 名称集合，对应 Android 的 getSkeletonSlots
+    func getSkeletonSlots(drawable: SkeletonDrawableWrapper, template: TemplateConfig) -> [String: Set<String>] {
+        var mapping: [String: Set<String>] = [:]
+        for selection in template.selections {
+            for sku in selection.skus {
+                guard let skin = drawable.skeletonData.findSkin(name: sku.skinName) else { continue }
+                
+                var slotNames = Set<String>()
+                // 通过 skin 的 attachments 来获取 slot 名称
+                for slot in drawable.skeletonData.slots {
+                    if let _ = skin.getAttachment(slotIndex: slot.index, name: slot.name)?.name {
+                        slotNames.insert(slot.name!)
+                    }
+                }
+                mapping[sku.id] = slotNames
+            }
+        }
+        
+        return mapping
     }
     
 }

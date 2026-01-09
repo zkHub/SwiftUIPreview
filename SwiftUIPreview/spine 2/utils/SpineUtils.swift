@@ -41,43 +41,18 @@ enum SpineUtils {
                 guard let skin = drawable.skeletonData.findSkin(name: sku.skinName) else { continue }
                 
                 var slotNames = Set<String>()
-                // 遍历 skin 的 attachments 来获取 slot 名称
-                // 注意：Spine iOS 的 API 可能不同，这里需要根据实际 API 调整
-                
-//                skin.getAttachment(slotIndex: Int32, name: <#T##String?#>)
-//                skin.entries
-                
+                // 通过 skin 的 attachments 来获取 slot 名称
                 for slot in drawable.skeletonData.slots {
-                    if let slotName = skin.getAttachment(slotIndex: slot.index, name: slot.name)?.name {
+                    if let _ = skin.getAttachment(slotIndex: slot.index, name: slot.name)?.name {
                         slotNames.insert(slot.name!)
                     }
                 }
-                
-//                if let attachments = skin.attachments {
-//                    for entry in attachments {
-//                        if let slotIndex = entry.slotIndex,
-//                           slotIndex < drawable.skeletonData.slots.count {
-//                            let slot = drawable.skeletonData.slots[slotIndex]
-//                            if let slotName = slot.name {
-//                                slotNames.insert(slotName)
-//                            }
-//                        }
-//                    }
-//                }
-                
                 mapping[sku.id] = slotNames
             }
         }
         
         return mapping
     }
-    
-    /// 将 Skeleton 渲染为 UIImage
-    private static func renderSkeletonToImage(skeleton: Skeleton, width: CGFloat, height: CGFloat) -> UIImage? {
-        // 使用 Metal 渲染到纹理，然后转换为 UIImage
-        // 这里需要根据 Spine iOS 的实际渲染 API 来实现
-        // 暂时返回 nil，需要后续根据实际 API 完善
-        return nil
-    }
+
 }
 
