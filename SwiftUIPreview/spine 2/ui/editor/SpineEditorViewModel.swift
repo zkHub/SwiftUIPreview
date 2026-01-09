@@ -104,7 +104,7 @@ class SpineEditorViewModel: ObservableObject {
                     )
                     
                     // 如果有初始 Avatar，设置它
-                    if var initAvatar = editor.template.initAvatar {
+                    if let initAvatar = editor.template.initAvatar {
                         self.setupInitAvatar(initAvatar)
                     }
                 }
@@ -369,32 +369,27 @@ class SpineEditorViewModel: ObservableObject {
             .reduce(into: [String: Sku]()) { dict, sku in
                 dict[sku.id] = sku
             }
-
+        
         // 2. 收集所有可用的 toningIds（去重）
         var availableToningIds = Set<String>()
         for skuId in selectedSkuIds {
             if let sku = allSkusMap[skuId], let toningIds = sku.toningIds {
-                for toningId in toningIds {
-                    availableToningIds.insert(toningId)
-                }
+                availableToningIds.formUnion(toningIds)
             }
         }
-
-        // 3. 对每个 toningId 随机决定是否染色（60%概率）
+        
+        // 如果 template.tonings 为空就返回空字典
         guard let allTonings = template.tonings else {
             return [:]
         }
-
+        
+        // 3. 对每个 toningId 随机选择一个颜色
         for toningId in availableToningIds {
-            if Double.random(in: 0..<1) < 0.4 {
-                if let toning = allTonings.first(where: { $0.id == toningId }),
-                   !toning.colors.isEmpty {
-
-                    // 随机选择一个颜色
-                    let randomColor = toning.colors.randomElement()
-                    if let color = randomColor {
-                        randomTonings[toningId] = color.id
-                    }
+            if let toning = allTonings.first(where: { $0.id == toningId }),
+               !toning.colors.isEmpty {
+                
+                if let randomColor = toning.colors.randomElement() {
+                    randomTonings[toningId] = randomColor.id
                 }
             }
         }
@@ -521,9 +516,11 @@ class SpineEditorViewModel: ObservableObject {
             }
             
             // 计算颜色
-            let sampler = ColorSampler(colors: colorSet.colors)
-            let lightColor = sampler.bright()
-            let darkColor = sampler.dark()
+            var lightColor = UIColor(hexRGB: colorSet.light)
+            let darkColor = UIColor(hexRGB: colorSet.dark)
+            if (lightColor == UIColor.black) {
+                lightColor = darkColor
+            }
             
             // 找到所有符合条件的 SKU
             let affectedSkus = selectedSkuIds.compactMap { skuId -> Sku? in

@@ -1,0 +1,1873 @@
+{
+  "selections": [
+    {
+      "id": "sel_iy96z8xx",
+      "playIndex": 0,
+      "skus": [
+        {
+          "id": "00m6i7os",
+          "pro": 0,
+          "skinName": "body/body_01",
+          "category": "body",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        }
+      ],
+      "name": "身体",
+      "cover": "Csf"
+    },
+    {
+      "id": "sel_2h3ydzuu",
+      "playIndex": 1,
+      "skus": [
+        {
+          "id": "00v0u6h2",
+          "pro": 0,
+          "skinName": "face/eyelids/eyelids_01",
+          "category": "face/eyelids",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00v0u6h3",
+          "pro": 0,
+          "skinName": "face/eyelids/eyelids_02",
+          "category": "face/eyelids",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00v0u6h4",
+          "pro": 500,
+          "skinName": "face/eyelids/eyelids_03",
+          "category": "face/eyelids",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00v0u6gx",
+          "pro": 0,
+          "skinName": "face/eyelids/eyelids_04",
+          "category": "face/eyelids",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00v0u6gy",
+          "pro": 500,
+          "skinName": "face/eyelids/eyelids_05",
+          "category": "face/eyelids",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        }
+      ],
+      "name": "眼眶",
+      "cover": "Vvg"
+    },
+    {
+      "id": "sel_2r3z76f6",
+      "playIndex": 2,
+      "skus": [
+        {
+          "id": "00gvo7ui",
+          "pro": 0,
+          "skinName": "face/eye/eye_01",
+          "category": "face/eye"
+        }
+      ],
+      "name": "眼白",
+      "cover": "miN"
+    },
+    {
+      "id": "sel_kf5vkiwi",
+      "playIndex": 3,
+      "skus": [
+        {
+          "id": "00ka3lbu",
+          "pro": 0,
+          "skinName": "face/pupil/pupil_01",
+          "category": "face/pupil",
+          "toningIds": [
+            "7i10Q9Jm"
+          ]
+        },
+        {
+          "id": "00ka3lbt",
+          "pro": 500,
+          "skinName": "face/pupil/pupil_02",
+          "category": "face/pupil",
+          "toningIds": [
+            "7i10Q9Jm"
+          ]
+        },
+        {
+          "id": "00ka3lbs",
+          "pro": 0,
+          "skinName": "face/pupil/pupil_03",
+          "category": "face/pupil",
+          "toningIds": [
+            "7i10Q9Jm"
+          ]
+        },
+        {
+          "id": "00ka3lbz",
+          "pro": 0,
+          "skinName": "face/pupil/pupil_04",
+          "category": "face/pupil",
+          "toningIds": [
+            "7i10Q9Jm"
+          ]
+        },
+        {
+          "id": "00ka3lby",
+          "pro": 500,
+          "skinName": "face/pupil/pupil_05",
+          "category": "face/pupil",
+          "toningIds": [
+            "7i10Q9Jm"
+          ]
+        },
+        {
+          "id": "00ka3lbx",
+          "pro": 0,
+          "skinName": "face/pupil/pupil_06",
+          "category": "face/pupil",
+          "toningIds": [
+            "7i10Q9Jm"
+          ]
+        },
+        {
+          "id": "002yd0sa",
+          "pro": 0,
+          "skinName": "face/highlight/highlight_01",
+          "category": "face/highlight",
+          "hidden": true
+        }
+      ],
+      "name": "眼睛",
+      "cover": "MxE"
+    },
+    {
+      "id": "sel_3ow24c9z",
+      "playIndex": 4,
+      "skus": [
+        {
+          "id": "00bcft52",
+          "pro": 500,
+          "skinName": "face/mouth/mouth_01",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft53",
+          "pro": 0,
+          "skinName": "face/mouth/mouth_02",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft54",
+          "pro": 0,
+          "skinName": "face/mouth/mouth_03",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft4x",
+          "pro": 500,
+          "skinName": "face/mouth/mouth_04",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft4y",
+          "pro": 0,
+          "skinName": "face/mouth/mouth_05",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft4z",
+          "pro": 0,
+          "skinName": "face/mouth/mouth_06",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft50",
+          "pro": 0,
+          "skinName": "face/mouth/mouth_07",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft59",
+          "pro": 500,
+          "skinName": "face/mouth/mouth_08",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        },
+        {
+          "id": "00bcft5a",
+          "pro": 500,
+          "skinName": "face/mouth/mouth_09",
+          "category": "face/mouth",
+          "toningIds": [
+            "wgbcmxpG"
+          ]
+        }
+      ],
+      "name": "嘴",
+      "cover": "0mJ"
+    },
+    {
+      "id": "sel_vry7tc1z",
+      "playIndex": 5,
+      "skus": [
+        {
+          "id": "00xqmz0m",
+          "pro": 500,
+          "skinName": "face/nose/nose_01",
+          "category": "face/nose",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00xqmz0n",
+          "pro": 0,
+          "skinName": "face/nose/nose_02",
+          "category": "face/nose",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00xqmz0o",
+          "pro": 0,
+          "skinName": "face/nose/nose_03",
+          "category": "face/nose",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        },
+        {
+          "id": "00xqmz0h",
+          "pro": 500,
+          "skinName": "face/nose/nose_04",
+          "category": "face/nose",
+          "toningIds": [
+            "w2oRCD2r"
+          ]
+        }
+      ],
+      "name": "鼻子",
+      "cover": "8pU"
+    },
+    {
+      "id": "sel_rwndwe09",
+      "playIndex": 6,
+      "skus": [
+        {
+          "id": "00vcw0sa",
+          "pro": 0,
+          "skinName": "face/eyebrow/eyebrow_01",
+          "category": "face/eyebrow"
+        },
+        {
+          "id": "00vcw0s9",
+          "pro": 500,
+          "skinName": "face/eyebrow/eyebrow_02",
+          "category": "face/eyebrow"
+        },
+        {
+          "id": "00vcw0s8",
+          "pro": 0,
+          "skinName": "face/eyebrow/eyebrow_03",
+          "category": "face/eyebrow"
+        },
+        {
+          "id": "00vcw0sf",
+          "pro": 0,
+          "skinName": "face/eyebrow/eyebrow_04",
+          "category": "face/eyebrow"
+        },
+        {
+          "id": "00vcw0sd",
+          "pro": 0,
+          "skinName": "face/eyebrow/eyebrow_06",
+          "category": "face/eyebrow"
+        },
+        {
+          "id": "00vcw0se",
+          "pro": 500,
+          "skinName": "face/eyebrow/eyebrow_05",
+          "category": "face/eyebrow"
+        }
+      ],
+      "name": "眉毛",
+      "cover": "841"
+    },
+    {
+      "id": "sel_h3r31e8c",
+      "playIndex": 7,
+      "skus": [
+        {
+          "id": "00uwq56x",
+          "pro": 500,
+          "skinName": "hair/bangs/bangs_01",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq56y",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_02",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq56z",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_03",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq570",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_04",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq571",
+          "pro": 500,
+          "skinName": "hair/bangs/bangs_05",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq572",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_06",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq573",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_07",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq56o",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_08",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00uwq56p",
+          "pro": 500,
+          "skinName": "hair/bangs/bangs_09",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00pkdzo9",
+          "pro": 0,
+          "skinName": "hair/bangs/bangs_010",
+          "category": "hair/bangs",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        }
+      ],
+      "name": "前发",
+      "cover": "3BJ"
+    },
+    {
+      "id": "sel_p0n51o2g",
+      "playIndex": 8,
+      "skus": [
+        {
+          "id": "00gcrs21",
+          "pro": 0,
+          "skinName": "hair/hairback/hairback_01",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs22",
+          "pro": 0,
+          "skinName": "hair/hairback/hairback_02",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs23",
+          "pro": 500,
+          "skinName": "hair/hairback/hairback_03",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs24",
+          "pro": 0,
+          "skinName": "hair/hairback/hairback_04",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs25",
+          "pro": 0,
+          "skinName": "hair/hairback/hairback_05",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs26",
+          "pro": 500,
+          "skinName": "hair/hairback/hairback_06",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs27",
+          "pro": 0,
+          "skinName": "hair/hairback/hairback_07",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00gcrs1s",
+          "pro": 0,
+          "skinName": "hair/hairback/hairback_08",
+          "category": "hair/hairback",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        }
+      ],
+      "name": "后发",
+      "cover": "BKR"
+    },
+    {
+      "id": "sel_ckdcbsdn",
+      "playIndex": 9,
+      "skus": [
+        {
+          "id": "00h1tic3",
+          "pro": 500,
+          "skinName": "hair/l_side/l_side_05",
+          "category": "hair/l_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00h1tic4",
+          "pro": 0,
+          "skinName": "hair/l_side/l_side_04",
+          "category": "hair/l_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00h1tic5",
+          "pro": 0,
+          "skinName": "hair/l_side/l_side_03",
+          "category": "hair/l_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00h1tic6",
+          "pro": 500,
+          "skinName": "hair/l_side/l_side_02",
+          "category": "hair/l_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00h1tic7",
+          "pro": 0,
+          "skinName": "hair/l_side/l_side_01",
+          "category": "hair/l_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        }
+      ],
+      "name": "左鬓发",
+      "cover": "KD3"
+    },
+    {
+      "id": "sel_6xx7errt",
+      "playIndex": 10,
+      "skus": [
+        {
+          "id": "00g3t32t",
+          "pro": 500,
+          "skinName": "hair/r_side/r_side_03",
+          "category": "hair/r_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00g3t32r",
+          "pro": 0,
+          "skinName": "hair/r_side/r_side_05",
+          "category": "hair/r_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00g3t32s",
+          "pro": 500,
+          "skinName": "hair/r_side/r_side_04",
+          "category": "hair/r_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00g3t32u",
+          "pro": 0,
+          "skinName": "hair/r_side/r_side_02",
+          "category": "hair/r_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        },
+        {
+          "id": "00g3t32v",
+          "pro": 0,
+          "skinName": "hair/r_side/r_side_01",
+          "category": "hair/r_side",
+          "toningIds": [
+            "7M62JoQx"
+          ]
+        }
+      ],
+      "name": "右鬓发",
+      "cover": "Gks"
+    },
+    {
+      "id": "sel_olb8bkh6",
+      "playIndex": 11,
+      "skus": [
+        {
+          "id": "001d3cic",
+          "pro": 500,
+          "skinName": "clothing/clothing_01",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3cif",
+          "pro": 500,
+          "skinName": "clothing/clothing_02",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3cie",
+          "pro": 0,
+          "skinName": "clothing/clothing_03",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3ci9",
+          "pro": 0,
+          "skinName": "clothing/clothing_04",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3ci8",
+          "pro": 0,
+          "skinName": "clothing/clothing_05",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3cib",
+          "pro": 0,
+          "skinName": "clothing/clothing_06",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3cia",
+          "pro": 0,
+          "skinName": "clothing/clothing_07",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3cil",
+          "pro": 0,
+          "skinName": "clothing/clothing_08",
+          "category": "clothing"
+        },
+        {
+          "id": "001d3cik",
+          "pro": 0,
+          "skinName": "clothing/clothing_09",
+          "category": "clothing"
+        },
+        {
+          "id": "00q11l5o",
+          "pro": 0,
+          "skinName": "clothing/clothing_010",
+          "category": "clothing"
+        },
+        {
+          "id": "00q11l5n",
+          "pro": 500,
+          "skinName": "clothing/clothing_011",
+          "category": "clothing"
+        },
+        {
+          "id": "00q11l5m",
+          "pro": 500,
+          "skinName": "clothing/clothing_012",
+          "category": "clothing"
+        },
+        {
+          "id": "00q11l5l",
+          "pro": 0,
+          "skinName": "clothing/clothing_013",
+          "category": "clothing"
+        }
+      ],
+      "name": "衣服",
+      "cover": "Qg1"
+    },
+    {
+      "id": "sel_ighcgq8r",
+      "playIndex": 12,
+      "skus": [
+        {
+          "id": "00zijslo",
+          "pro": 0,
+          "skinName": "bag/bag_01",
+          "category": "bag"
+        },
+        {
+          "id": "00zijsll",
+          "pro": 500,
+          "skinName": "bag/bag_02",
+          "category": "bag"
+        },
+        {
+          "id": "00zijslm",
+          "pro": 0,
+          "skinName": "bag/bag_03",
+          "category": "bag"
+        },
+        {
+          "id": "00zijslr",
+          "pro": 0,
+          "skinName": "bag/bag_04",
+          "category": "bag"
+        },
+        {
+          "id": "00zijsls",
+          "pro": 0,
+          "skinName": "bag/bag_05",
+          "category": "bag"
+        },
+        {
+          "id": "00zijslp",
+          "pro": 500,
+          "skinName": "bag/bag_06",
+          "category": "bag"
+        },
+        {
+          "id": "00zijslq",
+          "pro": 100,
+          "skinName": "bag/bag_07",
+          "category": "bag"
+        },
+        {
+          "id": "00zijslf",
+          "pro": 500,
+          "skinName": "bag/bag_08",
+          "category": "bag"
+        },
+        {
+          "id": "00zijslg",
+          "pro": 0,
+          "skinName": "bag/bag_09",
+          "category": "bag"
+        },
+        {
+          "id": "00ziccak",
+          "pro": 0,
+          "skinName": "bag/bag_010",
+          "category": "bag"
+        },
+        {
+          "id": "00ziccaj",
+          "pro": 500,
+          "skinName": "bag/bag_011",
+          "category": "bag"
+        },
+        {
+          "id": "00ziccai",
+          "pro": 0,
+          "skinName": "bag/bag_012",
+          "category": "bag"
+        }
+      ],
+      "name": "包包",
+      "cover": "NaY"
+    },
+    {
+      "id": "sel_hwys5yek",
+      "playIndex": 13,
+      "skus": [
+        {
+          "id": "00mdikb8",
+          "pro": 500,
+          "skinName": "choker/choker_01",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikbb",
+          "pro": 0,
+          "skinName": "choker/choker_02",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikba",
+          "pro": 0,
+          "skinName": "choker/choker_03",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikb5",
+          "pro": 500,
+          "skinName": "choker/choker_04",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikb4",
+          "pro": 0,
+          "skinName": "choker/choker_05",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikb7",
+          "pro": 0,
+          "skinName": "choker/choker_06",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikb6",
+          "pro": 0,
+          "skinName": "choker/choker_07",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikbh",
+          "pro": 500,
+          "skinName": "choker/choker_08",
+          "category": "choker"
+        },
+        {
+          "id": "00mdikbg",
+          "pro": 0,
+          "skinName": "choker/choker_09",
+          "category": "choker"
+        }
+      ],
+      "name": "choker",
+      "cover": "8U9"
+    },
+    {
+      "id": "sel_xyzbah5z",
+      "playIndex": 14,
+      "skus": [
+        {
+          "id": "00jx52wk",
+          "pro": 500,
+          "skinName": "earring/earring_01",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wn",
+          "pro": 0,
+          "skinName": "earring/earring_02",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wm",
+          "pro": 0,
+          "skinName": "earring/earring_03",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wh",
+          "pro": 0,
+          "skinName": "earring/earring_04",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wg",
+          "pro": 500,
+          "skinName": "earring/earring_05",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wj",
+          "pro": 0,
+          "skinName": "earring/earring_06",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wi",
+          "pro": 500,
+          "skinName": "earring/earring_07",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52wt",
+          "pro": 0,
+          "skinName": "earring/earring_08",
+          "category": "earring"
+        },
+        {
+          "id": "00jx52ws",
+          "pro": 500,
+          "skinName": "earring/earring_09",
+          "category": "earring"
+        },
+        {
+          "id": "00i3n610",
+          "pro": 0,
+          "skinName": "earring/earring_010",
+          "category": "earring"
+        },
+        {
+          "id": "00i3n611",
+          "pro": 0,
+          "skinName": "earring/earring_011",
+          "category": "earring"
+        },
+        {
+          "id": "00i3n612",
+          "pro": 500,
+          "skinName": "earring/earring_012",
+          "category": "earring"
+        }
+      ],
+      "name": "耳环",
+      "cover": "9ae"
+    },
+    {
+      "id": "sel_1djgp3ru",
+      "playIndex": 15,
+      "skus": [
+        {
+          "id": "00x9hk2c",
+          "pro": 0,
+          "skinName": "gloves/gloves_01",
+          "category": "gloves"
+        },
+        {
+          "id": "00x9hk2f",
+          "pro": 500,
+          "skinName": "gloves/gloves_02",
+          "category": "gloves"
+        },
+        {
+          "id": "00x9hk2e",
+          "pro": 0,
+          "skinName": "gloves/gloves_03",
+          "category": "gloves"
+        },
+        {
+          "id": "00x9hk29",
+          "pro": 500,
+          "skinName": "gloves/gloves_04",
+          "category": "gloves"
+        },
+        {
+          "id": "00x9hk28",
+          "pro": 0,
+          "skinName": "gloves/gloves_05",
+          "category": "gloves"
+        },
+        {
+          "id": "00x9hk2b",
+          "pro": 500,
+          "skinName": "gloves/gloves_06",
+          "category": "gloves"
+        },
+        {
+          "id": "00x9hk2a",
+          "pro": 0,
+          "skinName": "gloves/gloves_07",
+          "category": "gloves"
+        }
+      ],
+      "name": "衣袖",
+      "cover": "U4W"
+    },
+    {
+      "id": "sel_8k1s58qy",
+      "playIndex": 16,
+      "skus": [
+        {
+          "id": "00qcsgz0",
+          "pro": 0,
+          "skinName": "neck_accessory/neck_accessory_01",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgyx",
+          "pro": 0,
+          "skinName": "neck_accessory/neck_accessory_02",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgz3",
+          "pro": 0,
+          "skinName": "neck_accessory/neck_accessory_04",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgz4",
+          "pro": 0,
+          "skinName": "neck_accessory/neck_accessory_05",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgz1",
+          "pro": 500,
+          "skinName": "neck_accessory/neck_accessory_06",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgz2",
+          "pro": 0,
+          "skinName": "neck_accessory/neck_accessory_07",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgyr",
+          "pro": 0,
+          "skinName": "neck_accessory/neck_accessory_08",
+          "category": "neck_accessory"
+        },
+        {
+          "id": "00qcsgys",
+          "pro": 500,
+          "skinName": "neck_accessory/neck_accessory_09",
+          "category": "neck_accessory"
+        }
+      ],
+      "name": "项链",
+      "cover": "DsX"
+    },
+    {
+      "id": "sel_0zigay8s",
+      "playIndex": 17,
+      "skus": [
+        {
+          "id": "00ofmnh8",
+          "pro": 0,
+          "skinName": "head_accessory02/head_accessory02_1",
+          "category": "head_accessory02"
+        },
+        {
+          "id": "00ofmnh5",
+          "pro": 500,
+          "skinName": "head_accessory02/head_accessory02_2",
+          "category": "head_accessory02"
+        },
+        {
+          "id": "00ofmnh6",
+          "pro": 0,
+          "skinName": "head_accessory02/head_accessory02_3",
+          "category": "head_accessory02"
+        },
+        {
+          "id": "00ofmnhb",
+          "pro": 200,
+          "skinName": "head_accessory02/head_accessory02_4",
+          "category": "head_accessory02"
+        },
+        {
+          "id": "00ofmnhc",
+          "pro": 500,
+          "skinName": "head_accessory02/head_accessory02_5",
+          "category": "head_accessory02"
+        },
+        {
+          "id": "00ofmnh9",
+          "pro": 0,
+          "skinName": "head_accessory02/head_accessory02_6",
+          "category": "head_accessory02"
+        }
+      ],
+      "name": "头饰",
+      "cover": "bwI"
+    },
+    {
+      "id": "sel_j23tujet",
+      "playIndex": 18,
+      "skus": [
+        {
+          "id": "005lwx1j",
+          "pro": 0,
+          "skinName": "head_accessory01/head_accessory01_2",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "005lwx1i",
+          "pro": 500,
+          "skinName": "head_accessory01/head_accessory01_3",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "005lwx1d",
+          "pro": 0,
+          "skinName": "head_accessory01/head_accessory01_4",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "005lwx1f",
+          "pro": 500,
+          "skinName": "head_accessory01/head_accessory01_6",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "005lwx1e",
+          "pro": 500,
+          "skinName": "head_accessory01/head_accessory01_7",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "005lwx1p",
+          "pro": 0,
+          "skinName": "head_accessory01/head_accessory01_8",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "005lwx1o",
+          "pro": 0,
+          "skinName": "head_accessory01/head_accessory01_9",
+          "category": "head_accessory01"
+        },
+        {
+          "id": "00s05vkc",
+          "pro": 0,
+          "skinName": "head_accessory01/head_accessory01_10",
+          "category": "head_accessory01"
+        }
+      ],
+      "name": "发饰",
+      "cover": "ZM7"
+    },
+    {
+      "id": "sel_chm5du73",
+      "playIndex": 19,
+      "skus": [
+        {
+          "id": "00kf5d2k",
+          "pro": 0,
+          "skinName": "hand_accessory/hand_accessory_01",
+          "category": "hand_accessory"
+        },
+        {
+          "id": "00kf5d2h",
+          "pro": 500,
+          "skinName": "hand_accessory/hand_accessory_02",
+          "category": "hand_accessory"
+        },
+        {
+          "id": "00kf5d2i",
+          "pro": 0,
+          "skinName": "hand_accessory/hand_accessory_03",
+          "category": "hand_accessory"
+        },
+        {
+          "id": "00kf5d2n",
+          "pro": 500,
+          "skinName": "hand_accessory/hand_accessory_04",
+          "category": "hand_accessory"
+        },
+        {
+          "id": "00kf5d2o",
+          "pro": 0,
+          "skinName": "hand_accessory/hand_accessory_05",
+          "category": "hand_accessory"
+        }
+      ],
+      "name": "衣服装饰",
+      "cover": "Nyp"
+    },
+    {
+      "id": "sel_o6bflztj",
+      "playIndex": 20,
+      "skus": [
+        {
+          "id": "00oscj2x",
+          "pro": 0,
+          "skinName": "background/background_tx_01",
+          "category": "background"
+        },
+        {
+          "id": "00oscj30",
+          "pro": 500,
+          "skinName": "background/background_tx_02",
+          "category": "background"
+        },
+        {
+          "id": "00oscj2z",
+          "pro": 0,
+          "skinName": "background/background_tx_03",
+          "category": "background"
+        },
+        {
+          "id": "00oscj32",
+          "pro": 0,
+          "skinName": "background/background_tx_04",
+          "category": "background"
+        },
+        {
+          "id": "00oscj31",
+          "pro": 500,
+          "skinName": "background/background_tx_05",
+          "category": "background"
+        }
+      ],
+      "name": "背景",
+      "cover": "09Z"
+    }
+  ],
+  "tonings": [
+    {
+      "name": "肤色",
+      "id": "w2oRCD2r",
+      "pro": 0,
+      "colors": [
+        {
+          "id": "2oJ3tVltfe",
+          "light": "#ffc6af",
+          "dark": "#cc5943"
+        },
+        {
+          "id": "3L2NXLlE0o",
+          "light": "#dd9b7c",
+          "dark": "#942b18"
+        },
+        {
+          "id": "5p4QAmVGFF",
+          "light": "#ffeeee",
+          "dark": "#c74141"
+        },
+        {
+          "id": "8LhQX1qMYs",
+          "light": "#e99e97",
+          "dark": "#8c2817"
+        },
+        {
+          "id": "8zk3IKbVJe",
+          "light": "#ff906b",
+          "dark": "#751616"
+        },
+        {
+          "id": "Bj9imYfbAR",
+          "light": "#b9cfe3",
+          "dark": "#5e458a"
+        },
+        {
+          "id": "BogKwosxrG",
+          "light": "#fddac3",
+          "dark": "#6e1f0f"
+        },
+        {
+          "id": "GMRLPcTaQM",
+          "light": "#cb836e",
+          "dark": "#791d07"
+        },
+        {
+          "id": "IaulCI3Rg9",
+          "light": "#ffc9d7",
+          "dark": "#802f5a"
+        },
+        {
+          "id": "KYLKZx2kfS",
+          "light": "#f6d9cb",
+          "dark": "#700b0b"
+        },
+        {
+          "id": "KxYycf1HWY",
+          "light": "#cd7777",
+          "dark": "#680909"
+        },
+        {
+          "id": "PXTBh1hWg5",
+          "light": "#dcdcdc",
+          "dark": "#000000"
+        },
+        {
+          "id": "SvdT2yuZHD",
+          "light": "#f0bfc0",
+          "dark": "#000000"
+        },
+        {
+          "id": "XwmN9F4AIF",
+          "light": "#c47158",
+          "dark": "#7b0e0e"
+        },
+        {
+          "id": "ZW5NQCuJ9Z",
+          "light": "#ae8e7d",
+          "dark": "#701f14"
+        },
+        {
+          "id": "aAaeFzbXrO",
+          "light": "#b98b8c",
+          "dark": "#981416"
+        },
+        {
+          "id": "bx69zwZiTm",
+          "light": "#874b1a",
+          "dark": "#000000"
+        },
+        {
+          "id": "fu31u81eqX",
+          "light": "#de898a",
+          "dark": "#000000"
+        },
+        {
+          "id": "hnb6tSvSwo",
+          "light": "#aed8df",
+          "dark": "#032c40"
+        },
+        {
+          "id": "j8DV3oeEoH",
+          "light": "#f59d9d",
+          "dark": "#aa1e1e"
+        },
+        {
+          "id": "p1RiSOgXvM",
+          "light": "#f9c5dd",
+          "dark": "#370c18"
+        },
+        {
+          "id": "soBWcc3bCQ",
+          "light": "#975c47",
+          "dark": "#690c07"
+        },
+        {
+          "id": "xB2CzMtE3e",
+          "light": "#8a8888",
+          "dark": "#3f383f"
+        },
+        {
+          "id": "zrAFEXZV3K",
+          "light": "#753134",
+          "dark": "#000000"
+        },
+        {
+          "id": "xw14b6ah",
+          "light": "#ffffff",
+          "dark": "#000000"
+        },
+        {
+          "id": "rsrrir5w",
+          "light": "#ffffff",
+          "dark": "#000000"
+        },
+        {
+          "id": "q6tdnif2",
+          "light": "#ffffff",
+          "dark": "#846d62"
+        }
+      ]
+    },
+    {
+      "name": "瞳孔",
+      "id": "7i10Q9Jm",
+      "pro": 0,
+      "colors": [
+        {
+          "id": "243e559b",
+          "light": "#000000",
+          "dark": "#7cc958"
+        },
+        {
+          "id": "2782e5fd",
+          "light": "#000000",
+          "dark": "#69e0ec"
+        },
+        {
+          "id": "45a12644",
+          "light": "#1f0606",
+          "dark": "#5a0475"
+        },
+        {
+          "id": "58e40aea",
+          "light": "#000000",
+          "dark": "#ffd052"
+        },
+        {
+          "id": "62531788",
+          "light": "#3b0909",
+          "dark": "#f12626"
+        },
+        {
+          "id": "8f1be236",
+          "light": "#094244",
+          "dark": "#51e24a"
+        },
+        {
+          "id": "9615dcee",
+          "light": "#000000",
+          "dark": "#fd6c90"
+        },
+        {
+          "id": "9d4649c6",
+          "light": "#000000",
+          "dark": "#4863ff"
+        },
+        {
+          "id": "a4e2bfb8",
+          "light": "#e53935",
+          "dark": "#fae84b"
+        },
+        {
+          "id": "e0c9f6f",
+          "light": "#ffffff",
+          "dark": "#000000"
+        },
+        {
+          "id": "e6238abc",
+          "light": "#200e28",
+          "dark": "#ff4ad3"
+        },
+        {
+          "id": "ef5f42d0",
+          "light": "#8b0dff",
+          "dark": "#ffe96a"
+        },
+        {
+          "id": "f0506924",
+          "light": "#ffb2b2",
+          "dark": "#b355ec"
+        },
+        {
+          "id": "fbd640cd",
+          "light": "#cd12e1",
+          "dark": "#4df4ff"
+        },
+        {
+          "id": "fde5070e",
+          "light": "#ffd117",
+          "dark": "#c10003"
+        },
+        {
+          "id": "ck43mn30",
+          "light": "#373737",
+          "dark": "#000000"
+        },
+        {
+          "id": "073foq8p",
+          "light": "#ffffff",
+          "dark": "#444444"
+        },
+        {
+          "id": "98ux9umy",
+          "light": "#b3b3ff",
+          "dark": "#181e60"
+        },
+        {
+          "id": "ibq2afs7",
+          "light": "#ffffb3",
+          "dark": "#352803"
+        },
+        {
+          "id": "9tcrpssj",
+          "light": "#ff6e6e",
+          "dark": "#440505"
+        },
+        {
+          "id": "5ec1ejsr",
+          "light": "#ead193",
+          "dark": "#7b4608"
+        },
+        {
+          "id": "kwquas9b",
+          "light": "#b1fff0",
+          "dark": "#000000"
+        },
+        {
+          "id": "bqnwousz",
+          "light": "#d0a7ee",
+          "dark": "#46064f"
+        },
+        {
+          "id": "ib8fmr89",
+          "light": "#ff442f",
+          "dark": "#421515"
+        },
+        {
+          "id": "v0uy4pee",
+          "light": "#94b3e6",
+          "dark": "#0e2148"
+        },
+        {
+          "id": "rfuotfx9",
+          "light": "#ee65df",
+          "dark": "#3e042a"
+        },
+        {
+          "id": "xo2ets59",
+          "light": "#79db69",
+          "dark": "#000000"
+        }
+      ]
+    },
+    {
+      "name": "头发",
+      "id": "7M62JoQx",
+      "pro": 0,
+      "colors": [
+        {
+          "id": "0XcTthBzfn",
+          "light": "#feffc7",
+          "dark": "#000000"
+        },
+        {
+          "id": "1CMvkrWFmd",
+          "light": "#cc88df",
+          "dark": "#260039"
+        },
+        {
+          "id": "1O4j7j7teC",
+          "light": "#6bc9ff",
+          "dark": "#04040d"
+        },
+        {
+          "id": "2N8gVasixa",
+          "light": "#ff7474",
+          "dark": "#350808"
+        },
+        {
+          "id": "4LCTwDWSrq",
+          "light": "#a95f30",
+          "dark": "#000000"
+        },
+        {
+          "id": "5gzaab9bPe",
+          "light": "#ffeba2",
+          "dark": "#794141"
+        },
+        {
+          "id": "5ygvOM1wUt",
+          "light": "#78d6da",
+          "dark": "#010a0d"
+        },
+        {
+          "id": "6XieddTf0v",
+          "light": "#ffffff",
+          "dark": "#000000"
+        },
+        {
+          "id": "6fsVCr6pzG",
+          "light": "#595858",
+          "dark": "#000000"
+        },
+        {
+          "id": "AOHmC50kPl",
+          "light": "#623222",
+          "dark": "#1b1b1b"
+        },
+        {
+          "id": "Ap9HXpZIw6",
+          "light": "#d2a979",
+          "dark": "#190908"
+        },
+        {
+          "id": "AvGGNeNkWr",
+          "light": "#c2c6ff",
+          "dark": "#020a11"
+        },
+        {
+          "id": "BjuRbzq1Et",
+          "light": "#a293a8",
+          "dark": "#010622"
+        },
+        {
+          "id": "DDMokJeejA",
+          "light": "#ffede3",
+          "dark": "#2f1708"
+        },
+        {
+          "id": "EI420XeqA1",
+          "light": "#5b4949",
+          "dark": "#220707"
+        },
+        {
+          "id": "EQ2kNSzrVt",
+          "light": "#7f6562",
+          "dark": "#000000"
+        },
+        {
+          "id": "HZryCUvp7Y",
+          "light": "#d1a890",
+          "dark": "#000000"
+        },
+        {
+          "id": "JoBIR8ynTF",
+          "light": "#698ad0",
+          "dark": "#000000"
+        },
+        {
+          "id": "LYIMbBlyCD",
+          "light": "#ffe9e9",
+          "dark": "#990a0a"
+        },
+        {
+          "id": "NFbT5jKIlo",
+          "light": "#fd8de6",
+          "dark": "#950422"
+        },
+        {
+          "id": "RIlC6giGrG",
+          "light": "#4f3f59",
+          "dark": "#e6ecff"
+        },
+        {
+          "id": "U4S9P6J8er",
+          "light": "#000000",
+          "dark": "#d3ee8e"
+        },
+        {
+          "id": "Uvp4xGdJDG",
+          "light": "#000000",
+          "dark": "#f9fde1"
+        },
+        {
+          "id": "YjhMB4fXSo",
+          "light": "#ff9671",
+          "dark": "#53260d"
+        },
+        {
+          "id": "aSSbXloo1j",
+          "light": "#000000",
+          "dark": "#7a72e2"
+        },
+        {
+          "id": "akbjm7yTSH",
+          "light": "#000000",
+          "dark": "#ffffff"
+        },
+        {
+          "id": "bhC59nvP7i",
+          "light": "#d8966c",
+          "dark": "#350c01"
+        },
+        {
+          "id": "bo3LWhpmdP",
+          "light": "#ff99f7",
+          "dark": "#441b1b"
+        },
+        {
+          "id": "cY3JA9Hkfg",
+          "light": "#2f0300",
+          "dark": "#ffdacb"
+        },
+        {
+          "id": "l7RyrDarKz",
+          "light": "#000000",
+          "dark": "#749854"
+        },
+        {
+          "id": "lHPacJvqgN",
+          "light": "#af816e",
+          "dark": "#371a00"
+        },
+        {
+          "id": "nMJLSSV7I2",
+          "light": "#f5c3ff",
+          "dark": "#a6067c"
+        },
+        {
+          "id": "oJdwPtQOcS",
+          "light": "#ff8989",
+          "dark": "#5b1029"
+        },
+        {
+          "id": "ouk3CCmfZJ",
+          "light": "#000000",
+          "dark": "#33799b"
+        },
+        {
+          "id": "pnILDplJXx",
+          "light": "#2a2d28",
+          "dark": "#efffdd"
+        },
+        {
+          "id": "qJv7MivIKo",
+          "light": "#db3434",
+          "dark": "#220404"
+        },
+        {
+          "id": "rp74b4gZ5M",
+          "light": "#000000",
+          "dark": "#afd9ff"
+        },
+        {
+          "id": "sLxkkyZa0j",
+          "light": "#000000",
+          "dark": "#bca9c6"
+        },
+        {
+          "id": "sPzLCmIKwk",
+          "light": "#000000",
+          "dark": "#ffefc1"
+        },
+        {
+          "id": "tWSZuxuL4I",
+          "light": "#fff2d4",
+          "dark": "#622100"
+        },
+        {
+          "id": "tvFfQeNiNY",
+          "light": "#ffbc8e",
+          "dark": "#4a0909"
+        },
+        {
+          "id": "urCXHcjPaC",
+          "light": "#750909",
+          "dark": "#460f1d"
+        },
+        {
+          "id": "vEAyYpuieJ",
+          "light": "#000000",
+          "dark": "#ea5353"
+        },
+        {
+          "id": "w3gilaFIBC",
+          "light": "#000000",
+          "dark": "#ff63bb"
+        },
+        {
+          "id": "wK80esHEph",
+          "light": "#eeeeee",
+          "dark": "#3e3e3e"
+        },
+        {
+          "id": "wqqsoITPvE",
+          "light": "#000000",
+          "dark": "#f9b838"
+        },
+        {
+          "id": "x0HHNf28IU",
+          "light": "#ada382",
+          "dark": "#000000"
+        },
+        {
+          "id": "xn4qI8uLrv",
+          "light": "#000000",
+          "dark": "#9c5858"
+        },
+        {
+          "id": "zF70yeTWyA",
+          "light": "#000000",
+          "dark": "#94d7c9"
+        },
+        {
+          "id": "ocn3i56n",
+          "light": "#f6e570",
+          "dark": "#9f8b06"
+        },
+        {
+          "id": "c5z057vp",
+          "light": "#bfff71",
+          "dark": "#304616"
+        },
+        {
+          "id": "hxz6okla",
+          "light": "#6a937a",
+          "dark": "#000000"
+        },
+        {
+          "id": "whky2ymw",
+          "light": "#000000",
+          "dark": "#000000"
+        },
+        {
+          "id": "fgw9tlgz",
+          "light": "#fffed3",
+          "dark": "#5d5b3b"
+        }
+      ]
+    },
+    {
+      "name": "嘴",
+      "id": "wgbcmxpG",
+      "pro": 0,
+      "colors": [
+        {
+          "id": "0zacgXHdBf",
+          "light": "#646464",
+          "dark": "#4f0606"
+        },
+        {
+          "id": "ALlDX2HajL",
+          "light": "#ff902d",
+          "dark": "#942707"
+        },
+        {
+          "id": "BiWMZqXqgH",
+          "light": "#000000",
+          "dark": "#83a642"
+        },
+        {
+          "id": "DzEk5LUR5B",
+          "light": "#ff6d6d",
+          "dark": "#0f0000"
+        },
+        {
+          "id": "HOnkQvMEE5",
+          "light": "#000000",
+          "dark": "#dd1df7"
+        },
+        {
+          "id": "UCMGEuEW2S",
+          "light": "#7a36e3",
+          "dark": "#6d1095"
+        },
+        {
+          "id": "enKmTHktdo",
+          "light": "#ffffff",
+          "dark": "#562411"
+        },
+        {
+          "id": "maGQmBmMJH",
+          "light": "#ffa3f5",
+          "dark": "#3b0000"
+        },
+        {
+          "id": "vHq1zWPJOG",
+          "light": "#8fe7ff",
+          "dark": "#1f5460"
+        },
+        {
+          "id": "vvP0rA712Z",
+          "light": "#9c7dff",
+          "dark": "#690716"
+        },
+        {
+          "id": "xSEtgRwM3A",
+          "light": "#dc8165",
+          "dark": "#000000"
+        }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "id": "idle_default",
+      "name": "idle_default",
+      "pro": 0,
+      "loop": true
+    },
+    {
+      "id": "react_default",
+      "name": "react_default",
+      "pro": 0,
+      "loop": true
+    }
+  ],
+  "requireCategories": [
+    "body",
+    "clothing",
+    "face/pupil",
+    "face",
+    "hair/bangs",
+    "hair/hairback",
+    "face/nose",
+    "face/highlight",
+    "face/eyelids",
+    "face/eyebrow",
+    "face/eye",
+    "hair/r_side",
+    "hair/l_side",
+    "face/mouth"
+  ],
+  "initAvatar": {
+    "version": 1765874400000,
+    "skus": [
+      "00m6i7os"
+    ],
+    "tonings": {
+      "7M62JoQx": "qJv7MivIKo"
+    },
+    "animation": "idle_default"
+  }
+}

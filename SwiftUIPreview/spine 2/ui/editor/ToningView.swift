@@ -98,9 +98,9 @@ struct ColorItemView: View {
     var body: some View {
         VStack(spacing: 4) {
             // 显示渐变色预览
-            if let firstColor = colorSet.colors.first {
+//            if let firstColor = colorSet.colors.first {
                 let gradient = LinearGradient(
-                    colors: colorSet.colors.map { hexToColor($0.color) },
+                    colors: [Color(hex: colorSet.light), Color(hex: colorSet.dark)],
                     startPoint: .leading,
                     endPoint: .trailing
                 )
@@ -112,7 +112,7 @@ struct ColorItemView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 2)
                     )
-            }
+//            }
         }
         .onTapGesture {
             viewModel.selectColor(toningId: toningId, colorId: colorSet.id)

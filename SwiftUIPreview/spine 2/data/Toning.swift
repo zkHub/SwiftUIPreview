@@ -11,7 +11,8 @@ struct Toning: Codable, Equatable {
 /// ColorSet 数据模型，对应 Android 的 ColorSet.kt
 struct ColorSet: Codable, Equatable {
     let id: String
-    let colors: [ToningColor]
+    let light: String  // 亮色 (#hexcode)
+    let dark: String    // 暗色 (#hexcode)
 }
 
 /// Color 数据模型，对应 Android 的 Color.kt
