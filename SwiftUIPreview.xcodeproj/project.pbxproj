@@ -39,6 +39,7 @@
 		583D73C12DDC7EC100D34E5D /* DragSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C02DDC7EC100D34E5D /* DragSortView.swift */; };
 		583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D73C42DDC80E800D34E5D /* DragListView.swift */; };
 		583D74022DE43DCF00D34E5D /* OCCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583D74012DE43DCF00D34E5D /* OCCreateView.swift */; };
+		58417FD92F10F97200673B91 /* BetterCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 58417FD82F10F97200673B91 /* BetterCodable */; };
 		5854E3032E6FC991005D66EA /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5854E3022E6FC991005D66EA /* GradientText.swift */; };
 		5854E3282E6FD9B8005D66EA /* VAGRoundedNext-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5854E3082E6FD9B8005D66EA /* VAGRoundedNext-Black.otf */; };
 		5854E33F2E7002F8005D66EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5854E33D2E7002F8005D66EA /* Localizable.strings */; };
@@ -262,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58DECDB82F0FBA6600C2623C /* Spine in Frameworks */,
+				58417FD92F10F97200673B91 /* BetterCodable in Frameworks */,
 				5856520A2F0FB2B600FE26B0 /* Spine in Frameworks */,
 				58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */,
 				58C478E12CA545C60069CE19 /* Lottie in Frameworks */,
@@ -655,6 +657,7 @@
 				5856520B2F0FB2B600FE26B0 /* SpineCppLite */,
 				58DECDB72F0FBA6600C2623C /* Spine */,
 				58DECDB92F0FBA6600C2623C /* SpineCppLite */,
+				58417FD82F10F97200673B91 /* BetterCodable */,
 			);
 			productName = SwiftUIPreview;
 			productReference = 58C607602C7EFA2F00097699 /* SwiftUIPreview.app */;
@@ -696,6 +699,7 @@
 				586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */,
 				589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 				58DECDB62F0FBA6600C2623C /* XCRemoteSwiftPackageReference "spine-runtimes" */,
+				58417FD72F10F97200673B91 /* XCRemoteSwiftPackageReference "BetterCodable" */,
 			);
 			productRefGroup = 58C607612C7EFA2F00097699 /* Products */;
 			projectDirPath = "";
@@ -1097,6 +1101,14 @@
 				minimumVersion = 8.0.3;
 			};
 		};
+		58417FD72F10F97200673B91 /* XCRemoteSwiftPackageReference "BetterCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marksands/BetterCodable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
 		586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yeatse/KingfisherWebP";
@@ -1144,6 +1156,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58324B482CB682D50044C85A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		58417FD82F10F97200673B91 /* BetterCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58417FD72F10F97200673B91 /* XCRemoteSwiftPackageReference "BetterCodable" */;
+			productName = BetterCodable;
 		};
 		585652042F0FB17B00FE26B0 /* Spine */ = {
 			isa = XCSwiftPackageProductDependency;

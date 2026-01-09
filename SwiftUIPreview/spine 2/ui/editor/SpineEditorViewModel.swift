@@ -105,7 +105,6 @@ class SpineEditorViewModel: ObservableObject {
                     
                     // 如果有初始 Avatar，设置它
                     if var initAvatar = editor.template.initAvatar {
-                        initAvatar.tonings = [:]
                         self.setupInitAvatar(initAvatar)
                     }
                 }
@@ -277,10 +276,10 @@ class SpineEditorViewModel: ObservableObject {
     /// 选择颜色，对应 Android 的 selectColor
     func selectColor(toningId: String, colorId: String) {
         var selectedTonings = avatar.tonings
-        if selectedTonings?[toningId] == colorId {
-            selectedTonings?.removeValue(forKey: toningId)
+        if selectedTonings[toningId] == colorId {
+            selectedTonings.removeValue(forKey: toningId)
         } else {
-            selectedTonings?[toningId] = colorId
+            selectedTonings[toningId] = colorId
         }
         
         let newAvatar = SpineAvatar(
@@ -293,7 +292,7 @@ class SpineEditorViewModel: ObservableObject {
     
     /// 检查颜色是否已选中，对应 Android 的 isColorSelected
     func isColorSelected(toningId: String, colorId: String) -> Bool {
-        return avatar.tonings?[toningId] == colorId
+        return avatar.tonings[toningId] == colorId
     }
     
     /// 获取皮肤缩略图，对应 Android 的 getSkinBitmap
@@ -331,12 +330,12 @@ class SpineEditorViewModel: ObservableObject {
             }
         }
         
-        // 阶段2：处理可选 Categories（40%概率）
+        // 阶段2：处理可选 Categories（60%概率）
         let allCategories = Set(categoryToSkus.keys)
         let optionalCategories = allCategories.subtracting(Set(requireCategories))
         
         for optionalCategory in optionalCategories {
-            if Double.random(in: 0..<1) < 0.4 {
+            if Double.random(in: 0..<1) < 0.6 {
                 if let candidates = categoryToSkus[optionalCategory], !candidates.isEmpty {
                     if let selectedSku = candidates.randomElement() {
                         selectedSkus.insert(selectedSku.id)
@@ -345,14 +344,64 @@ class SpineEditorViewModel: ObservableObject {
             }
         }
         
+        // Step 3: 随机染色（40%概率）
+        let randomTonings = generateRandomTonings(selectedSkuIds: selectedSkus, template: template)
+        
         // 生成新 Avatar（清空染色）
         let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: Array(selectedSkus),
-            animation: avatar.animation, tonings: [:]
+            animation: avatar.animation, tonings: randomTonings
         )
         updateAvatar(newAvatar)
     }
+    
+    
+    /**
+     * 生成随机染色配置
+     * 对于每个支持染色的 toningId，有 40% 概率随机选择一个颜色
+     */
+    func generateRandomTonings(selectedSkuIds: Set<String>, template: TemplateConfig) -> [String: String] {
+        var randomTonings: [String: String] = [:]
+        // 1. 构建 skuId -> Sku 映射
+        let allSkusMap: [String: Sku] = template.selections
+            .flatMap { $0.skus }
+            .reduce(into: [String: Sku]()) { dict, sku in
+                dict[sku.id] = sku
+            }
+
+        // 2. 收集所有可用的 toningIds（去重）
+        var availableToningIds = Set<String>()
+        for skuId in selectedSkuIds {
+            if let sku = allSkusMap[skuId], let toningIds = sku.toningIds {
+                for toningId in toningIds {
+                    availableToningIds.insert(toningId)
+                }
+            }
+        }
+
+        // 3. 对每个 toningId 随机决定是否染色（60%概率）
+        guard let allTonings = template.tonings else {
+            return [:]
+        }
+
+        for toningId in availableToningIds {
+            if Double.random(in: 0..<1) < 0.4 {
+                if let toning = allTonings.first(where: { $0.id == toningId }),
+                   !toning.colors.isEmpty {
+
+                    // 随机选择一个颜色
+                    let randomColor = toning.colors.randomElement()
+                    if let color = randomColor {
+                        randomTonings[toningId] = color.id
+                    }
+                }
+            }
+        }
+
+        return randomTonings
+    }
+    
     
     /// 构建 Category -> SKUs 的索引映射，对应 Android 的 buildCategoryToSkusMap
     private func buildCategoryToSkusMap(template: TemplateConfig) -> [String: [Sku]] {
@@ -452,7 +501,8 @@ class SpineEditorViewModel: ObservableObject {
         resetColor(skeleton: skeleton)
         
         // 应用染色
-        guard let avatarTonings = avatar.tonings, !avatarTonings.isEmpty else { return }
+        let avatarTonings = avatar.tonings
+        guard !avatarTonings.isEmpty else { return }
         
         let tonings = template.tonings ?? []
         guard !tonings.isEmpty else { return }
