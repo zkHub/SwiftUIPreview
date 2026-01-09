@@ -3,9 +3,9 @@ import Spine
 import UIKit
 
 /// Editor 数据模型，对应 Android 的 Editor.kt
-struct Editor {
+struct SpineEditorConfig {
     let template: TemplateConfig
-    let skeletonDrawable: SkeletonDrawableWrapper
+//    let skeletonDrawable: SkeletonDrawableWrapper
     let skeletonSkins: [String: UIImage] // skinName: image
     let skuSlots: [String: Set<String>] // skuId: slotNames
 }

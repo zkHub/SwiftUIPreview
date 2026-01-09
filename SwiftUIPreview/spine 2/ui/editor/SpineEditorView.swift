@@ -26,6 +26,7 @@ struct SpineEditorView: View {
         .onAppear {
             viewModel.initialize(templateId: templateId)
         }
+        .environmentObject(viewModel)
     }
     
     private var mainContent: some View {
@@ -134,8 +135,6 @@ struct SpineEditorView: View {
         ZStack {
             if let editor = viewModel.editor {
                 SpineAvatarView(
-                    drawable: editor.skeletonDrawable,
-                    avatar: $viewModel.avatar,
                     template: editor.template,
                     skuSlots: editor.skuSlots
                 )
@@ -149,14 +148,12 @@ struct SpineEditorView: View {
         VStack(spacing: 0) {
             if showingToning {
                 ToningView(
-                    selectionIndex: currentSelectionIndex,
-                    viewModel: viewModel
+                    selectionIndex: currentSelectionIndex
                 )
                 .transition(.move(edge: .bottom))
             } else {
                 SelectionView(
-                    selectionIndex: $currentSelectionIndex,
-                    viewModel: viewModel
+                    selectionIndex: $currentSelectionIndex
                 )
             }
         }
@@ -206,19 +203,17 @@ struct ErrorView: View {
 
 /// Spine Avatar 视图（用于显示和更新 Avatar）
 struct SpineAvatarView: View {
-    let drawable: SkeletonDrawableWrapper
-    @Binding var avatar: Avatar
     let template: TemplateConfig
     let skuSlots: [String: Set<String>]
     
-    @State private var controller: SpineController?
-    
+    @EnvironmentObject var viewModel: SpineEditorViewModel
+        
     var body: some View {
         Group {
-            if let controller = controller {
+            if let drawable = viewModel.drawable {
                 SpineView(
                     from: .drawable(drawable),
-                    controller: controller,
+                    controller: viewModel.controller,
                     mode: .fit,
                     alignment: .center,
                     boundsProvider: RawBounds(x: -256, y: -512, width: 512, height: 512),
@@ -226,43 +221,32 @@ struct SpineAvatarView: View {
                 )
                 .aspectRatio(1.0, contentMode: .fit)
                 .onAppear {
-                    applyAvatar(controller: controller)
+                    applyAvatar(controller: viewModel.controller)
                 }
-                .onChange(of: avatar) { _ in
-                    applyAvatar(controller: controller)
+                .onChange(of: viewModel.avatar) { _ in
+                    // 使用捕获列表避免潜在的循环引用
+                    applyAvatar(controller: viewModel.controller)
                 }
+
             } else {
                 Color.clear
-                    .onAppear {
-                        initializeController()
-                    }
             }
         }
     }
     
-    private func initializeController() {
-        controller = SpineController(
-            onInitialized: { controller in
-//                guard let self = self else { return }
-                // 默认播放 idle 动画
-                if let animation = controller.skeletonData.findAnimation(name: "idle_default") {
-                    controller.animationState.setAnimation(trackIndex: 0, animation: animation, loop: true)
-                }
-                applyAvatar(controller: controller)
-            },
-            disposeDrawableOnDeInit: false
-        )
-    }
-    
     private func applyAvatar(controller: SpineController) {
+        guard let drawable = viewModel.drawable else {
+            return
+        }
         let skeleton = drawable.skeleton
         
         // 应用皮肤
         let skus = template.selections
             .flatMap { $0.skus }
-            .filter { avatar.skus.contains($0.id) }
+            .filter { viewModel.avatar.skus.contains($0.id) }
         
         // 构建自定义皮肤
+        // 注意：每次创建新的 skin，旧的会被自动释放
         let customSkin = Skin.create(name: "avatar-skin")
         for sku in skus {
             if let skin = drawable.skeletonData.findSkin(name: sku.skinName) {
@@ -285,7 +269,7 @@ struct SpineAvatarView: View {
         resetColor(skeleton: skeleton)
         
         // 应用染色
-        guard let avatarTonings = avatar.tonings, !avatarTonings.isEmpty else { return }
+        guard let avatarTonings = viewModel.avatar.tonings, !avatarTonings.isEmpty else { return }
         
         let tonings = template.tonings ?? []
         guard !tonings.isEmpty else { return }
@@ -295,7 +279,7 @@ struct SpineAvatarView: View {
             .flatMap { $0.skus }
             .reduce(into: [String: Sku]()) { $0[$1.id] = $1 }
         
-        let selectedSkuIds = Set(avatar.skus)
+        let selectedSkuIds = Set(viewModel.avatar.skus)
         
         for (toningId, colorId) in avatarTonings {
             guard let toning = tonings.first(where: { $0.id == toningId }),

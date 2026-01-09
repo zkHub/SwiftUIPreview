@@ -4,7 +4,7 @@ import Kingfisher
 /// 选择视图，对应 Android 的 SelectionFragment
 struct SelectionView: View {
     @Binding var selectionIndex: Int
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         if let editor = viewModel.editor {
@@ -36,8 +36,7 @@ struct SelectionView: View {
                 if selectionIndex < selections.count {
                     let currentSelection = selections[selectionIndex]
                     SkuGridView(
-                        skus: currentSelection.skus,
-                        viewModel: viewModel
+                        skus: currentSelection.skus
                     )
                 }
             }
@@ -45,7 +44,8 @@ struct SelectionView: View {
     }
     
     private func hasSelectedSku(in selection: Selection) -> Bool {
-        let selectedSkus = Set(viewModel.avatar.skus)
+        let array = viewModel.avatar.skus
+        let selectedSkus = Set(array)
         return selection.skus.contains { selectedSkus.contains($0.id) }
     }
 }
@@ -91,7 +91,7 @@ struct SelectionTabView: View {
 /// SKU 网格视图
 struct SkuGridView: View {
     let skus: [Sku]
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -99,8 +99,7 @@ struct SkuGridView: View {
                 ForEach(skus, id: \.id) { sku in
                     SkuItemView(
                         sku: sku,
-                        isSelected: viewModel.isSkuSelected(skuId: sku.id),
-                        viewModel: viewModel
+                        isSelected: viewModel.isSkuSelected(skuId: sku.id)
                     )
                 }
             }
@@ -113,7 +112,7 @@ struct SkuGridView: View {
 struct SkuItemView: View {
     let sku: Sku
     let isSelected: Bool
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         VStack(spacing: 4) {

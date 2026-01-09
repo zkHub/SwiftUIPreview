@@ -3,7 +3,7 @@ import SwiftUI
 /// 调色视图，对应 Android 的 ToningFragment
 struct ToningView: View {
     let selectionIndex: Int
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         let toningSets = viewModel.getToningSets(selectionIndex: selectionIndex)
@@ -19,8 +19,7 @@ struct ToningView: View {
                     HStack(spacing: 12) {
                         ForEach(toningSets, id: \.sku.id) { toningSet in
                             ToningTabView(
-                                toningSet: toningSet,
-                                viewModel: viewModel
+                                toningSet: toningSet
                             )
                         }
                     }
@@ -32,13 +31,11 @@ struct ToningView: View {
                 if let firstToningSet = toningSets.first {
                     if firstToningSet.tonings.count == 1 {
                         ColorView(
-                            toning: firstToningSet.tonings[0],
-                            viewModel: viewModel
+                            toning: firstToningSet.tonings[0]
                         )
                     } else {
                         ToningSectionView(
-                            tonings: firstToningSet.tonings,
-                            viewModel: viewModel
+                            tonings: firstToningSet.tonings
                         )
                     }
                 }
@@ -50,8 +47,8 @@ struct ToningView: View {
 /// 调色 Tab 视图
 struct ToningTabView: View {
     let toningSet: ToningSet
-    @ObservedObject var viewModel: SpineEditorViewModel
-    
+    //    @ObservedObject var viewModel: SpineEditorViewModel
+        @EnvironmentObject var viewModel: SpineEditorViewModel
     var body: some View {
         VStack {
             if let image = viewModel.getSkinBitmap(skinName: toningSet.sku.skinName) {
@@ -72,7 +69,7 @@ struct ToningTabView: View {
 /// 颜色视图，对应 Android 的 ColorFragment
 struct ColorView: View {
     let toning: Toning
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -81,8 +78,8 @@ struct ColorView: View {
                     ColorItemView(
                         colorSet: colorSet,
                         toningId: toning.id,
-                        isSelected: viewModel.isColorSelected(toningId: toning.id, colorId: colorSet.id),
-                        viewModel: viewModel
+                        isSelected: viewModel.isColorSelected(toningId: toning.id, colorId: colorSet.id)
+//                        viewModel: viewModel
                     )
                 }
             }
@@ -96,7 +93,7 @@ struct ColorItemView: View {
     let colorSet: ColorSet
     let toningId: String
     let isSelected: Bool
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         VStack(spacing: 4) {
@@ -152,7 +149,7 @@ struct ColorItemView: View {
 /// 调色方案视图，对应 Android 的 ToningSectionFragment
 struct ToningSectionView: View {
     let tonings: [Toning]
-    @ObservedObject var viewModel: SpineEditorViewModel
+    @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
         ScrollView {
@@ -171,8 +168,7 @@ struct ToningSectionView: View {
                                     ColorItemView(
                                         colorSet: colorSet,
                                         toningId: toning.id,
-                                        isSelected: viewModel.isColorSelected(toningId: toning.id, colorId: colorSet.id),
-                                        viewModel: viewModel
+                                        isSelected: viewModel.isColorSelected(toningId: toning.id, colorId: colorSet.id)
                                     )
                                 }
                             }

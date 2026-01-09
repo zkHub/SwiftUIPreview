@@ -9,7 +9,7 @@ import SpineCppLite
 struct EditorUiState {
     var isLoading: Bool = false
     var isError: Bool = false
-    var editor: Editor? = nil
+    var editor: SpineEditorConfig? = nil
 }
 
 /// 导出 UI 状态，对应 Android 的 ExportUiState
@@ -27,7 +27,7 @@ class SpineEditorViewModel: ObservableObject {
     @Published var drawable: SkeletonDrawableWrapper?
     
     @Published var editorUiState = EditorUiState()
-    @Published var avatar = Avatar()
+    @Published var avatar = SpineAvatar()
     @Published var canUndo = false
     @Published var canRedo = false
     @Published var showPalette = false
@@ -36,13 +36,18 @@ class SpineEditorViewModel: ObservableObject {
     private var isInitialized = false
     let thumbnailSize = CGSize(width: 200, height: 200)
 
-    var editor: Editor? {
+    var editor: SpineEditorConfig? {
         editorUiState.editor
     }
     
-    private var history: [Avatar] = []
+    private var history: [SpineAvatar] = []
     private var historyIndex: Int = -1
     private let maxHistorySize = 50
+    
+    // Task 引用，用于取消异步操作
+    private var loadTask: Task<Void, Never>?
+    private var exportTask: Task<Void, Never>?
+    
     
     init() {
         controller = SpineController(
@@ -66,19 +71,33 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     deinit {
-        editor?.skeletonDrawable.dispose()
-//        customSkin?.dispose()
+        // 取消所有正在运行的 Task，防止内存泄漏
+        loadTask?.cancel()
+        exportTask?.cancel()
+
+        // 释放 Spine 资源
+        drawable?.dispose()
     }
     
     /// 加载编辑器，对应 Android 的 loadEditor
     func loadEditor() {
+        // 取消之前的加载任务
+        loadTask?.cancel()
+        
         editorUiState = EditorUiState(isLoading: true, isError: false)
         
-        Task {
+        loadTask = Task { [weak self] in
+            guard let self = self else { return }
+            
             do {
-                let editor = try await loadEditorAsync()
+                let editor = try await self.loadEditorAsync()
+                
+                // 检查任务是否被取消
+                guard !Task.isCancelled else { return }
+                
                 await MainActor.run {
-                    editorUiState = EditorUiState(
+                    guard !Task.isCancelled else { return }
+                    self.editorUiState = EditorUiState(
                         isLoading: false,
                         isError: false,
                         editor: editor
@@ -87,13 +106,17 @@ class SpineEditorViewModel: ObservableObject {
                     // 如果有初始 Avatar，设置它
                     if var initAvatar = editor.template.initAvatar {
                         initAvatar.tonings = [:]
-                        setupInitAvatar(initAvatar)
+                        self.setupInitAvatar(initAvatar)
                     }
                 }
             } catch {
+                // 如果任务被取消，不更新状态
+                guard !Task.isCancelled else { return }
+                
                 print("❌ [SpineEditorViewModel] 加载编辑器失败: \(error)")
                 await MainActor.run {
-                    editorUiState = EditorUiState(isLoading: false, isError: true)
+                    guard !Task.isCancelled else { return }
+                    self.editorUiState = EditorUiState(isLoading: false, isError: true)
                 }
             }
         }
@@ -101,16 +124,32 @@ class SpineEditorViewModel: ObservableObject {
     
     /// 异步加载编辑器
     @MainActor
-    private func loadEditorAsync() async throws -> Editor {
-        return try await Task.detached(priority: .high) {
+    private func loadEditorAsync() async throws -> SpineEditorConfig {
+        return try await Task.detached(priority: .high) { [weak self] in
+            guard let self = self else {
+                throw CancellationError()
+            }
+            
+            // 检查任务是否被取消
+            try Task.checkCancellation()
+            
             // 加载 Template
             let template = try self.getTemplate(templateId: self.templateId)
+            
+            // 检查任务是否被取消
+            try Task.checkCancellation()
             
             // 加载 SkeletonDrawable
             let drawable = try await self.getSkeletonDrawable(templateId: self.templateId)
             
+            // 检查任务是否被取消
+            try Task.checkCancellation()
+            
             // 获取皮肤缩略图
             let skeletonSkins = try await SpineUtils.getSkeletonSkins(drawable: drawable)
+            
+            // 检查任务是否被取消
+            try Task.checkCancellation()
             
             // 获取 SKU Slots 映射
             let skeletonSlots = SpineUtils.getSkeletonSlots(drawable: drawable, template: template)
@@ -124,10 +163,12 @@ class SpineEditorViewModel: ObservableObject {
                 requireCategories: template.requireCategories,
                 initAvatar: template.initAvatar
             )
-            
-            return Editor(
+            await MainActor.run {
+                self.drawable = drawable
+            }
+            return SpineEditorConfig(
                 template: sortedTemplate,
-                skeletonDrawable: drawable,
+//                skeletonDrawable: drawable,
                 skeletonSkins: skeletonSkins,
                 skuSlots: skeletonSlots
             )
@@ -158,7 +199,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 设置初始 Avatar，对应 Android 的 setupInitAvatar
-    private func setupInitAvatar(_ initAvatar: Avatar) {
+    private func setupInitAvatar(_ initAvatar: SpineAvatar) {
         avatar = initAvatar
         history.removeAll()
         history.append(initAvatar)
@@ -189,7 +230,7 @@ class SpineEditorViewModel: ObservableObject {
             currentSkus.append(sku.id)
         }
         
-        let newAvatar = Avatar(
+        let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: currentSkus,
             tonings: avatar.tonings,
@@ -212,7 +253,7 @@ class SpineEditorViewModel: ObservableObject {
         var selectedSkus = avatar.skus
         selectedSkus.removeAll { $0 == sku.id }
         
-        let newAvatar = Avatar(
+        let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: selectedSkus,
             tonings: avatar.tonings,
@@ -244,7 +285,7 @@ class SpineEditorViewModel: ObservableObject {
             selectedTonings?[toningId] = colorId
         }
         
-        let newAvatar = Avatar(
+        let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: avatar.skus,
             tonings: selectedTonings,
@@ -308,7 +349,7 @@ class SpineEditorViewModel: ObservableObject {
         }
         
         // 生成新 Avatar（清空染色）
-        let newAvatar = Avatar(
+        let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: Array(selectedSkus),
             tonings: [:],
@@ -360,7 +401,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 更新 Avatar，对应 Android 的 updateAvatar
-    private func updateAvatar(_ newAvatar: Avatar) {
+    private func updateAvatar(_ newAvatar: SpineAvatar) {
         // 如果当前不在历史记录末尾，删除后面的记录
         if historyIndex < history.count - 1 {
             history.removeSubrange((historyIndex + 1)..<history.count)
@@ -381,26 +422,43 @@ class SpineEditorViewModel: ObservableObject {
     func export() {
         guard let editor = editor else { return }
         
+        // 取消之前的导出任务
+        exportTask?.cancel()
+        
         exportUiState = ExportUiState(isLoading: true, export: nil)
         
-        Task {
+        exportTask = Task { [weak self] in
+            guard let self = self else { return }
+            
             do {
-                let export = try await exportAsync(editor: editor)
+                let export = try await self.exportAsync(editor: editor)
+                
+                // 检查任务是否被取消
+                guard !Task.isCancelled else { return }
+                
                 await MainActor.run {
-                    exportUiState = ExportUiState(isLoading: false, export: export)
+                    guard !Task.isCancelled else { return }
+                    self.exportUiState = ExportUiState(isLoading: false, export: export)
                 }
             } catch {
+                // 如果任务被取消，不更新状态
+                guard !Task.isCancelled else { return }
+                
                 print("❌ [SpineEditorViewModel] 导出失败: \(error)")
                 await MainActor.run {
-                    exportUiState = ExportUiState(isLoading: false, export: nil)
+                    guard !Task.isCancelled else { return }
+                    self.exportUiState = ExportUiState(isLoading: false, export: nil)
                 }
             }
         }
     }
     
     /// 异步导出
-    private func exportAsync(editor: Editor) async throws -> Export {
-        let recorder = SpineRecorder(drawable: editor.skeletonDrawable)
+    private func exportAsync(editor: SpineEditorConfig) async throws -> Export {
+        // 检查任务是否被取消
+        try Task.checkCancellation()
+        
+//        let recorder = SpineRecorder(drawable: editor.skeletonDrawable)
         let fileName = "\(Int64(Date().timeIntervalSince1970 * 1000)).gif"
         
         // 创建临时文件
@@ -408,7 +466,10 @@ class SpineEditorViewModel: ObservableObject {
         let fileURL = tempDir.appendingPathComponent(fileName)
         
         // 录制 GIF（内部会确保在主线程执行渲染）
-        try await recorder.recordGif(animationName: "idle_default", output: fileURL)
+        try await recordGif(animationName: "idle_default", output: fileURL)
+        
+        // 检查任务是否被取消
+        try Task.checkCancellation()
         
         return Export(avatar: self.avatar, imageFile: fileURL)
     }
@@ -455,5 +516,125 @@ class SpineEditorViewModel: ObservableObject {
                 }
             }
     }
+    
+    
+    /// 录制 GIF，对应 Android 的 recordGif
+    @MainActor
+    func recordGif(
+        animationName: String,
+        width: Int = 512,
+        height: Int = 512,
+        fps: Int = 30,
+        output: URL
+    ) async throws {
+        guard let drawable = drawable, let animation = drawable.skeletonData.findAnimation(name: animationName) else {
+            throw NSError(domain: "SpineRecorder", code: -1, userInfo: [NSLocalizedDescriptionKey: "找不到动画: \(animationName)"])
+        }
+        
+        let duration = animation.duration
+        let frameCount = max(2, Int(duration * Float(fps)))
+        let delta = 1.0 / Float(fps)
+        
+        // 获取 skeleton 实例
+        let skeleton = drawable.skeleton
+        
+        // 收集所有帧
+        var frames: [UIImage] = []
+        
+        // 在主线程批量完成所有帧的渲染，尽量减少对显示动画的影响时间
+        try await MainActor.run {
+            // 渲染每一帧
+            for frameIndex in 0..<frameCount {
+                // 重置 skeleton 到初始姿态（每帧都重置，确保状态一致）
+                skeleton.setToSetupPose()
+                
+                // 计算当前应该渲染的动画时间（循环播放）
+                let currentTime = Float(frameIndex) * delta
+                let animationTime = currentTime.truncatingRemainder(dividingBy: duration)
+                
+                // 临时设置动画并应用到特定时间
+                // 注意：这会短暂影响显示的动画，但我们快速完成所有帧后立即恢复
+                drawable.animationState.setAnimation(trackIndex: 0, animation: animation, loop: false)
+                
+                // 更新到目标时间点
+                // 使用小步长更新，确保动画正确应用
+                var accumulatedTime: Float = 0
+                let stepSize: Float = 0.016 // 约 60fps 的步长
+                while accumulatedTime < animationTime {
+                    let step = min(stepSize, animationTime - accumulatedTime)
+                    drawable.animationState.update(delta: step)
+                    accumulatedTime += step
+                }
+                
+                drawable.animationState.apply(skeleton: skeleton)
+                
+                // 更新骨架变换
+                skeleton.update(delta: 0)
+                skeleton.updateWorldTransform(physics: SPINE_PHYSICS_UPDATE)
+                
+                // 渲染 skeleton 为 UIImage
+                // 使用透明背景，避免背景出现在 GIF 中
+                if let cgImage = try drawable.renderToImage(
+                    size: CGSize(width: width, height: height),
+                    boundsProvider: RawBounds(x: -256, y: -512, width: 512, height: 512),
+                    backgroundColor: .clear, // 使用透明背景
+                    scaleFactor: 1.0
+                ) {
+                    frames.append(UIImage(cgImage: cgImage))
+                }
+            }
+            
+            // 所有帧渲染完成后，立即恢复显示的动画
+            // 恢复默认的 idle 动画
+            if let idleAnimation = drawable.skeletonData.findAnimation(name: "idle_default") {
+                drawable.animationState.setAnimation(trackIndex: 0, animation: idleAnimation, loop: true)
+            }
+        }
+        
+        // 将 frames 编码为 GIF
+        try encodeFramesToGif(frames: frames, output: output, delay: 1000 / fps)
+    }
+    
+    /// 将帧编码为 GIF
+    private func encodeFramesToGif(frames: [UIImage], output: URL, delay: Int) throws {
+        guard !frames.isEmpty else {
+            throw NSError(domain: "SpineRecorder", code: -1, userInfo: [NSLocalizedDescriptionKey: "没有可编码的帧"])
+        }
+        
+        // 使用 ImageIO 创建 GIF
+        guard let destination = CGImageDestinationCreateWithURL(output as CFURL, "com.compuserve.gif" as CFString, frames.count, nil) else {
+            throw NSError(domain: "SpineRecorder", code: -1, userInfo: [NSLocalizedDescriptionKey: "无法创建 GIF 目标"])
+        }
+        
+        // 设置全局 GIF 属性（无限循环）
+        let globalGifProperties: [String: Any] = [
+            kCGImagePropertyGIFDictionary as String: [
+                kCGImagePropertyGIFLoopCount as String: 0 // 无限循环
+            ]
+        ]
+        CGImageDestinationSetProperties(destination, globalGifProperties as CFDictionary)
+        
+        // 设置每帧的延迟时间
+        let delayTime = Double(delay) / 1000.0
+        
+        // 添加每一帧
+        for frame in frames {
+            guard let cgImage = frame.cgImage else { continue }
+            
+            let frameProperties: [String: Any] = [
+                kCGImagePropertyGIFDictionary as String: [
+                    kCGImagePropertyGIFDelayTime as String: delayTime
+                ]
+            ]
+            
+            CGImageDestinationAddImage(destination, cgImage, frameProperties as CFDictionary)
+        }
+        
+        // 完成编码
+        guard CGImageDestinationFinalize(destination) else {
+            throw NSError(domain: "SpineRecorder", code: -1, userInfo: [NSLocalizedDescriptionKey: "GIF 编码失败"])
+        }
+    }
+    
 }
 

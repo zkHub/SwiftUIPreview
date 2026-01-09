@@ -51,8 +51,8 @@
 		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
 		587506DD2E53222C007E1290 /* TapLikeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */; };
 		5875070D2E5726EE007E1290 /* TextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875070C2E5726EE007E1290 /* TextContentView.swift */; };
-		5896594B2F0BA65D004616C4 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659382F0BA65D004616C4 /* Avatar.swift */; };
-		5896594C2F0BA65D004616C4 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593D2F0BA65D004616C4 /* Editor.swift */; };
+		5896594B2F0BA65D004616C4 /* SpineAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659382F0BA65D004616C4 /* SpineAvatar.swift */; };
+		5896594C2F0BA65D004616C4 /* SpineEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593D2F0BA65D004616C4 /* SpineEditorConfig.swift */; };
 		5896594D2F0BA65D004616C4 /* ToningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659442F0BA65D004616C4 /* ToningView.swift */; };
 		5896594E2F0BA65D004616C4 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659392F0BA65D004616C4 /* Selection.swift */; };
 		5896594F2F0BA65D004616C4 /* SpineEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659422F0BA65D004616C4 /* SpineEditorViewModel.swift */; };
@@ -201,11 +201,11 @@
 		587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLikeAnimationView.swift; sourceTree = "<group>"; };
 		5875070C2E5726EE007E1290 /* TextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentView.swift; sourceTree = "<group>"; };
 		589659372F0BA65D004616C4 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		589659382F0BA65D004616C4 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		589659382F0BA65D004616C4 /* SpineAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineAvatar.swift; sourceTree = "<group>"; };
 		589659392F0BA65D004616C4 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		5896593A2F0BA65D004616C4 /* TemplateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateConfig.swift; sourceTree = "<group>"; };
 		5896593B2F0BA65D004616C4 /* Toning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toning.swift; sourceTree = "<group>"; };
-		5896593D2F0BA65D004616C4 /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
+		5896593D2F0BA65D004616C4 /* SpineEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineEditorConfig.swift; sourceTree = "<group>"; };
 		5896593E2F0BA65D004616C4 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
 		589659402F0BA65D004616C4 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		589659412F0BA65D004616C4 /* SpineEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineEditorView.swift; sourceTree = "<group>"; };
@@ -443,7 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				589659372F0BA65D004616C4 /* Animation.swift */,
-				589659382F0BA65D004616C4 /* Avatar.swift */,
+				589659382F0BA65D004616C4 /* SpineAvatar.swift */,
 				589659392F0BA65D004616C4 /* Selection.swift */,
 				5896593A2F0BA65D004616C4 /* TemplateConfig.swift */,
 				5896593B2F0BA65D004616C4 /* Toning.swift */,
@@ -454,7 +454,7 @@
 		5896593F2F0BA65D004616C4 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				5896593D2F0BA65D004616C4 /* Editor.swift */,
+				5896593D2F0BA65D004616C4 /* SpineEditorConfig.swift */,
 				5896593E2F0BA65D004616C4 /* Export.swift */,
 			);
 			path = model;
@@ -818,8 +818,8 @@
 				58C607662C7EFA2F00097699 /* ContentView.swift in Sources */,
 				5875070D2E5726EE007E1290 /* TextContentView.swift in Sources */,
 				586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */,
-				5896594B2F0BA65D004616C4 /* Avatar.swift in Sources */,
-				5896594C2F0BA65D004616C4 /* Editor.swift in Sources */,
+				5896594B2F0BA65D004616C4 /* SpineAvatar.swift in Sources */,
+				5896594C2F0BA65D004616C4 /* SpineEditorConfig.swift in Sources */,
 				5896594D2F0BA65D004616C4 /* ToningView.swift in Sources */,
 				5896594E2F0BA65D004616C4 /* Selection.swift in Sources */,
 				5896594F2F0BA65D004616C4 /* SpineEditorViewModel.swift in Sources */,

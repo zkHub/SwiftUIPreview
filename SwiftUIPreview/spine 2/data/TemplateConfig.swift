@@ -6,6 +6,6 @@ struct TemplateConfig: Codable, Equatable {
     let tonings: [Toning]?
     let animations: [Animation]?
     let requireCategories: [String]?
-    let initAvatar: Avatar?
+    let initAvatar: SpineAvatar?
 }
 
