@@ -9,7 +9,7 @@ import SpineCppLite
 struct EditorUiState {
     var isLoading: Bool = false
     var isError: Bool = false
-    var editor: SpineEditorConfig? = nil
+    var editor: SpineEditor? = nil
 }
 
 /// 导出 UI 状态，对应 Android 的 ExportUiState
@@ -36,7 +36,7 @@ class SpineEditorViewModel: ObservableObject {
     private var isInitialized = false
     let thumbnailSize = CGSize(width: 200, height: 200)
 
-    var editor: SpineEditorConfig? {
+    var editor: SpineEditor? {
         editorUiState.editor
     }
     
@@ -123,7 +123,7 @@ class SpineEditorViewModel: ObservableObject {
     
     /// 异步加载编辑器
     @MainActor
-    private func loadEditorAsync() async throws -> SpineEditorConfig {
+    private func loadEditorAsync() async throws -> SpineEditor {
         return try await Task.detached(priority: .high) { [weak self] in
             guard let self = self else {
                 throw CancellationError()
@@ -155,7 +155,7 @@ class SpineEditorViewModel: ObservableObject {
             
             // 排序 selections
             let sortedSelections = template.selections.sorted { $0.playIndex < $1.playIndex }
-            let sortedTemplate = TemplateConfig(
+            let sortedTemplate = SpineTemplate(
                 selections: sortedSelections,
                 tonings: template.tonings,
                 animations: template.animations,
@@ -165,7 +165,7 @@ class SpineEditorViewModel: ObservableObject {
             await MainActor.run {
                 self.drawable = drawable
             }
-            return SpineEditorConfig(
+            return SpineEditor(
                 template: sortedTemplate,
 //                skeletonDrawable: drawable,
                 skeletonSkins: skeletonSkins,
@@ -175,13 +175,13 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 获取 Template，对应 Android 的 getTemplate
-    private func getTemplate(templateId: String) throws -> TemplateConfig {
+    private func getTemplate(templateId: String) throws -> SpineTemplate {
         guard let bundle = Bundle.main.path(forResource: "\(templateId)", ofType: "json") else {
             throw NSError(domain: "SpineEditorViewModel", code: -1, userInfo: [NSLocalizedDescriptionKey: "找不到模板文件"])
         }
         
         let data = try Data(contentsOf: URL(fileURLWithPath: bundle))
-        return try JSONDecoder().decode(TemplateConfig.self, from: data)
+        return try JSONDecoder().decode(SpineTemplate.self, from: data)
     }
     
     /// 获取 SkeletonDrawable，对应 Android 的 getSkeletonDrawable
@@ -207,7 +207,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 选择 SKU，对应 Android 的 selectSku
-    func selectSku(_ sku: Sku) {
+    func selectSku(_ sku: SpineSku) {
         guard let editor = editor else { return }
         
         var currentSkus = avatar.skus
@@ -215,7 +215,7 @@ class SpineEditorViewModel: ObservableObject {
         // 构建 skuId -> Sku 的映射
         let allSkusMap = editor.template.selections
             .flatMap { $0.skus }
-            .reduce(into: [String: Sku]()) { $0[$1.id] = $1 }
+            .reduce(into: [String: SpineSku]()) { $0[$1.id] = $1 }
         
         // 找到当前已选中的同 category 的 SKU
         if let existingSkuId = currentSkus.first(where: { allSkusMap[$0]?.category == sku.category }),
@@ -238,7 +238,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 取消选择 SKU，对应 Android 的 unselectSku
-    func unselectSku(_ sku: Sku) {
+    func unselectSku(_ sku: SpineSku) {
         guard let editor = editor else { return }
         
         // 检查是否是必选的 category
@@ -265,7 +265,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 切换 SKU 选择状态，对应 Android 的 toggleSelectSku
-    func toggleSelectSku(_ sku: Sku) {
+    func toggleSelectSku(_ sku: SpineSku) {
         if isSkuSelected(skuId: sku.id) {
             unselectSku(sku)
         } else {
@@ -361,12 +361,12 @@ class SpineEditorViewModel: ObservableObject {
      * 生成随机染色配置
      * 对于每个支持染色的 toningId，有 40% 概率随机选择一个颜色
      */
-    func generateRandomTonings(selectedSkuIds: Set<String>, template: TemplateConfig) -> [String: String] {
+    func generateRandomTonings(selectedSkuIds: Set<String>, template: SpineTemplate) -> [String: String] {
         var randomTonings: [String: String] = [:]
         // 1. 构建 skuId -> Sku 映射
-        let allSkusMap: [String: Sku] = template.selections
+        let allSkusMap: [String: SpineSku] = template.selections
             .flatMap { $0.skus }
-            .reduce(into: [String: Sku]()) { dict, sku in
+            .reduce(into: [String: SpineSku]()) { dict, sku in
                 dict[sku.id] = sku
             }
         
@@ -399,8 +399,8 @@ class SpineEditorViewModel: ObservableObject {
     
     
     /// 构建 Category -> SKUs 的索引映射，对应 Android 的 buildCategoryToSkusMap
-    private func buildCategoryToSkusMap(template: TemplateConfig) -> [String: [Sku]] {
-        var categoryToSkus: [String: [Sku]] = [:]
+    private func buildCategoryToSkusMap(template: SpineTemplate) -> [String: [SpineSku]] {
+        var categoryToSkus: [String: [SpineSku]] = [:]
         
         for selection in template.selections {
             for sku in selection.skus {
@@ -505,7 +505,7 @@ class SpineEditorViewModel: ObservableObject {
         // 构建 skuId -> Sku 的映射
         let allSkusMap = template.selections
             .flatMap { $0.skus }
-            .reduce(into: [String: Sku]()) { $0[$1.id] = $1 }
+            .reduce(into: [String: SpineSku]()) { $0[$1.id] = $1 }
         
         let selectedSkuIds = Set(avatar.skus)
         
@@ -523,7 +523,7 @@ class SpineEditorViewModel: ObservableObject {
             }
             
             // 找到所有符合条件的 SKU
-            let affectedSkus = selectedSkuIds.compactMap { skuId -> Sku? in
+            let affectedSkus = selectedSkuIds.compactMap { skuId -> SpineSku? in
                 guard let sku = allSkusMap[skuId],
                       sku.toningIds?.contains(toningId) == true else {
                     return nil
@@ -610,7 +610,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 异步导出
-    private func exportAsync(editor: SpineEditorConfig) async throws -> Export {
+    private func exportAsync(editor: SpineEditor) async throws -> Export {
         // 检查任务是否被取消
         try Task.checkCancellation()
         
@@ -820,7 +820,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 获取 SKU 对应的 Slot 名称集合，对应 Android 的 getSkeletonSlots
-    func getSkeletonSlots(drawable: SkeletonDrawableWrapper, template: TemplateConfig) -> [String: Set<String>] {
+    func getSkeletonSlots(drawable: SkeletonDrawableWrapper, template: SpineTemplate) -> [String: Set<String>] {
         var mapping: [String: Set<String>] = [:]
         for selection in template.selections {
             for sku in selection.skus {

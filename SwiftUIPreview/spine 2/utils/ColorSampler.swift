@@ -1,6 +1,15 @@
 import Foundation
 import UIKit
 
+
+
+/// Color 数据模型，对应 Android 的 Color.kt
+struct ToningColor: Codable, Equatable {
+    let color: String
+    let offset: Float
+}
+
+
 /// 颜色采样器，对应 Android 的 ColorSampler.kt
 class ColorSampler {
     private let sortedColors: [ToningColor]

@@ -68,7 +68,7 @@ struct ToningTabView: View {
 
 /// 颜色视图，对应 Android 的 ColorFragment
 struct ColorView: View {
-    let toning: Toning
+    let toning: SpineToning
     @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
@@ -90,7 +90,7 @@ struct ColorView: View {
 
 /// 颜色项目视图
 struct ColorItemView: View {
-    let colorSet: ColorSet
+    let colorSet: SpineColor
     let toningId: String
     let isSelected: Bool
     @EnvironmentObject var viewModel: SpineEditorViewModel
@@ -148,7 +148,7 @@ struct ColorItemView: View {
 
 /// 调色方案视图，对应 Android 的 ToningSectionFragment
 struct ToningSectionView: View {
-    let tonings: [Toning]
+    let tonings: [SpineToning]
     @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {

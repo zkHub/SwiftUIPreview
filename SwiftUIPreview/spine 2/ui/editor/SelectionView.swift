@@ -43,7 +43,7 @@ struct SelectionView: View {
         }
     }
     
-    private func hasSelectedSku(in selection: Selection) -> Bool {
+    private func hasSelectedSku(in selection: SpineSelection) -> Bool {
         let array = viewModel.avatar.skus
         let selectedSkus = Set(array)
         return selection.skus.contains { selectedSkus.contains($0.id) }
@@ -52,7 +52,7 @@ struct SelectionView: View {
 
 /// 选择 Tab 视图
 struct SelectionTabView: View {
-    let selection: Selection
+    let selection: SpineSelection
     let isSelected: Bool
     let hasSelectedSku: Bool
     let onTap: () -> Void
@@ -90,7 +90,7 @@ struct SelectionTabView: View {
 
 /// SKU 网格视图
 struct SkuGridView: View {
-    let skus: [Sku]
+    let skus: [SpineSku]
     @EnvironmentObject var viewModel: SpineEditorViewModel
     
     var body: some View {
@@ -110,7 +110,7 @@ struct SkuGridView: View {
 
 /// SKU 项目视图
 struct SkuItemView: View {
-    let sku: Sku
+    let sku: SpineSku
     let isSelected: Bool
     @EnvironmentObject var viewModel: SpineEditorViewModel
     
