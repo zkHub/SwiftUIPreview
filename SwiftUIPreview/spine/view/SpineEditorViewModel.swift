@@ -15,7 +15,7 @@ struct EditorUiState {
 /// 导出 UI 状态，对应 Android 的 ExportUiState
 struct ExportUiState {
     var isLoading: Bool = false
-    var export: Export? = nil
+    var export: SpineExport? = nil
 }
 
 /// Spine 编辑器 ViewModel，对应 Android 的 SpineEditorViewModel.kt
@@ -610,7 +610,7 @@ class SpineEditorViewModel: ObservableObject {
     }
     
     /// 异步导出
-    private func exportAsync(editor: SpineEditor) async throws -> Export {
+    private func exportAsync(editor: SpineEditor) async throws -> SpineExport {
         // 检查任务是否被取消
         try Task.checkCancellation()
         
@@ -627,7 +627,7 @@ class SpineEditorViewModel: ObservableObject {
         // 检查任务是否被取消
         try Task.checkCancellation()
         
-        return Export(avatar: self.avatar, imageFile: fileURL)
+        return SpineExport(avatar: self.avatar, imageFile: fileURL)
     }
     
     /// 更新调色板可见性，对应 Android 的 updatePaletteVisibility

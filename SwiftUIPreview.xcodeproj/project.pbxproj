@@ -63,7 +63,7 @@
 		5875070D2E5726EE007E1290 /* TextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5875070C2E5726EE007E1290 /* TextContentView.swift */; };
 		5896594D2F0BA65D004616C4 /* ToningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659442F0BA65D004616C4 /* ToningView.swift */; };
 		5896594F2F0BA65D004616C4 /* SpineEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659422F0BA65D004616C4 /* SpineEditorViewModel.swift */; };
-		589659502F0BA65D004616C4 /* Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593E2F0BA65D004616C4 /* Export.swift */; };
+		589659502F0BA65D004616C4 /* SpineExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5896593E2F0BA65D004616C4 /* SpineExport.swift */; };
 		589659512F0BA65D004616C4 /* SpineEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659412F0BA65D004616C4 /* SpineEditorView.swift */; };
 		589659542F0BA65D004616C4 /* SpineUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659482F0BA65D004616C4 /* SpineUtils.swift */; };
 		589659552F0BA65D004616C4 /* SpineRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589659432F0BA65D004616C4 /* SpineRecorder.swift */; };
@@ -207,7 +207,7 @@
 		587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLikeAnimationView.swift; sourceTree = "<group>"; };
 		5875070C2E5726EE007E1290 /* TextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentView.swift; sourceTree = "<group>"; };
 		5896593A2F0BA65D004616C4 /* SpineTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineTemplate.swift; sourceTree = "<group>"; };
-		5896593E2F0BA65D004616C4 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
+		5896593E2F0BA65D004616C4 /* SpineExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineExport.swift; sourceTree = "<group>"; };
 		589659402F0BA65D004616C4 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		589659412F0BA65D004616C4 /* SpineEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineEditorView.swift; sourceTree = "<group>"; };
 		589659422F0BA65D004616C4 /* SpineEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpineEditorViewModel.swift; sourceTree = "<group>"; };
@@ -448,41 +448,25 @@
 			path = res;
 			sourceTree = "<group>";
 		};
-		5896593C2F0BA65D004616C4 /* data */ = {
+		5896593C2F0BA65D004616C4 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				5896593A2F0BA65D004616C4 /* SpineTemplate.swift */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		5896593F2F0BA65D004616C4 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				5896593E2F0BA65D004616C4 /* Export.swift */,
+				5896593E2F0BA65D004616C4 /* SpineExport.swift */,
 				58654EAE2F14944A00B4BBC9 /* SpineEditor.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		589659452F0BA65D004616C4 /* editor */ = {
+		589659462F0BA65D004616C4 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				5896593F2F0BA65D004616C4 /* model */,
 				589659402F0BA65D004616C4 /* SelectionView.swift */,
 				589659412F0BA65D004616C4 /* SpineEditorView.swift */,
 				589659422F0BA65D004616C4 /* SpineEditorViewModel.swift */,
 				589659442F0BA65D004616C4 /* ToningView.swift */,
 			);
-			path = editor;
-			sourceTree = "<group>";
-		};
-		589659462F0BA65D004616C4 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				589659452F0BA65D004616C4 /* editor */,
-			);
-			path = ui;
+			path = view;
 			sourceTree = "<group>";
 		};
 		589659492F0BA65D004616C4 /* utils */ = {
@@ -495,15 +479,15 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		5896594A2F0BA65D004616C4 /* spine 2 */ = {
+		5896594A2F0BA65D004616C4 /* spine */ = {
 			isa = PBXGroup;
 			children = (
 				58417FDA2F11099100673B91 /* res */,
-				5896593C2F0BA65D004616C4 /* data */,
-				589659462F0BA65D004616C4 /* ui */,
+				5896593C2F0BA65D004616C4 /* model */,
+				589659462F0BA65D004616C4 /* view */,
 				589659492F0BA65D004616C4 /* utils */,
 			);
-			path = "spine 2";
+			path = spine;
 			sourceTree = "<group>";
 		};
 		58C607572C7EFA2F00097699 = {
@@ -529,7 +513,7 @@
 		58C607622C7EFA2F00097699 /* SwiftUIPreview */ = {
 			isa = PBXGroup;
 			children = (
-				5896594A2F0BA65D004616C4 /* spine 2 */,
+				5896594A2F0BA65D004616C4 /* spine */,
 				58324B642CB76D8C0044C85A /* Info.plist */,
 				58324B462CB6801D0044C85A /* extension */,
 				58C607632C7EFA2F00097699 /* SwiftUIPreviewApp.swift */,
@@ -813,7 +797,7 @@
 				586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */,
 				5896594D2F0BA65D004616C4 /* ToningView.swift in Sources */,
 				5896594F2F0BA65D004616C4 /* SpineEditorViewModel.swift in Sources */,
-				589659502F0BA65D004616C4 /* Export.swift in Sources */,
+				589659502F0BA65D004616C4 /* SpineExport.swift in Sources */,
 				589659512F0BA65D004616C4 /* SpineEditorView.swift in Sources */,
 				589659542F0BA65D004616C4 /* SpineUtils.swift in Sources */,
 				589659552F0BA65D004616C4 /* SpineRecorder.swift in Sources */,
