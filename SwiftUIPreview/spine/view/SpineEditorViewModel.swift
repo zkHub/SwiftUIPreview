@@ -344,10 +344,10 @@ class SpineEditorViewModel: ObservableObject {
             }
         }
         
-        // Step 3: 随机染色（40%概率）
+        // Step 3: 随机染色
         let randomTonings = generateRandomTonings(selectedSkuIds: selectedSkus, template: template)
         
-        // 生成新 Avatar（清空染色）
+        // 生成新 Avatar
         let newAvatar = SpineAvatar(
             version: avatar.version,
             skus: Array(selectedSkus),
@@ -359,7 +359,7 @@ class SpineEditorViewModel: ObservableObject {
     
     /**
      * 生成随机染色配置
-     * 对于每个支持染色的 toningId，有 40% 概率随机选择一个颜色
+     * 对于每个支持染色的 toningId，随机选择一个颜色
      */
     func generateRandomTonings(selectedSkuIds: Set<String>, template: SpineTemplate) -> [String: String] {
         var randomTonings: [String: String] = [:]
@@ -797,6 +797,11 @@ class SpineEditorViewModel: ObservableObject {
     @MainActor
     func getSkeletonSkins(drawable: SkeletonDrawableWrapper) async throws -> [String: UIImage] {
         return try await MainActor.run {
+            let maxWidth = 200.0
+            let maxHeight = 200.0
+            let minWidth = 80.0
+            let minHeight = 80.0
+            
             var skeletonSkins: [String: UIImage] = [:]
             for skin in drawable.skeletonData.skins {
                 if skin.name == "default" { continue }
@@ -805,11 +810,20 @@ class SpineEditorViewModel: ObservableObject {
                 skeleton.setToSetupPose()
                 skeleton.update(delta: 0)
                 skeleton.updateWorldTransform(physics: SPINE_PHYSICS_UPDATE)
+                
+                var width = CGFloat(skeleton.bounds.width)
+                var height = CGFloat(skeleton.bounds.height)
+
+                if (width < minWidth) { width = minWidth }
+                if (height < minHeight) { height = minHeight }
+                if (width > maxWidth) { width = maxWidth }
+                if (height > maxHeight) { height = maxHeight }
+                
                 try skin.name.flatMap { skinName in
                     if let img = try drawable.renderToImage(
                         size: CGSizeMake(200, 200),
                         backgroundColor: .white,
-                        scaleFactor: UIScreen.main.scale
+                        scaleFactor: 1.0
                     ) {
                         skeletonSkins[skinName] = UIImage(cgImage: img)
                     }
