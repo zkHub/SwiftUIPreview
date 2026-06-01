@@ -1,6 +1,15 @@
 {
-  "originHash" : "7995963cabc8e8b2cf3f3622fe4a6c8dfc78d66a6af87abc472f154a7a5d4bcc",
+  "originHash" : "9bb1cf7448f81c884725ec58a115c91486f5231735ba4ce4f8303eee1877dd34",
   "pins" : [
+    {
+      "identity" : "bettercodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marksands/BetterCodable.git",
+      "state" : {
+        "revision" : "61153170668db7a46a20a87e35e70f80b24d4eb5",
+        "version" : "0.4.0"
+      }
+    },
     {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
@@ -44,6 +53,15 @@
       "state" : {
         "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
         "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "spine-runtimes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zkHub/spine-runtimes",
+      "state" : {
+        "branch" : "4.2",
+        "revision" : "6572f6bcd93544f7ef3e194777aee783cc14d35c"
       }
     },
     {

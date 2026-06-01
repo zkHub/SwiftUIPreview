@@ -7,6 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58000FF82F890AB700951921 /* QGAnimatedImageDecodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FA22F890AB700951921 /* QGAnimatedImageDecodeConfig.m */; };
+		58000FF92F890AB700951921 /* QGVAPConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FAA2F890AB700951921 /* QGVAPConfigManager.m */; };
+		58000FFA2F890AB700951921 /* QGVAPMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FE22F890AB700951921 /* QGVAPMetalView.m */; };
+		58000FFB2F890AB700951921 /* QGHWDMetalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FE52F890AB700951921 /* QGHWDMetalRenderer.m */; };
+		58000FFC2F890AB700951921 /* QGVAPSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FDB2F890AB700951921 /* QGVAPSafeMutableDictionary.m */; };
+		58000FFD2F890AB700951921 /* QGVAPLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FD22F890AB700951921 /* QGVAPLogger.m */; };
+		58000FFE2F890AB700951921 /* QGAnimatedImageBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FA02F890AB700951921 /* QGAnimatedImageBufferManager.m */; };
+		58000FFF2F890AB700951921 /* QGBaseAnimatedImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FAD2F890AB700951921 /* QGBaseAnimatedImageFrame.m */; };
+		580010002F890AB700951921 /* QGVAPWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FEF2F890AB700951921 /* QGVAPWrapView.m */; };
+		580010012F890AB700951921 /* QGHWDShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 58000FF52F890AB700951921 /* QGHWDShaders.metal */; };
+		580010022F890AB700951921 /* QGMP4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FC02F890AB700951921 /* QGMP4Parser.m */; };
+		580010032F890AB700951921 /* QGAnimatedImageDecodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FA42F890AB700951921 /* QGAnimatedImageDecodeManager.m */; };
+		580010042F890AB700951921 /* QGHWDMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FE72F890AB700951921 /* QGHWDMetalView.m */; };
+		580010052F890AB700951921 /* QGVAPMetalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FD72F890AB700951921 /* QGVAPMetalUtil.m */; };
+		580010062F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FC72F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.m */; };
+		580010072F890AB700951921 /* QGVAPConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FB72F890AB700951921 /* QGVAPConfigModel.m */; };
+		580010082F890AB700951921 /* QGHWDMP4OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FEA2F890AB700951921 /* QGHWDMP4OpenGLView.m */; };
+		580010092F890AB700951921 /* QGVAPSafeMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FD92F890AB700951921 /* QGVAPSafeMutableArray.m */; };
+		5800100A2F890AB700951921 /* NSDictionary+VAPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FC52F890AB700951921 /* NSDictionary+VAPUtil.m */; };
+		5800100B2F890AB700951921 /* QGVAPMetalShaderFunctionLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FD52F890AB700951921 /* QGVAPMetalShaderFunctionLoader.m */; };
+		5800100C2F890AB700951921 /* UIDevice+VAPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FCB2F890AB700951921 /* UIDevice+VAPUtil.m */; };
+		5800100D2F890AB700951921 /* QGAnimatedImageDecodeThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FA62F890AB700951921 /* QGAnimatedImageDecodeThread.m */; };
+		5800100E2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FAF2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.m */; };
+		5800100F2F890AB700951921 /* QGBaseDFileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FB12F890AB700951921 /* QGBaseDFileInfo.m */; };
+		580010102F890AB700951921 /* UIView+MP4HWDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FCF2F890AB700951921 /* UIView+MP4HWDecode.m */; };
+		580010112F890AB700951921 /* QGMP4Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FBE2F890AB700951921 /* QGMP4Box.m */; };
+		580010122F890AB700951921 /* QGVAPMaskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FB92F890AB700951921 /* QGVAPMaskInfo.m */; };
+		580010132F890AB700951921 /* UIView+VAP.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FF12F890AB700951921 /* UIView+VAP.m */; };
+		580010142F890AB700951921 /* UIGestureRecognizer+VAPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FCD2F890AB700951921 /* UIGestureRecognizer+VAPUtil.m */; };
+		580010152F890AB700951921 /* QGMP4AnimatedImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FB32F890AB700951921 /* QGMP4AnimatedImageFrame.m */; };
+		580010162F890AB700951921 /* UIColor+VAPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FC92F890AB700951921 /* UIColor+VAPUtil.m */; };
+		580010172F890AB700951921 /* QGVAPMetalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FE02F890AB700951921 /* QGVAPMetalRenderer.m */; };
+		580010182F890AB700951921 /* QGBaseDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000F9B2F890AB700951921 /* QGBaseDecoder.m */; };
+		580010192F890AB700951921 /* NSArray+VAPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FC32F890AB700951921 /* NSArray+VAPUtil.m */; };
+		5800101A2F890AB700951921 /* QGVAPWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FDD2F890AB700951921 /* QGVAPWeakProxy.m */; };
+		5800101B2F890AB700951921 /* QGVAPTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FBB2F890AB700951921 /* QGVAPTextureLoader.m */; };
+		5800101C2F890AB700951921 /* QGMP4HWDFileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FB52F890AB700951921 /* QGMP4HWDFileInfo.m */; };
+		5800101D2F890AB700951921 /* QGAnimatedImageDecodeThreadPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000FA82F890AB700951921 /* QGAnimatedImageDecodeThreadPool.m */; };
+		5800101E2F890AB700951921 /* QGMP4FrameHWDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58000F9D2F890AB700951921 /* QGMP4FrameHWDecoder.m */; };
 		58036FD02E7A9278003C68E6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58036FCF2E7A9278003C68E6 /* WebKit.framework */; };
 		581941F22E7BF6A600C751ED /* TabTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581941F12E7BF6A600C751ED /* TabTestView.swift */; };
 		58324B442CB680190044C85A /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58324B422CB680190044C85A /* UIColorExt.swift */; };
@@ -92,13 +131,16 @@
 		58C6077D2C8028C100097699 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6077C2C8028C000097699 /* ColorView.swift */; };
 		58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6077E2C804DA800097699 /* ColorExtention.swift */; };
 		58C607812C85C04B00097699 /* FontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C607802C85C04B00097699 /* FontView.swift */; };
+		58CB94D12F3C795E005BDF42 /* skadnetworkids.xml in Resources */ = {isa = PBXBuildFile; fileRef = 58CB94D02F3C795E005BDF42 /* skadnetworkids.xml */; };
 		58CBBE682D0A8753006660DC /* AttributeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CBBE672D0A8753006660DC /* AttributeLabel.swift */; };
+		58TEXT012F3D910000100001 /* TextStrokeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58TEXT002F3D910000100001 /* TextStrokeViews.swift */; };
 		58CDE8572DC31CFF0015B33B /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE8562DC31CFF0015B33B /* DrawingView.swift */; };
 		58CDE85F2DC9F0490015B33B /* PKDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */; };
 		58CDE8612DCA03690015B33B /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */; };
 		58CDE8632DCA04550015B33B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CDE8622DCA04550015B33B /* 2.png */; };
 		58DECDB82F0FBA6600C2623C /* Spine in Frameworks */ = {isa = PBXBuildFile; productRef = 58DECDB72F0FBA6600C2623C /* Spine */; };
 		58DECDBA2F0FBA6600C2623C /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 58DECDB92F0FBA6600C2623C /* SpineCppLite */; };
+		58EED1012F3D9000000100FC /* DiagonalRibbonTransitionMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EED1002F3D9000000100FB /* DiagonalRibbonTransitionMockView.swift */; };
 		8CAEB5378B9B3184A72DD954 /* Pods_SwiftUIPreview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D45175B7538B8E60E111BA /* Pods_SwiftUIPreview.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +175,87 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		58000F9A2F890AB700951921 /* QGBaseDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGBaseDecoder.h; sourceTree = "<group>"; };
+		58000F9B2F890AB700951921 /* QGBaseDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGBaseDecoder.m; sourceTree = "<group>"; };
+		58000F9C2F890AB700951921 /* QGMP4FrameHWDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGMP4FrameHWDecoder.h; sourceTree = "<group>"; };
+		58000F9D2F890AB700951921 /* QGMP4FrameHWDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGMP4FrameHWDecoder.m; sourceTree = "<group>"; };
+		58000F9F2F890AB700951921 /* QGAnimatedImageBufferManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAnimatedImageBufferManager.h; sourceTree = "<group>"; };
+		58000FA02F890AB700951921 /* QGAnimatedImageBufferManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAnimatedImageBufferManager.m; sourceTree = "<group>"; };
+		58000FA12F890AB700951921 /* QGAnimatedImageDecodeConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAnimatedImageDecodeConfig.h; sourceTree = "<group>"; };
+		58000FA22F890AB700951921 /* QGAnimatedImageDecodeConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAnimatedImageDecodeConfig.m; sourceTree = "<group>"; };
+		58000FA32F890AB700951921 /* QGAnimatedImageDecodeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAnimatedImageDecodeManager.h; sourceTree = "<group>"; };
+		58000FA42F890AB700951921 /* QGAnimatedImageDecodeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAnimatedImageDecodeManager.m; sourceTree = "<group>"; };
+		58000FA52F890AB700951921 /* QGAnimatedImageDecodeThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAnimatedImageDecodeThread.h; sourceTree = "<group>"; };
+		58000FA62F890AB700951921 /* QGAnimatedImageDecodeThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAnimatedImageDecodeThread.m; sourceTree = "<group>"; };
+		58000FA72F890AB700951921 /* QGAnimatedImageDecodeThreadPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGAnimatedImageDecodeThreadPool.h; sourceTree = "<group>"; };
+		58000FA82F890AB700951921 /* QGAnimatedImageDecodeThreadPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGAnimatedImageDecodeThreadPool.m; sourceTree = "<group>"; };
+		58000FA92F890AB700951921 /* QGVAPConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPConfigManager.h; sourceTree = "<group>"; };
+		58000FAA2F890AB700951921 /* QGVAPConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPConfigManager.m; sourceTree = "<group>"; };
+		58000FAC2F890AB700951921 /* QGBaseAnimatedImageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGBaseAnimatedImageFrame.h; sourceTree = "<group>"; };
+		58000FAD2F890AB700951921 /* QGBaseAnimatedImageFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGBaseAnimatedImageFrame.m; sourceTree = "<group>"; };
+		58000FAE2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QGBaseAnimatedImageFrame+Displaying.h"; sourceTree = "<group>"; };
+		58000FAF2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QGBaseAnimatedImageFrame+Displaying.m"; sourceTree = "<group>"; };
+		58000FB02F890AB700951921 /* QGBaseDFileInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGBaseDFileInfo.h; sourceTree = "<group>"; };
+		58000FB12F890AB700951921 /* QGBaseDFileInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGBaseDFileInfo.m; sourceTree = "<group>"; };
+		58000FB22F890AB700951921 /* QGMP4AnimatedImageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGMP4AnimatedImageFrame.h; sourceTree = "<group>"; };
+		58000FB32F890AB700951921 /* QGMP4AnimatedImageFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGMP4AnimatedImageFrame.m; sourceTree = "<group>"; };
+		58000FB42F890AB700951921 /* QGMP4HWDFileInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGMP4HWDFileInfo.h; sourceTree = "<group>"; };
+		58000FB52F890AB700951921 /* QGMP4HWDFileInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGMP4HWDFileInfo.m; sourceTree = "<group>"; };
+		58000FB62F890AB700951921 /* QGVAPConfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPConfigModel.h; sourceTree = "<group>"; };
+		58000FB72F890AB700951921 /* QGVAPConfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPConfigModel.m; sourceTree = "<group>"; };
+		58000FB82F890AB700951921 /* QGVAPMaskInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPMaskInfo.h; sourceTree = "<group>"; };
+		58000FB92F890AB700951921 /* QGVAPMaskInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPMaskInfo.m; sourceTree = "<group>"; };
+		58000FBA2F890AB700951921 /* QGVAPTextureLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPTextureLoader.h; sourceTree = "<group>"; };
+		58000FBB2F890AB700951921 /* QGVAPTextureLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPTextureLoader.m; sourceTree = "<group>"; };
+		58000FBD2F890AB700951921 /* QGMP4Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGMP4Box.h; sourceTree = "<group>"; };
+		58000FBE2F890AB700951921 /* QGMP4Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGMP4Box.m; sourceTree = "<group>"; };
+		58000FBF2F890AB700951921 /* QGMP4Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGMP4Parser.h; sourceTree = "<group>"; };
+		58000FC02F890AB700951921 /* QGMP4Parser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGMP4Parser.m; sourceTree = "<group>"; };
+		58000FC22F890AB700951921 /* NSArray+VAPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+VAPUtil.h"; sourceTree = "<group>"; };
+		58000FC32F890AB700951921 /* NSArray+VAPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VAPUtil.m"; sourceTree = "<group>"; };
+		58000FC42F890AB700951921 /* NSDictionary+VAPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VAPUtil.h"; sourceTree = "<group>"; };
+		58000FC52F890AB700951921 /* NSDictionary+VAPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VAPUtil.m"; sourceTree = "<group>"; };
+		58000FC62F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+VAPThreadSafe.h"; sourceTree = "<group>"; };
+		58000FC72F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+VAPThreadSafe.m"; sourceTree = "<group>"; };
+		58000FC82F890AB700951921 /* UIColor+VAPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+VAPUtil.h"; sourceTree = "<group>"; };
+		58000FC92F890AB700951921 /* UIColor+VAPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VAPUtil.m"; sourceTree = "<group>"; };
+		58000FCA2F890AB700951921 /* UIDevice+VAPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+VAPUtil.h"; sourceTree = "<group>"; };
+		58000FCB2F890AB700951921 /* UIDevice+VAPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+VAPUtil.m"; sourceTree = "<group>"; };
+		58000FCC2F890AB700951921 /* UIGestureRecognizer+VAPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+VAPUtil.h"; sourceTree = "<group>"; };
+		58000FCD2F890AB700951921 /* UIGestureRecognizer+VAPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+VAPUtil.m"; sourceTree = "<group>"; };
+		58000FCE2F890AB700951921 /* UIView+MP4HWDecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MP4HWDecode.h"; sourceTree = "<group>"; };
+		58000FCF2F890AB700951921 /* UIView+MP4HWDecode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MP4HWDecode.m"; sourceTree = "<group>"; };
+		58000FD12F890AB700951921 /* QGVAPLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPLogger.h; sourceTree = "<group>"; };
+		58000FD22F890AB700951921 /* QGVAPLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPLogger.m; sourceTree = "<group>"; };
+		58000FD42F890AB700951921 /* QGVAPMetalShaderFunctionLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPMetalShaderFunctionLoader.h; sourceTree = "<group>"; };
+		58000FD52F890AB700951921 /* QGVAPMetalShaderFunctionLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPMetalShaderFunctionLoader.m; sourceTree = "<group>"; };
+		58000FD62F890AB700951921 /* QGVAPMetalUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPMetalUtil.h; sourceTree = "<group>"; };
+		58000FD72F890AB700951921 /* QGVAPMetalUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPMetalUtil.m; sourceTree = "<group>"; };
+		58000FD82F890AB700951921 /* QGVAPSafeMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPSafeMutableArray.h; sourceTree = "<group>"; };
+		58000FD92F890AB700951921 /* QGVAPSafeMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPSafeMutableArray.m; sourceTree = "<group>"; };
+		58000FDA2F890AB700951921 /* QGVAPSafeMutableDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPSafeMutableDictionary.h; sourceTree = "<group>"; };
+		58000FDB2F890AB700951921 /* QGVAPSafeMutableDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPSafeMutableDictionary.m; sourceTree = "<group>"; };
+		58000FDC2F890AB700951921 /* QGVAPWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPWeakProxy.h; sourceTree = "<group>"; };
+		58000FDD2F890AB700951921 /* QGVAPWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPWeakProxy.m; sourceTree = "<group>"; };
+		58000FDF2F890AB700951921 /* QGVAPMetalRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPMetalRenderer.h; sourceTree = "<group>"; };
+		58000FE02F890AB700951921 /* QGVAPMetalRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPMetalRenderer.m; sourceTree = "<group>"; };
+		58000FE12F890AB700951921 /* QGVAPMetalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPMetalView.h; sourceTree = "<group>"; };
+		58000FE22F890AB700951921 /* QGVAPMetalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPMetalView.m; sourceTree = "<group>"; };
+		58000FE42F890AB700951921 /* QGHWDMetalRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHWDMetalRenderer.h; sourceTree = "<group>"; };
+		58000FE52F890AB700951921 /* QGHWDMetalRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHWDMetalRenderer.m; sourceTree = "<group>"; };
+		58000FE62F890AB700951921 /* QGHWDMetalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHWDMetalView.h; sourceTree = "<group>"; };
+		58000FE72F890AB700951921 /* QGHWDMetalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHWDMetalView.m; sourceTree = "<group>"; };
+		58000FE92F890AB700951921 /* QGHWDMP4OpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHWDMP4OpenGLView.h; sourceTree = "<group>"; };
+		58000FEA2F890AB700951921 /* QGHWDMP4OpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGHWDMP4OpenGLView.m; sourceTree = "<group>"; };
+		58000FED2F890AB700951921 /* QGVAPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPlayer.h; sourceTree = "<group>"; };
+		58000FEE2F890AB700951921 /* QGVAPWrapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGVAPWrapView.h; sourceTree = "<group>"; };
+		58000FEF2F890AB700951921 /* QGVAPWrapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGVAPWrapView.m; sourceTree = "<group>"; };
+		58000FF02F890AB700951921 /* UIView+VAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+VAP.h"; sourceTree = "<group>"; };
+		58000FF12F890AB700951921 /* UIView+VAP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+VAP.m"; sourceTree = "<group>"; };
+		58000FF22F890AB700951921 /* VAPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAPMacros.h; sourceTree = "<group>"; };
+		58000FF42F890AB700951921 /* QGHWDMetalShaderSourceDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHWDMetalShaderSourceDefine.h; sourceTree = "<group>"; };
+		58000FF52F890AB700951921 /* QGHWDShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = QGHWDShaders.metal; sourceTree = "<group>"; };
+		58000FF62F890AB700951921 /* QGHWDShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGHWDShaderTypes.h; sourceTree = "<group>"; };
 		58036FCF2E7A9278003C68E6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		581941F12E7BF6A600C751ED /* TabTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTestView.swift; sourceTree = "<group>"; };
 		582D8FF62D1518E3004AE8DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -236,7 +359,9 @@
 		58C6077C2C8028C000097699 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		58C6077E2C804DA800097699 /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		58C607802C85C04B00097699 /* FontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontView.swift; sourceTree = "<group>"; };
+		58CB94D02F3C795E005BDF42 /* skadnetworkids.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = skadnetworkids.xml; sourceTree = "<group>"; };
 		58CBBE672D0A8753006660DC /* AttributeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeLabel.swift; sourceTree = "<group>"; };
+		58TEXT002F3D910000100001 /* TextStrokeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStrokeViews.swift; sourceTree = "<group>"; };
 		58CDE8562DC31CFF0015B33B /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		58CDE85E2DC9F0490015B33B /* PKDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKDrawingView.swift; sourceTree = "<group>"; };
 		58CDE8602DCA03690015B33B /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
@@ -244,6 +369,7 @@
 		58D7AFD42E1B5C69003AF0E4 /* create_build_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_build_upload.py; sourceTree = "<group>"; };
 		58D7AFF02E289D97003AF0E4 /* get_reviews.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = get_reviews.py; sourceTree = "<group>"; };
 		58D7AFF62E28E83E003AF0E4 /* AuthKey_9Q394F5TP7.p8 */ = {isa = PBXFileReference; lastKnownFileType = text; path = AuthKey_9Q394F5TP7.p8; sourceTree = "<group>"; };
+		58EED1002F3D9000000100FB /* DiagonalRibbonTransitionMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalRibbonTransitionMockView.swift; sourceTree = "<group>"; };
 		81D45175B7538B8E60E111BA /* Pods_SwiftUIPreview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIPreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF3A7BD1D2948520A268DEF /* Pods-SwiftUIPreview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPreview.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview.debug.xcconfig"; sourceTree = "<group>"; };
 		FB5524AD2FBFD486AC861B4C /* Pods-SwiftUIPreview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIPreview.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIPreview/Pods-SwiftUIPreview.release.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +400,198 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58000F992F890AAD00951921 /* vap */ = {
+			isa = PBXGroup;
+			children = (
+				58000FF32F890AB700951921 /* Classes */,
+				58000FF72F890AB700951921 /* Shaders */,
+			);
+			path = vap;
+			sourceTree = "<group>";
+		};
+		58000F9E2F890AB700951921 /* Decoders */ = {
+			isa = PBXGroup;
+			children = (
+				58000F9A2F890AB700951921 /* QGBaseDecoder.h */,
+				58000F9B2F890AB700951921 /* QGBaseDecoder.m */,
+				58000F9C2F890AB700951921 /* QGMP4FrameHWDecoder.h */,
+				58000F9D2F890AB700951921 /* QGMP4FrameHWDecoder.m */,
+			);
+			path = Decoders;
+			sourceTree = "<group>";
+		};
+		58000FAB2F890AB700951921 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58000F9E2F890AB700951921 /* Decoders */,
+				58000F9F2F890AB700951921 /* QGAnimatedImageBufferManager.h */,
+				58000FA02F890AB700951921 /* QGAnimatedImageBufferManager.m */,
+				58000FA12F890AB700951921 /* QGAnimatedImageDecodeConfig.h */,
+				58000FA22F890AB700951921 /* QGAnimatedImageDecodeConfig.m */,
+				58000FA32F890AB700951921 /* QGAnimatedImageDecodeManager.h */,
+				58000FA42F890AB700951921 /* QGAnimatedImageDecodeManager.m */,
+				58000FA52F890AB700951921 /* QGAnimatedImageDecodeThread.h */,
+				58000FA62F890AB700951921 /* QGAnimatedImageDecodeThread.m */,
+				58000FA72F890AB700951921 /* QGAnimatedImageDecodeThreadPool.h */,
+				58000FA82F890AB700951921 /* QGAnimatedImageDecodeThreadPool.m */,
+				58000FA92F890AB700951921 /* QGVAPConfigManager.h */,
+				58000FAA2F890AB700951921 /* QGVAPConfigManager.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		58000FBC2F890AB700951921 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58000FAC2F890AB700951921 /* QGBaseAnimatedImageFrame.h */,
+				58000FAD2F890AB700951921 /* QGBaseAnimatedImageFrame.m */,
+				58000FAE2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.h */,
+				58000FAF2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.m */,
+				58000FB02F890AB700951921 /* QGBaseDFileInfo.h */,
+				58000FB12F890AB700951921 /* QGBaseDFileInfo.m */,
+				58000FB22F890AB700951921 /* QGMP4AnimatedImageFrame.h */,
+				58000FB32F890AB700951921 /* QGMP4AnimatedImageFrame.m */,
+				58000FB42F890AB700951921 /* QGMP4HWDFileInfo.h */,
+				58000FB52F890AB700951921 /* QGMP4HWDFileInfo.m */,
+				58000FB62F890AB700951921 /* QGVAPConfigModel.h */,
+				58000FB72F890AB700951921 /* QGVAPConfigModel.m */,
+				58000FB82F890AB700951921 /* QGVAPMaskInfo.h */,
+				58000FB92F890AB700951921 /* QGVAPMaskInfo.m */,
+				58000FBA2F890AB700951921 /* QGVAPTextureLoader.h */,
+				58000FBB2F890AB700951921 /* QGVAPTextureLoader.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58000FC12F890AB700951921 /* MP4Parser */ = {
+			isa = PBXGroup;
+			children = (
+				58000FBD2F890AB700951921 /* QGMP4Box.h */,
+				58000FBE2F890AB700951921 /* QGMP4Box.m */,
+				58000FBF2F890AB700951921 /* QGMP4Parser.h */,
+				58000FC02F890AB700951921 /* QGMP4Parser.m */,
+			);
+			path = MP4Parser;
+			sourceTree = "<group>";
+		};
+		58000FD02F890AB700951921 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				58000FC22F890AB700951921 /* NSArray+VAPUtil.h */,
+				58000FC32F890AB700951921 /* NSArray+VAPUtil.m */,
+				58000FC42F890AB700951921 /* NSDictionary+VAPUtil.h */,
+				58000FC52F890AB700951921 /* NSDictionary+VAPUtil.m */,
+				58000FC62F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.h */,
+				58000FC72F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.m */,
+				58000FC82F890AB700951921 /* UIColor+VAPUtil.h */,
+				58000FC92F890AB700951921 /* UIColor+VAPUtil.m */,
+				58000FCA2F890AB700951921 /* UIDevice+VAPUtil.h */,
+				58000FCB2F890AB700951921 /* UIDevice+VAPUtil.m */,
+				58000FCC2F890AB700951921 /* UIGestureRecognizer+VAPUtil.h */,
+				58000FCD2F890AB700951921 /* UIGestureRecognizer+VAPUtil.m */,
+				58000FCE2F890AB700951921 /* UIView+MP4HWDecode.h */,
+				58000FCF2F890AB700951921 /* UIView+MP4HWDecode.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		58000FD32F890AB700951921 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				58000FD12F890AB700951921 /* QGVAPLogger.h */,
+				58000FD22F890AB700951921 /* QGVAPLogger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		58000FDE2F890AB700951921 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				58000FD02F890AB700951921 /* Categorys */,
+				58000FD32F890AB700951921 /* Logger */,
+				58000FD42F890AB700951921 /* QGVAPMetalShaderFunctionLoader.h */,
+				58000FD52F890AB700951921 /* QGVAPMetalShaderFunctionLoader.m */,
+				58000FD62F890AB700951921 /* QGVAPMetalUtil.h */,
+				58000FD72F890AB700951921 /* QGVAPMetalUtil.m */,
+				58000FD82F890AB700951921 /* QGVAPSafeMutableArray.h */,
+				58000FD92F890AB700951921 /* QGVAPSafeMutableArray.m */,
+				58000FDA2F890AB700951921 /* QGVAPSafeMutableDictionary.h */,
+				58000FDB2F890AB700951921 /* QGVAPSafeMutableDictionary.m */,
+				58000FDC2F890AB700951921 /* QGVAPWeakProxy.h */,
+				58000FDD2F890AB700951921 /* QGVAPWeakProxy.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		58000FE32F890AB700951921 /* Vapx */ = {
+			isa = PBXGroup;
+			children = (
+				58000FDF2F890AB700951921 /* QGVAPMetalRenderer.h */,
+				58000FE02F890AB700951921 /* QGVAPMetalRenderer.m */,
+				58000FE12F890AB700951921 /* QGVAPMetalView.h */,
+				58000FE22F890AB700951921 /* QGVAPMetalView.m */,
+			);
+			path = Vapx;
+			sourceTree = "<group>";
+		};
+		58000FE82F890AB700951921 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				58000FE32F890AB700951921 /* Vapx */,
+				58000FE42F890AB700951921 /* QGHWDMetalRenderer.h */,
+				58000FE52F890AB700951921 /* QGHWDMetalRenderer.m */,
+				58000FE62F890AB700951921 /* QGHWDMetalView.h */,
+				58000FE72F890AB700951921 /* QGHWDMetalView.m */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		58000FEB2F890AB700951921 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				58000FE92F890AB700951921 /* QGHWDMP4OpenGLView.h */,
+				58000FEA2F890AB700951921 /* QGHWDMP4OpenGLView.m */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
+		58000FEC2F890AB700951921 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58000FE82F890AB700951921 /* Metal */,
+				58000FEB2F890AB700951921 /* OpenGL */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58000FF32F890AB700951921 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				58000FAB2F890AB700951921 /* Controllers */,
+				58000FBC2F890AB700951921 /* Models */,
+				58000FC12F890AB700951921 /* MP4Parser */,
+				58000FDE2F890AB700951921 /* Utils */,
+				58000FEC2F890AB700951921 /* Views */,
+				58000FED2F890AB700951921 /* QGVAPlayer.h */,
+				58000FEE2F890AB700951921 /* QGVAPWrapView.h */,
+				58000FEF2F890AB700951921 /* QGVAPWrapView.m */,
+				58000FF02F890AB700951921 /* UIView+VAP.h */,
+				58000FF12F890AB700951921 /* UIView+VAP.m */,
+				58000FF22F890AB700951921 /* VAPMacros.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		58000FF72F890AB700951921 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				58000FF42F890AB700951921 /* QGHWDMetalShaderSourceDefine.h */,
+				58000FF52F890AB700951921 /* QGHWDShaders.metal */,
+				58000FF62F890AB700951921 /* QGHWDShaderTypes.h */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		58324B462CB6801D0044C85A /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,12 +811,12 @@
 		58C607572C7EFA2F00097699 = {
 			isa = PBXGroup;
 			children = (
-				58D7AFED2E289D48003AF0E4 /* Neku */,
 				58C607622C7EFA2F00097699 /* SwiftUIPreview */,
 				583D73E12DDC8E2600D34E5D /* StickerPacks */,
 				58C607612C7EFA2F00097699 /* Products */,
 				58C607712C7EFC3B00097699 /* Frameworks */,
 				7F8CCEF331F831FAAD94DDA5 /* Pods */,
+				58D7AFED2E289D48003AF0E4 /* Neku */,
 			);
 			sourceTree = "<group>";
 		};
@@ -513,6 +831,7 @@
 		58C607622C7EFA2F00097699 /* SwiftUIPreview */ = {
 			isa = PBXGroup;
 			children = (
+				58000F992F890AAD00951921 /* vap */,
 				5896594A2F0BA65D004616C4 /* spine */,
 				58324B642CB76D8C0044C85A /* Info.plist */,
 				58324B462CB6801D0044C85A /* extension */,
@@ -524,6 +843,7 @@
 				58C607782C7EFDF600097699 /* ExpandTextView.swift */,
 				58C6077A2C7EFF1C00097699 /* MoreTextView.swift */,
 				58CBBE672D0A8753006660DC /* AttributeLabel.swift */,
+				58TEXT002F3D910000100001 /* TextStrokeViews.swift */,
 				58C478E22CA695A60069CE19 /* MakeStickerView.swift */,
 				58C478E42CA699150069CE19 /* MakeStickerEidtorView.swift */,
 				58324B772CB7D2A60044C85A /* MakeStickerFontView.swift */,
@@ -542,6 +862,7 @@
 				581941F12E7BF6A600C751ED /* TabTestView.swift */,
 				5854E3022E6FC991005D66EA /* GradientText.swift */,
 				587506DC2E53222C007E1290 /* TapLikeAnimationView.swift */,
+				58EED1002F3D9000000100FB /* DiagonalRibbonTransitionMockView.swift */,
 				5875070C2E5726EE007E1290 /* TextContentView.swift */,
 				58324B4B2CB76BE50044C85A /* Fonts */,
 				58CDE8622DCA04550015B33B /* 2.png */,
@@ -552,6 +873,7 @@
 				58C607672C7EFA3100097699 /* Assets.xcassets */,
 				58C607742C7EFC5D00097699 /* skad1.plist */,
 				58C607752C7EFC5D00097699 /* skad2.plist */,
+				58CB94D02F3C795E005BDF42 /* skadnetworkids.xml */,
 				5854E33D2E7002F8005D66EA /* Localizable.strings */,
 				58C607692C7EFA3100097699 /* Preview Content */,
 				5896597F2F0DFF26004616C4 /* SwiftUIPreview-Bridging-Header.h */,
@@ -712,6 +1034,7 @@
 			files = (
 				58417FE32F1109A200673B91 /* spine-MJbLxQ7V.png in Resources */,
 				58417FE42F1109A200673B91 /* spine-hSXG11sA.json in Resources */,
+				58CB94D12F3C795E005BDF42 /* skadnetworkids.xml in Resources */,
 				58417FE52F1109A200673B91 /* hSXG11sA.json in Resources */,
 				58417FE62F1109A200673B91 /* spine-MJbLxQ7V.atlas in Resources */,
 				58417FE72F1109A200673B91 /* spine-hSXG11sA.png in Resources */,
@@ -786,6 +1109,7 @@
 				581941F22E7BF6A600C751ED /* TabTestView.swift in Sources */,
 				58C6077F2C804DA800097699 /* ColorExtention.swift in Sources */,
 				587506DD2E53222C007E1290 /* TapLikeAnimationView.swift in Sources */,
+				58EED1012F3D9000000100FC /* DiagonalRibbonTransitionMockView.swift in Sources */,
 				583D74022DE43DCF00D34E5D /* OCCreateView.swift in Sources */,
 				58324B782CB7D2A60044C85A /* MakeStickerFontView.swift in Sources */,
 				583D73C52DDC80E800D34E5D /* DragListView.swift in Sources */,
@@ -799,6 +1123,45 @@
 				5896594F2F0BA65D004616C4 /* SpineEditorViewModel.swift in Sources */,
 				589659502F0BA65D004616C4 /* SpineExport.swift in Sources */,
 				589659512F0BA65D004616C4 /* SpineEditorView.swift in Sources */,
+				58000FF82F890AB700951921 /* QGAnimatedImageDecodeConfig.m in Sources */,
+				58000FF92F890AB700951921 /* QGVAPConfigManager.m in Sources */,
+				58000FFA2F890AB700951921 /* QGVAPMetalView.m in Sources */,
+				58000FFB2F890AB700951921 /* QGHWDMetalRenderer.m in Sources */,
+				58000FFC2F890AB700951921 /* QGVAPSafeMutableDictionary.m in Sources */,
+				58000FFD2F890AB700951921 /* QGVAPLogger.m in Sources */,
+				58000FFE2F890AB700951921 /* QGAnimatedImageBufferManager.m in Sources */,
+				58000FFF2F890AB700951921 /* QGBaseAnimatedImageFrame.m in Sources */,
+				580010002F890AB700951921 /* QGVAPWrapView.m in Sources */,
+				580010012F890AB700951921 /* QGHWDShaders.metal in Sources */,
+				580010022F890AB700951921 /* QGMP4Parser.m in Sources */,
+				580010032F890AB700951921 /* QGAnimatedImageDecodeManager.m in Sources */,
+				580010042F890AB700951921 /* QGHWDMetalView.m in Sources */,
+				580010052F890AB700951921 /* QGVAPMetalUtil.m in Sources */,
+				580010062F890AB700951921 /* NSNotificationCenter+VAPThreadSafe.m in Sources */,
+				580010072F890AB700951921 /* QGVAPConfigModel.m in Sources */,
+				580010082F890AB700951921 /* QGHWDMP4OpenGLView.m in Sources */,
+				580010092F890AB700951921 /* QGVAPSafeMutableArray.m in Sources */,
+				5800100A2F890AB700951921 /* NSDictionary+VAPUtil.m in Sources */,
+				5800100B2F890AB700951921 /* QGVAPMetalShaderFunctionLoader.m in Sources */,
+				5800100C2F890AB700951921 /* UIDevice+VAPUtil.m in Sources */,
+				5800100D2F890AB700951921 /* QGAnimatedImageDecodeThread.m in Sources */,
+				5800100E2F890AB700951921 /* QGBaseAnimatedImageFrame+Displaying.m in Sources */,
+				5800100F2F890AB700951921 /* QGBaseDFileInfo.m in Sources */,
+				580010102F890AB700951921 /* UIView+MP4HWDecode.m in Sources */,
+				580010112F890AB700951921 /* QGMP4Box.m in Sources */,
+				580010122F890AB700951921 /* QGVAPMaskInfo.m in Sources */,
+				580010132F890AB700951921 /* UIView+VAP.m in Sources */,
+				580010142F890AB700951921 /* UIGestureRecognizer+VAPUtil.m in Sources */,
+				580010152F890AB700951921 /* QGMP4AnimatedImageFrame.m in Sources */,
+				580010162F890AB700951921 /* UIColor+VAPUtil.m in Sources */,
+				580010172F890AB700951921 /* QGVAPMetalRenderer.m in Sources */,
+				580010182F890AB700951921 /* QGBaseDecoder.m in Sources */,
+				580010192F890AB700951921 /* NSArray+VAPUtil.m in Sources */,
+				5800101A2F890AB700951921 /* QGVAPWeakProxy.m in Sources */,
+				5800101B2F890AB700951921 /* QGVAPTextureLoader.m in Sources */,
+				5800101C2F890AB700951921 /* QGMP4HWDFileInfo.m in Sources */,
+				5800101D2F890AB700951921 /* QGAnimatedImageDecodeThreadPool.m in Sources */,
+				5800101E2F890AB700951921 /* QGMP4FrameHWDecoder.m in Sources */,
 				589659542F0BA65D004616C4 /* SpineUtils.swift in Sources */,
 				589659552F0BA65D004616C4 /* SpineRecorder.swift in Sources */,
 				589659562F0BA65D004616C4 /* SpineTemplate.swift in Sources */,
@@ -806,6 +1169,7 @@
 				589659582F0BA65D004616C4 /* SelectionView.swift in Sources */,
 				58324B7C2CB933ED0044C85A /* MakeStickerSelectView.swift in Sources */,
 				58CBBE682D0A8753006660DC /* AttributeLabel.swift in Sources */,
+				58TEXT012F3D910000100001 /* TextStrokeViews.swift in Sources */,
 				58324B442CB680190044C85A /* UIColorExt.swift in Sources */,
 				5854E3032E6FC991005D66EA /* GradientText.swift in Sources */,
 				58324B7A2CB7D3240044C85A /* MakeStickerFontColorView.swift in Sources */,
