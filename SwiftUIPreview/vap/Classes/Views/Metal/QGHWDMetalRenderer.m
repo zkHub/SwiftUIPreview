@@ -173,7 +173,7 @@ static const float kQGQuadVerticesConstants[kQGQuadVerticesConstantsRow][kQGQuad
     }
     CFTypeRef yCbCrMatrixType = CVBufferGetAttachment(pixelBuffer, kCVImageBufferYCbCrMatrixKey, NULL);
     matrix_float3x3 matrix = kQGColorConversionMatrix601FullRangeDefault;
-    if (CFStringCompare(yCbCrMatrixType, kCVImageBufferYCbCrMatrix_ITU_R_709_2, 0) == kCFCompareEqualTo) {
+    if (yCbCrMatrixType != NULL && CFStringCompare(yCbCrMatrixType, kCVImageBufferYCbCrMatrix_ITU_R_709_2, 0) == kCFCompareEqualTo) {
         matrix = kQGColorConversionMatrix709FullRangeDefault;
     }
     if (simd_equal(_currentColorConversionMatrix, matrix)) {

@@ -253,7 +253,11 @@ NSInteger const kQGBoxLargeSizeFlagLengthInBytes = 1;
     uint32_t entry_count = READ32BIT(&bytes[12]);
     self.chunkCount = entry_count;
     for (int i = 0; i < entry_count; ++i) {
-        [self.chunkOffsets addObject:@(READ32BIT(&bytes[16+i*4]))];
+        if (self.type == QGMP4BoxType_co64) {
+            [self.chunkOffsets addObject:@(READ64BIT(&bytes[16+i*8]))];
+        } else {
+            [self.chunkOffsets addObject:@(READ32BIT(&bytes[16+i*4]))];
+        }
     }
 }
 
@@ -388,6 +392,7 @@ stts记录了sample的时间信息，⾥⾯有多个entry，每个entry⾥⾯的
         case QGMP4BoxType_stts:
             return [QGMP4SttsBox class];
         case QGMP4BoxType_stco:
+        case QGMP4BoxType_co64:
             return [QGMP4StcoBox class];
         case QGMP4BoxType_hvcC:
             return [QGMP4HvccBox class];

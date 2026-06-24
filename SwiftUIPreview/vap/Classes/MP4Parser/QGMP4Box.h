@@ -17,6 +17,7 @@
 
 #define ATOM_TYPE(a, b, c, d) ((d) | ((c) << 8) | ((b) << 16) | ((unsigned)(a) << 24))
 #define READ32BIT(bytes) ((((bytes)[0]&0xff)<<24)+(((bytes)[1]&0xff)<<16)+(((bytes)[2]&0xff)<<8)+((bytes)[3]&0xff))
+#define READ64BIT(bytes) ((((uint64_t)READ32BIT(bytes))<<32)+READ32BIT((bytes)+4))
 
 extern NSInteger const kQGBoxSizeLengthInBytes;
 extern NSInteger const kQGBoxTypeLengthInBytes;
@@ -69,6 +70,7 @@ typedef NS_ENUM(NSUInteger, QGMP4BoxType) {
     QGMP4BoxType_stsc           =   ATOM_TYPE('s','t','s','c'),//0x73747363,
     QGMP4BoxType_stsz           =   ATOM_TYPE('s','t','s','z'),//0x7374737a,
     QGMP4BoxType_stco           =   ATOM_TYPE('s','t','c','o'),//0x7374636f,
+    QGMP4BoxType_co64           =   ATOM_TYPE('c','o','6','4'),//0x636f3634,
     QGMP4BoxType_ctts           =   ATOM_TYPE('c', 't', 't', 's'),//只有视频有，主要⽤来记录pts和dts的差值，通过它可以计算出pts
     QGMP4BoxType_udta           =   ATOM_TYPE('u','d','t','a'),//0x75647461,
     QGMP4BoxType_meta           =   ATOM_TYPE('m','e','t','a'),//0x6d657461,
@@ -223,7 +225,7 @@ The table is compactly coded. Each entry gives the index of the first chunk of a
 @property (nonatomic, assign) uint32_t sampleSize;
 @property (nonatomic, assign) uint32_t sampleIndex;
 @property (nonatomic, assign) uint32_t chunkIndex;
-@property (nonatomic, assign) uint32_t streamOffset;
+@property (nonatomic, assign) uint64_t streamOffset;
 @property (nonatomic, assign) uint64_t pts;
 @property (nonatomic, assign) uint64_t dts;
 @property (nonatomic, assign) BOOL isKeySample;

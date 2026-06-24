@@ -22,7 +22,8 @@ struct ContentView: View {
             List {
                 
                 NavigationLink("SpineEditorView", destination: SpineEditorView(templateId: "hSXG11sA", portal: ""))
-                
+                NavigationLink("VAPDemoView", destination: VAPDemoView())
+
                 NavigationLink("TabScrollSafeAreaTest", destination: TabScrollSafeAreaTest())
                 NavigationLink("TextContentView", destination: TextContentView())
                 NavigationLink("TestView", destination: TestView())

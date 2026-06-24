@@ -279,11 +279,14 @@
     QGMP4StszBox *stszBox = [self.videoTrackBox subBoxOfType:QGMP4BoxType_stsz];
     QGMP4StscBox *stscBox = [self.videoTrackBox subBoxOfType:QGMP4BoxType_stsc];
     QGMP4StcoBox *stcoBox = [self.videoTrackBox subBoxOfType:QGMP4BoxType_stco];
+    if (!stcoBox) {
+        stcoBox = [self.videoTrackBox subBoxOfType:QGMP4BoxType_co64];
+    }
     QGMP4CttsBox *cttsBox = [self.videoTrackBox subBoxOfType:QGMP4BoxType_ctts];
 
     uint32_t stscEntryIndex = 0;
     uint32_t stscEntrySampleIndex = 0;
-    uint32_t stscEntrySampleOffset = 0;
+    uint64_t stscEntrySampleOffset = 0;
     uint32_t sttsEntryIndex = 0;
     uint32_t sttsEntrySampleIndex = 0;
     uint32_t stcoChunkLogicIndex = 0;
@@ -296,7 +299,7 @@
 
         QGStscEntry *stscEntry = stscBox.entries[stscEntryIndex];
         QGSttsEntry *sttsEntry = sttsBox.entries[sttsEntryIndex];
-        uint32_t sampleOffset = [stcoBox.chunkOffsets[stcoChunkLogicIndex] unsignedIntValue] + stscEntrySampleOffset;
+        uint64_t sampleOffset = [stcoBox.chunkOffsets[stcoChunkLogicIndex] unsignedLongLongValue] + stscEntrySampleOffset;
         uint32_t ctts = 0;
         if (i < cttsBox.compositionOffsets.count) {
             ctts = [cttsBox.compositionOffsets[i] unsignedIntValue];
