@@ -61,8 +61,8 @@ private struct VAPResourceCell: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.red.opacity(0.18))
+//                RoundedRectangle(cornerRadius: 8)
+//                    .fill(Color.white)
 
                 VAPPlayerView(
                     fileURL: resource.url,
@@ -206,10 +206,9 @@ private enum VAPResourceLoader {
         .flatMap { $0 }
 
         let rootURLs = bundle.urls(forResourcesWithExtension: "mp4", subdirectory: nil) ?? []
-        let hashNamedRootURLs = rootURLs.filter { isVAPResourceName($0.deletingPathExtension().lastPathComponent) }
 
         let uniqueURLs = Dictionary(
-            grouping: subdirectoryURLs + hashNamedRootURLs,
+            grouping: subdirectoryURLs + rootURLs,
             by: { $0.lastPathComponent }
         )
         .compactMap { $0.value.first }
@@ -219,9 +218,6 @@ private enum VAPResourceLoader {
             .map(VAPResource.init(url:))
     }
 
-    private static func isVAPResourceName(_ name: String) -> Bool {
-        name.range(of: "^[0-9a-f]{64}$", options: .regularExpression) != nil
-    }
 }
 
 #Preview {
