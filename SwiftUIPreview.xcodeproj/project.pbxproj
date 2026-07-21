@@ -144,6 +144,7 @@
 		585652072F0FB17B00FE26B0 /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 585652062F0FB17B00FE26B0 /* SpineCppLite */; };
 		5856520A2F0FB2B600FE26B0 /* Spine in Frameworks */ = {isa = PBXBuildFile; productRef = 585652092F0FB2B600FE26B0 /* Spine */; };
 		5856520C2F0FB2B600FE26B0 /* SpineCppLite in Frameworks */ = {isa = PBXBuildFile; productRef = 5856520B2F0FB2B600FE26B0 /* SpineCppLite */; };
+		5862B04A300623220046899B /* DefaultCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 5862B049300623220046899B /* DefaultCodable */; };
 		586449352DA661F9007EA0F8 /* KingfisherWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 586449342DA661F9007EA0F8 /* KingfisherWebP */; };
 		586449372DA663B8007EA0F8 /* 1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 586449362DA663B8007EA0F8 /* 1.webp */; };
 		586449542DAF6040007EA0F8 /* GuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586449532DAF6040007EA0F8 /* GuideMaskView.swift */; };
@@ -482,6 +483,7 @@
 			files = (
 				58DECDB82F0FBA6600C2623C /* Spine in Frameworks */,
 				58417FD92F10F97200673B91 /* BetterCodable in Frameworks */,
+				5862B04A300623220046899B /* DefaultCodable in Frameworks */,
 				5856520A2F0FB2B600FE26B0 /* Spine in Frameworks */,
 				58324B4A2CB682D50044C85A /* Kingfisher in Frameworks */,
 				58C478E12CA545C60069CE19 /* Lottie in Frameworks */,
@@ -1118,6 +1120,7 @@
 				58DECDB72F0FBA6600C2623C /* Spine */,
 				58DECDB92F0FBA6600C2623C /* SpineCppLite */,
 				58417FD82F10F97200673B91 /* BetterCodable */,
+				5862B049300623220046899B /* DefaultCodable */,
 			);
 			productName = SwiftUIPreview;
 			productReference = 58C607602C7EFA2F00097699 /* SwiftUIPreview.app */;
@@ -1160,6 +1163,7 @@
 				589E2A302E88D6310029894A /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 				58DECDB62F0FBA6600C2623C /* XCRemoteSwiftPackageReference "spine-runtimes" */,
 				58417FD72F10F97200673B91 /* XCRemoteSwiftPackageReference "BetterCodable" */,
+				5862B048300623220046899B /* XCRemoteSwiftPackageReference "DefaultCodable" */,
 			);
 			productRefGroup = 58C607612C7EFA2F00097699 /* Products */;
 			projectDirPath = "";
@@ -1667,6 +1671,14 @@
 				minimumVersion = 0.4.0;
 			};
 		};
+		5862B048300623220046899B /* XCRemoteSwiftPackageReference "DefaultCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/DefaultCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
 		586449332DA661F9007EA0F8 /* XCRemoteSwiftPackageReference "KingfisherWebP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yeatse/KingfisherWebP";
@@ -1735,6 +1747,11 @@
 		5856520B2F0FB2B600FE26B0 /* SpineCppLite */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpineCppLite;
+		};
+		5862B049300623220046899B /* DefaultCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5862B048300623220046899B /* XCRemoteSwiftPackageReference "DefaultCodable" */;
+			productName = DefaultCodable;
 		};
 		586449342DA661F9007EA0F8 /* KingfisherWebP */ = {
 			isa = XCSwiftPackageProductDependency;

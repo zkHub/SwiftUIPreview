@@ -9,12 +9,37 @@ import SwiftUI
 import Kingfisher
 import KingfisherWebP
 import Lottie
+import DefaultCodable
+import BetterCodable
+
+ enum Dictaa: DefaultValueProvider {
+    public static let `default` = ["1": "1"]
+}
+
+struct Testss: Codable {
+    var v: Int = 1
+    var s: String?
+    
+    @Default<Empty>
+    var a: [String]
+    
+    @Default<False>
+    var b: Bool
+
+    @DefaultEmptyDictionary
+    var d1: [String: String]
+    
+    @Default<Dictaa>
+    var d2: [String: String]
+}
 
 struct ContentView: View {
     
     @State private var random1: Int = 0
     @State private var random2: Int = 0
     @State var showTabTest = false
+    
+    
     
     var body: some View {
         NavigationView(content: {
@@ -83,6 +108,15 @@ struct ContentView: View {
                 }
             }
             print(random1, random2)
+            
+            let value = """
+            {"v": 1, "a": []}
+            """
+            if let data = value.data(using: .utf8), let t = try? JSONDecoder().decode(Testss.self, from: data) {
+                print(t.v, t.s, t.b, t.a, t.d1, t.d2)
+            }
+//            let t = Testss()
+//            print(t.v, t.s, t.a, t.d1, t.d2)
         })
         .overlay {
             if showTabTest {

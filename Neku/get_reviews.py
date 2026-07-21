@@ -92,6 +92,10 @@ def export_versioned_reviews():
         for rev in reviews:
             rev['app_version'] = ver['version']  # 添加版本号字段
         all_data.extend(reviews)
+
+        if ver['version'] == MinVersion:
+            print(f"已提取到最低版本 {MinVersion}，停止获取更早版本的评论")
+            break
     
     # 导出Excel
     if all_data:
