@@ -7,14 +7,15 @@
 
 import SwiftUI
 import UIKit
+import QGVAPlayer
 
 struct VAPDemoView: View {
 
     @State private var resources: [VAPResource] = []
 
     private let columns = [
-        GridItem(.flexible(), spacing: 12),
-        GridItem(.flexible(), spacing: 12)
+//        GridItem(.flexible(), spacing: 12),
+        GridItem(.fixed(300), spacing: 12)
     ]
 
     var body: some View {
@@ -26,6 +27,7 @@ struct VAPDemoView: View {
             }
             .padding(12)
         }
+        .background(.black.opacity(0.8))
         .navigationTitle("VAP Resources")
         .onAppear {
             resources = VAPResourceLoader.loadResources()
@@ -74,15 +76,15 @@ private struct VAPResourceCell: View {
                     onStatusChange: { _ in }
                 )
 
-                #if targetEnvironment(simulator)
-                VStack(spacing: 6) {
-                    Image(systemName: "iphone.slash")
-                        .font(.title2)
-                    Text("真机播放")
-                        .font(.caption)
-                }
-                .foregroundStyle(.secondary)
-                #endif
+//                #if targetEnvironment(simulator)
+//                VStack(spacing: 6) {
+//                    Image(systemName: "iphone.slash")
+//                        .font(.title2)
+//                    Text("真机播放")
+//                        .font(.caption)
+//                }
+//                .foregroundStyle(.secondary)
+//                #endif
             }
             .aspectRatio(1, contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -136,14 +138,14 @@ private struct VAPPlayerView: UIViewRepresentable {
 
         uiView.stopHWDMP4()
 
-        #if targetEnvironment(simulator)
-        context.coordinator.sendStatus("VAP 硬解码不支持模拟器，请在真机播放")
-        return
-        #else
+//        #if targetEnvironment(simulator)
+//        context.coordinator.sendStatus("VAP 硬解码不支持模拟器，请在真机播放")
+//        return
+//        #else
         uiView.setMute(isMuted)
         uiView.playHWDMP4(fileURL.path, repeatCount: repeatCount, delegate: context.coordinator)
         context.coordinator.sendStatus("开始播放：\(fileURL.lastPathComponent)")
-        #endif
+//        #endif
     }
 
     static func dismantleUIView(_ uiView: QGVAPWrapView, coordinator: Coordinator) {

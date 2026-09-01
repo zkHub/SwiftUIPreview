@@ -1,5 +1,5 @@
 {
-  "originHash" : "e0f0480e026f46dc27a33d7fdb4d7608e7e5cbcae88a82020aca699fa410bc85",
+  "originHash" : "6f97aae642e57a7260b9ea7906ec065560e97cb9830a7e4aecea9f3d02d15b7a",
   "pins" : [
     {
       "identity" : "bettercodable",
@@ -53,6 +53,15 @@
       "state" : {
         "revision" : "69faaefa7721fba9e434a52c16adf4329c9084db",
         "version" : "4.6.0"
+      }
+    },
+    {
+      "identity" : "qgvaplayerpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zkHub/QGVAPlayerPackage.git",
+      "state" : {
+        "revision" : "11ce9f4123711f34780751879befe9c3f5b734ff",
+        "version" : "1.0.3"
       }
     },
     {
